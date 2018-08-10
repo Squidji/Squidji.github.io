@@ -1,185 +1,64 @@
-<!DOCTYPE html>
-<html>
-<h1 id='header' style='color:#20722f; font-family:Arial'>Error 101</h1>
-<button id='up_button' onclick='panelControl("Up")'>Up</button>
-<button id='left_button' onclick='panelControl("Left")'>Left</button>
-<button id='right_button' onclick='panelControl("Right")'>Right</button>
-<button id='down_button' onclick='panelControl("Down")'>Down</button>
-<br><button id='a_button' onclick='panelControl("A")'>A</button>
-<button id='b_button' onclick='panelControl("B")'>B</button>
-<button id='start_button' onclick='panelControl("Start")'>Start</button>
-<button id='select_button' onclick='panelControl("Select")'>Select</button>
-<p style='color:#ffffff'>Developer Data</p>
+<style>
+.head {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+}
+
+.subhead {
+    background-color: #98a6d1;
+    color: black;
+    padding: 10px;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<h1 class="head">Ben Squidji</h1>
+<h3 class="subhead">Projects</h3>
+<button class="button" style="vertical-align:middle" onclick="location.href='http://squidji.github.io/Panels'"><span>Panels </span></button>
+<h3 class='subhead'>Social Media</h3>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://www.instagram.com/ben__squidji'"><span>Instagram </span></button>
+
 
 <script>
-document.body.style.backgroundColor = "#141a38";
-
-let scanData
-let control = false
-
-let openSource = {
-  developerData : true
-};
-
-let player = {
-  locationClass: 'main',
-  locationFloor: 0,
-  locationPanelY: 0,
-  locationPanelX: 0,
-  locationY: 0,
-  locationX: 0,
-  
-  health: 100,
-  maxHealth: 100,
-  level: 1,
-  experience: 0,
-  experienceToLevel: 100,
-  
-  attack: 10,
-  maxAttack: 10,
-  defense: 10,
-  maxDefense: 10,
-  
-  appearance : '&#9863;'
-};
-let blockdata = {
-  nothing : {appearance : '\' \' ', moveUp : true, moveDown : true, moveLeft : true, moveRight : true, modifiers : [] , actions : []},
-  solid :   {appearance : '▉ ', moveUp : false, moveDown : false, moveLeft : false, moveRight : false, modifiers : [], actions : []}
-};
-let maindata = {
-  main : {0 : {0 : {0 : []}}}
-};
-
-let itemdata = {
-	global : {
-		codex : function(text) {/*Make Codex work with text*/}
-	},
-	potion : {},
-	map : {}
-};
-let enemydata = {
-	
-};
-
-
-for (let i = 0; i < 10; i++) {
-  let build = [];
-  for (let ii = 0; ii < 10; ii++) {
-    build.push({type : 'nothing'});
-  }
-  maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX].push(build);
-}
-
-function panelWrite() {
-  if (openSource.developerData) {
-    console.log('Class ' + player.locationClass);
-    console.log('Floor ' + player.locationFloor);
-    console.log('Panel Y ' + player.locationPanelY);
-    console.log('Panel X ' + player.locationPanelX);
-  }
-  let grandBuild = ''
-  for (let i = 0; i < 10; i++) {
-    let build = '';
-    for (let ii = 0; ii < 10; ii++) {
-      let block = maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX][i][ii].type;
-      let buildApp = blockdata[block].appearance;
-      if (i === player.locationY) {if (ii === player.locationX) {buildApp = player.appearance}}
-      build += buildApp;
-    }
-    grandBuild += build + '<br>';
-  }
-  document.getElementById('header').innerHTML = grandBuild;
-}
-function panelScan() {
-	let onLeft
-	if (player.locationX === 0) {onLeft = false} else {
-		onLeft = player.locationX - 1
-	}
-	let onRight
-	if (player.locationX === 9) {onRight = false} else {
-		onRight = player.locationX + 1
-	}
-	let onFront
-	if (player.locationY === 0) {onFront = false} else {
-		onFront = player.locationY - 1
-	}
-	let onBack
-	if (player.locationY === 9) {onBack = false} else {
-		onBack = player.locationY + 1
-	}
-	scanData = {'onLeft' : onLeft, 'onRight' : onRight, 'onFront' : onFront, 'onBack' : onBack}
-}
-function panelControl(input) {
-	if (control) {
-	if (input === 'Left') {
-		if (scanData.onLeft === false) {
-			player.locationPanelX -= 1;
-			player.locationX = 9;
-			if (player.locationPanelX in maindata[player.locationClass][player.locationFloor][player.locationPanelY]) {} else {newPanelX()}
-		} else {
-			player.locationX -= 1;
-	}}
-	if (input === 'Right') {
-		if (scanData.onRight === false) {
-			player.locationPanelX += 1;
-			player.locationX = 0;
-			if (player.locationPanelX in maindata[player.locationClass][player.locationFloor][player.locationPanelY]) {} else {newPanelX()}
-		} else {
-			player.locationX += 1;
-		}
-	}}
-	if (input === 'Up') {
-		if (scanData.onFront === false) {
-			player.locationPanelY -= 1;
-			player.locationY = 9;
-			if (player.locationPanelY in maindata[player.locationClass][player.locationFloor]) {} else {newPanelY()}
-		} else {
-			player.locationY -= 1;
-	}}
-	if (input === 'Down') {
-		if (scanData.onBack === false) {
-			player.locationPanelY += 1;
-			player.locationY = 0;
-			if (player.locationPanelY in maindata[player.locationClass][player.locationFloor]) {} else {newPanelY()}
-		} else {
-			player.locationY += 1;
-	}}
-	update()
-}
-
-function inventoryControl() {
-
-}
-
-function newPanelX() {
-	maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX] = []
-	for (let i = 0; i < 10; i++) {
-  	let build = [];
-  	for (let ii = 0; ii < 10; ii++) {
-    	build.push({type : 'nothing'});
-  }
-  maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX].push(build);
-}}
-function newPanelY() {
-	alert('hey?')
-	maindata[player.locationClass][player.locationFloor][player.locationPanelY] = [];
-	maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX] = [];
-	for (let i = 0; i < 10; i++) {
-  	let build = [];
-  	for (let ii = 0; ii < 10; ii++) {
-    	build.push({type : 'nothing'});
-  }
-  console.log(String(build));
-  maindata[player.locationClass][player.locationFloor][player.locationPanelY][player.locationPanelX].push(build);
-}}
-
-function update() {
-	panelWrite();
-	panelScan();
-	control = true
-}
-
-update();
+document.body.style.backgroundColor = '#141a38';
 </script>
-
-</html>
