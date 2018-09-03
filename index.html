@@ -2,10 +2,19 @@
 <title>squidji.github.io</title>
 
 <style>
+
+body {
+	background-image: url("blue.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
 h1 {
     background-color: blue;
     color: black;
     padding: 10px;
+	border-left: 6px inset blue;
+	border-top: 6px outset blue;
 }
 
 h2 {
@@ -82,12 +91,11 @@ button {
 
 <h1>Ben Squidji</h1>
 <h2>New Stuff</h2>
-<button><span>New Section of the website to display anything new! </span></button>
+<button onclick="location.href='http://squidji.github.io/v1.2.html'"><span>New Website v1.2 </span></button><button><span>New Section of the website to display anything new! </span></button>
 <h3>Projects</h3>
 <button class="button" style="vertical-align:middle" onclick="location.href='http://squidji.github.io/Panels'"><span>Panels </span></button>
 <h3>Social Media</h3>
 <button class="button" style="vertical-align:middle" onclick="location.href='https://www.instagram.com/ben__squidji'"><span>Instagram </span></button>
-
 
 <script>
 document.body.style.backgroundColor = '#151619';
