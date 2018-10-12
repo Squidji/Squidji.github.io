@@ -25,7 +25,21 @@
     }
     ul {
       padding: 10px;
-      background: rgba(0,0,0,0.5);
+      background: rgb(0, 255, 169);
+      animation: colorchange 7s infinite alternate;
+    }
+    @keyframes colorchange{
+      0% {background:rgb(0, 255, 169)}
+      10% {background:rgb(0, 255, 169)}
+      20% {background:rgb(0, 225, 255)}
+      30% {background:rgb(0, 174, 255)}
+      40% {background:#006eff}
+      50% {background:#0800ff}
+      60% {background:#6e00ff}
+      70% {background:#b200ff}
+      80% {background:#dc00ff}
+      90% {background:#ff00e5}
+      100%{background:#d0ff00}
     }
     li {
       display: inline;
@@ -47,15 +61,14 @@
       }
     }
     h2 {
-	  border : 8px outset #422887;
-	    font-family: "Arial", Helvetica, sans-serif;
-	  background-color : #422887;
+	   border-left: 8px solid #8e21af;
+	   background-color : #4821af;
+	   padding: 5px;
     }
     h3 {
       border-left: 6px solid blue;
       background-color: #2344af;
-  	padding: 10px;
-	font-family: "Arial", Helvetica, sans-serif;
+  	  padding: 10px;
     }
     p {
   	  color: white;
@@ -74,13 +87,15 @@
       cursor: pointer;
       margin: 5px;
       border: 5px double #41444c;
+      margin: 0 auto;
+      text-align: center;
     }
+
     .button {
       display: inline-block;
       border-radius: 4px;
       background-color: #41444c;
       border: none;
-      color: #000000;
       text-align: center;
       font-size: 28px;
       padding: 20px;
@@ -114,9 +129,10 @@
 </head>
 <body>
   <header>
-    <img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25%>
+    <img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25% style='padding:10px'>
     <h1>Squidji</h1>
-    <ul></ul>
+    <ul>
+    </ul>
   </header>
   <h2>New Stuff</h2>
 <button onclick="location.href='http://squidji.github.io/ProjectPanels-TechBeta.html'"><span>Panels : New Tech Beta Available! </span></button>
