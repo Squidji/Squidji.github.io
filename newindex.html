@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #151619;
+    }
+    header {
+      text-align: center;
+      background: url('https://raw.githubusercontent.com/Squidji/Squidji.github.io/master/blue.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+    h2 {
+	  border : 8px outset #422887;
+	  background-color : #422887;
+    }
+    h3 {
+      border-left: 6px solid blue;
+      background-color: #2344af;
+  	padding: 10px;
+    }
+    p {
+  	  color: white;
+  	  font-family: "Arial";
+    }
+    button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #1b527c;
+      border: none;
+      color: #000000;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      border: 5px double #41444c;
+    }
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #41444c;
+      border: none;
+      color: #000000;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .button:hover span {
+      padding-right: 25px;
+    }
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25%>
+    <h1>Squidji</h1>
+    
+  </header>
+  <h2>New Stuff</h2>
+<button onclick="location.href='http://squidji.github.io/ProjectPanels-TechBeta.html'"><span>Panels : New Tech Beta Available! </span></button>
+<button onclick="location.href='http://squidji.github.io/VersionData.html'"><span>New Website v1.4 </span></button>
+<h3>Projects</h3>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://squidji.github.io/dungeonsdoggos'"><span>Panels </span></button>
+<h3>Social Media</h3>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://www.instagram.com/squidji_spam/'"><span>Instagram </span></button>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/Squidji'"><span>Github </span></button>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://squidji.github.io/image1.png'"><span>Snapchat </span></button>
+  <script>
+    $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  </script>
+</body>
