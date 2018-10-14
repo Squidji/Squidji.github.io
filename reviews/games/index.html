@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      background-color: #151619;
+    }
+    header {
+      text-align: center;
+      background: url('https://raw.githubusercontent.com/Squidji/Squidji.github.io/master/blue.jpg');
+      background-size: cover;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+      font-family: "Arial", Helvetica, sans-serif;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgb(0, 255, 169);
+      animation: colorchange 7s infinite alternate;
+    }
+    @keyframes colorchange{
+      0% {background:rgb(0, 255, 169)}
+      10% {background:rgb(0, 255, 169)}
+      20% {background:rgb(0, 225, 255)}
+      30% {background:rgb(0, 174, 255)}
+      40% {background:#006eff}
+      50% {background:#0800ff}
+      60% {background:#6e00ff}
+      70% {background:#b200ff}
+      80% {background:#dc00ff}
+      90% {background:#ff00e5}
+      100%{background:#d0ff00}
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+    h2 {
+		border : 8px outset #422887;
+		background-color : #422887;
+	}
+    h3 {
+      border-left: 6px solid blue;
+      background-color: #2344af;
+  	  padding: 10px;
+    }
+    p {
+  	  color: white;
+  	  font-family: "Arial";
+    }
+    button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #1b527c;
+      border: none;
+      color: #000000;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      border: 5px double #41444c;
+      margin: 0 auto;
+      text-align: center;
+    }
+	.selected {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #5d1b7c;
+      border: none;
+      color: #000000;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+      border: 5px double #41444c;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #41444c;
+      border: none;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    button:hover span {
+      padding-right: 25px;
+    }
+    button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+.reviews {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.reviews td, .reviews th {
+    border: 1px solid #ddd;
+    padding: 8px;
+	background-color: #151619;
+	color:white;
+}
+
+.reviews tr:nth-child(even){background-color: #f2f2f2;}
+
+.reviews tr:hover {background-color: #ddd;}
+
+.reviews th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #35169e;
+    color: white;
+}
+  </style>
+<header>
+<title>Videogame Reviews</title>
+<link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+<a href='https://squidji.github.io'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=10% style='padding:5px'></a><h1>Videogame Reviews</h1>
+<ul class='color'></ul>
+</header>
+
+<button class='selected' style='width:50%'>Reviews and Scores</button><button style='width:50%' onclick="location.href='http://squidji.github.io/reviews/games/rankings'"><span>Rankings</span></button>
+
+<table class='reviews' style='width:75%'>
+	<tr>
+		<th>Game</th>
+		<th></th>
+		<th>Score</th>
+		<th>Review</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td>Splatoon 2</td>
+		<td><img src='posters/Splatoon.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td>6.75/7</td>
+		<td></td>
+		<td>Shooter; 3rd Person</td>
+	</tr>
+</table>
+
+<script>
+document.body.style.backgroundColor = '#151619';
+</script>
+</html>
