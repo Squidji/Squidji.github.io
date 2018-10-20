@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
   <link href="/normalize.css" rel="stylesheet">
-  <title>Tentacle</title>
+  <title>Squidji</title>
   <style>
     body {
       background-color: #151619;
@@ -19,9 +19,9 @@
       font-size: 70px;
       font-family: "Arial", Helvetica, sans-serif;
     }
-    img {
+    .img {
       margin: 40px 0px 0px 0px;
-      border: 7px solid white;
+      border: 4px solid white;
       border-radius: 20px;
     }
     ul {
@@ -74,30 +74,15 @@
   	  color: white;
   	  font-family: "Arial";
     }
-    button {
-      display: inline-block;
-      border-radius: 4px;
-      background-color: #1b527c;
-      border: none;
-      color: #000000;
-      text-align: center;
-      font-size: 28px;
-      padding: 20px;
-      transition: all 0.5s;
-      cursor: pointer;
-      margin: 5px;
-      border: 5px double #41444c;
-      margin: 0 auto;
-      text-align: center;
-    }
     .button {
       display: inline-block;
       border-radius: 4px;
       background-color: #41444c;
       border: none;
       text-align: center;
-      font-size: 18px;
+      font-size: 28px;
       padding: 20px;
+      width: 200px;
       transition: all 0.5s;
       cursor: pointer;
       margin: 5px;
@@ -123,27 +108,43 @@
       opacity: 1;
       right: 0;
     }
-	input[type=text] {
-		padding: 12px 20px;
-		margin: 8px 0;
-		display: inline-block;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		box-sizing: border-box;
-		font-size:18px
-	}
   </style>
   <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
 </head>
 <body>
   <header>
-    <a href='https://squidji.github.io'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=8% style='padding:5px'></a>
-    <h1>Tentacle</h1>
-    <ul>
+    <a href='https://squidji.github.io'><img class='img' src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=10% style='padding:10px'></a>
+    <h1>Panels Engine</h1>
+    <ul class='wrapper'>
     </ul>
   </header>
 
-<p>HELLO</p>
-<input type="text"><button class='button'>GO</button>
+<div id='panels'></div>
 
+<script>
+function launch(){
+let div = document.getElementById('panels');
+let panelWhole = "";
+
+let xs = Number(document.getElementById('x').value);
+let ys = Number(document.getElementById('y').value);
+let ws = document.getElementById('w').value;
+let hs = document.getElementById('h').value;
+
+for (let y = 0; y < ys; y++){
+for (let x = 0; x < xs; x++){
+panelWhole += "<img id='" + y + ":" + x + "' width='" + ws + "' height='" + hs + "' src='https://avatars1.githubusercontent.com/u/34148795?s=460v=4' style='border-radius: 5px;'>";
+}
+panelWhole += '<br>';
+}
+console.log(panelWhole);
+div.innerHTML = panelWhole;
+}
+</script>
+
+<p>X: </p><input id='x' type="number" name="quantity" min="1" max="50" value='10'>
+<p>Y: </p><input id='y' type="number" name="quantity" min="1" max="50" value='10'>
+<p>Width: </p><input id='w' type="number" name="quantity" min="25" max="200" value='50'>
+<p>Height: </p><input id='h' type="number" name="quantity" min="25" max="200" value='50'>
+<button onclick='launch()'>Go</button>
 </body>

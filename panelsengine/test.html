@@ -1,0 +1,29 @@
+<h1>Panels Engine</h1>
+<div id='panels'></div>
+
+<script>
+function launch(){
+let div = document.getElementById('panels');
+let panelWhole = "";
+
+let xs = Number(document.getElementById('x').value);
+let ys = Number(document.getElementById('y').value);
+let ws = document.getElementById('w').value;
+let hs = document.getElementById('h').value;
+
+for (let y = 0; y < ys; y++){
+for (let x = 0; x < xs; x++){
+panelWhole += "<img id='" + y + ":" + x + "' width='" + ws + "' height='" + hs + "' src='https://avatars1.githubusercontent.com/u/34148795?s=460v=4' style='border-style: solid; border-width: 1px; border-radius: 5px; border-color: white;'>";
+}
+panelWhole += '<br>';
+}
+console.log(panelWhole);
+div.innerHTML = panelWhole;
+}
+</script>
+
+<p>X: </p><input id='x' type="number" name="quantity" min="1" max="50" value='10'>
+<p>Y: </p><input id='y' type="number" name="quantity" min="1" max="50" value='10'>
+<p>Width: </p><input id='w' type="number" name="quantity" min="25" max="200" value='50'>
+<p>Height: </p><input id='h' type="number" name="quantity" min="25" max="200" value='50'>
+<button onclick='launch()'>Go</button>
