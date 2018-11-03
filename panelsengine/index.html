@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Panels Engine</title>
+<meta charset="utf-8"/>
 
 <!-- TABS -->
 <style>
@@ -243,35 +244,42 @@ if (typeof(Storage) !== "undefined") {
 </script>
 <!-- Files -->
 <script>
-	let engineimages = ['ImageOne'];
+	let engineimages = ['ImageOne', 'ImageTwo'];
 	let engineimagedata = {};
 	let currentimage = 0;
 	
 	function launchimage() {
-		updateblocklist();
+		console.log('launchimage()')
+		console.log('next: updateimagelist()')
+		updateimagelist();
 	}
 	function updateimagelist() {
+		console.log('updateimagelist()')
 		let thelistimages = "";
 		for (let b = 0; b < engineimages.length; b++) {
-			thelistblocks += "<li id='image:" + b + "'><a onclick='changeimage(" + b + ")'>" + engineimage[b] + "</a></li>";
+			thelistimages += "<li id='image:" + b + "'><a onclick='changeimage(" + b + ")'>" + engineimages[b] + "</a></li>";
 		}
 		document.getElementById('imagelist').innerHTML = thelistimages;
 	}
 	function changeimage(imageid) {
+		console.log('changeimage()')
 		currentimage = imageid;
 		document.getElementById('imagename').value = engineimages[imageid];
 	}
 	function nameimage() {
+		console.log('nameimage()')
 		engineimages[currentimage] = document.getElementById('imagename').value;
 		updateimagelist();
 	}
 	function newimage() {
+		console.log('newimage()')
 		engineimages.push('newimage');
 		currentimage = engineimages.length - 1;
 		updateimagelist();
 		changeimage(currentimage);
 	}
 	function removeimage() {
+		console.log('removeimage()')
 		engineimages.splice(currentimage, 1)
 		currentimage = 0;
 		updateimagelist();
@@ -310,8 +318,8 @@ if (typeof(Storage) !== "undefined") {
 	<form>
 	Player Name: <input type='text' id='playername'>
 	Player Image: <input type='file' id='playerimage' class='button2'>
-	<button onclick='alert(document.getElementById("playerimage").value)'>Upload</button>
-	<img id='playerimageview'>
+	<button onclick='document.getElementById("playerimageview").src = document.getElementById("playerimage").value'>Upload</button>
+	<img id='playerimageview'/>
 	</form>
 </div>
 
@@ -339,8 +347,8 @@ if (typeof(Storage) !== "undefined") {
 	<h2>Images</h2>
 	<ul id='imagelist'>
 	</ul>
-	<button class='button2' onkeyup='newimage()'><span>Add Image</span></button>
-	<button class='button2' onkeyup='removeimage()'><span>Remove Image</span></button>
+	<button class='button2' onclick='newimage()'><span>Add Image</span></button>
+	<button class='button2' onclick='removeimage()'><span>Remove Image</span></button>
 	<form>
 	<br>Name: <input type='text' onkeyup='nameimage()' id='imagename'>
 	</form>
