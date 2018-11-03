@@ -34,8 +34,6 @@ body, html {
 #Blocks {background-color: green;}
 #Player {background-color: blue;}
 #About {background-color: orange;}
-#Files {background-color: purple;}
-#Test {background-color: #333;}
 </style>
 <script>
 function openPage(pageName, elmnt, color) {
@@ -55,6 +53,13 @@ function openPage(pageName, elmnt, color) {
 
 	// Add the specific color to the button used to open the tab content
 	elmnt.style.backgroundColor = color;
+}
+function savegame() {
+if (typeof(Storage) !== "undefined") {
+    alert('Saving is not a feature yet!')
+} else {
+	alert('Webstorage does not work with your current browser.')
+}
 }
 </script>
 
@@ -225,60 +230,8 @@ div.innerHTML = panelWhole;
 		changeblock(currentblock);
 	}
 </script>
-<!-- Player -->
-<script>
-</script>
-<!-- About -->
-<script>
-function savegame() {
-if (typeof(Storage) !== "undefined") {
-    alert('Saving is not a feature yet!')
-} else {
-	alert('Webstorage does not work with your current browser.')
-}
-}
-</script>
-<!-- Test -->
-<script>
-</script>
-<!-- Files -->
-<script>
-	let engineimages = ['ImageOne'];
-	let engineimagedata = {};
-	let currentimage = 0;
-	
-	function launchimage() {
-		updateblocklist();
-	}
-	function updateimagelist() {
-		let thelistimages = "";
-		for (let b = 0; b < engineimages.length; b++) {
-			thelistblocks += "<li id='image:" + b + "'><a onclick='changeimage(" + b + ")'>" + engineimage[b] + "</a></li>";
-		}
-		document.getElementById('imagelist').innerHTML = thelistimages;
-	}
-	function changeimage(imageid) {
-		currentimage = imageid;
-		document.getElementById('imagename').value = engineimages[imageid];
-	}
-	function nameimage() {
-		engineimages[currentimage] = document.getElementById('imagename').value;
-		updateimagelist();
-	}
-	function newimage() {
-		engineimages.push('newimage');
-		currentimage = engineimages.length - 1;
-		updateimagelist();
-		changeimage(currentimage);
-	}
-	function removeimage() {
-		engineimages.splice(currentimage, 1)
-		currentimage = 0;
-		updateimagelist();
-		changeimage(currentimage);
-	}
-</script>
 </head>
+
 <body>
 <h1 style='color:white'> Panels Engine</h1>
 <ul class='color'></ul>
@@ -290,9 +243,6 @@ if (typeof(Storage) !== "undefined") {
 
 <div id="Map" class="tabcontent">
 	<div id='panels'></div>
-	<form>
-		
-	</form>
 </div>
 
 <div id="Blocks" class="tabcontent">
@@ -308,19 +258,15 @@ if (typeof(Storage) !== "undefined") {
 
 <div id="Player" class="tabcontent">
 	<form>
-	Player Name: <input type='text' id='playername'>
-	Player Image: <input type='file' id='playerimage' class='button2'>
-	<button onclick='alert(document.getElementById("playerimage").value)'>Upload</button>
-	<img id='playerimageview'>
+	
 	</form>
 </div>
 
 <div id="About" class="tabcontent">
-	<a class='button' href='https://squidji.github.io/inkwork/data/panelsengine/wiki' target="_blank"><span>About Panels Engine</span></a>
 	<button class='button' onclick='savegame()'><span>Save Game</span></button>
-	<button class='button' onclick="openPage('Test', this, '#555')"><span>Run Game</span></button>
-	<button class='button' onclick='alert("Under Construction")'><span>Export Game</span></button>
-	<button class='button' onclick="openPage('Files', this, '#555');launchimage()"><span>Manage Files</span></button>
+	<button class='button'><span>About Panels Engine</span></button>
+	<button class='button'><span>Run Game</span></button>
+	<button class='button'><span>Export Game</span></button>
 	<form>
 	Title: <input type='text'><br>
 	Creator: <input type='text'>
@@ -331,20 +277,6 @@ if (typeof(Storage) !== "undefined") {
 	Panel Height: <input type="number" name="quantity" min="25" max="200" value='50' id='hpx'>
 	</form>
 </div> 
-
-<div id='Test' class='tabcontent'>
-</div>
-
-<div id='Files' class="tabcontent">
-	<h2>Images</h2>
-	<ul id='imagelist'>
-	</ul>
-	<button class='button2' onkeyup='newimage()'><span>Add Image</span></button>
-	<button class='button2' onkeyup='removeimage()'><span>Remove Image</span></button>
-	<form>
-	<br>Name: <input type='text' onkeyup='nameimage()' id='imagename'>
-	</form>
-</div>
 
 </body>
 <html>
