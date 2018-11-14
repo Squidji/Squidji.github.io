@@ -1,9 +1,265 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link href="/normalize.css" rel="stylesheet">
-  <title>Squidji</title>
+	<title>Squidji</title>
+	<meta charset="utf-8"/>
+	<link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- sidebar -->
+	<style>
+	.sidebar {
+	  margin: 0;
+	  padding: 0;
+	  width: 200px;
+	  background-color: #555;
+	}
+
+	.sidebar a {
+	  display: block;
+	  color: white;
+	  padding: 16px;
+	  text-decoration: none;
+	  font-family: "Arial", Helvetica, sans-serif;
+	}
+
+	.sidebar a:hover {
+	  background-color: #999;
+	  color: white;
+	}
+	</style>
+	<!-- timeline -->
+	<style>
+	.timelineh2 {
+		border : 0px outset #fff;
+		background-color : #fff;
+		font-family: "Arial", Helvetica, sans-serif;
+	}
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+		box-sizing: border-box;
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+		box-sizing: border-box;
+		content: '';
+		position: absolute;
+		width: 6px;
+		background-color: white;
+		top: 0;
+		bottom: 0;
+		left: 50%;
+		margin-left: -3px;
+	}
+
+	/* Container around content */
+	.timelineContainer {
+		box-sizing: border-box;
+		padding: 10px 40px;
+		position: relative;
+		background-color: inherit;
+		width: 50%;
+	}
+
+	/* Place the container to the left */
+	.timelineLeft {
+		box-sizing: border-box;
+		left: 0;
+	}
+
+	/* Place the container to the right */
+	.timelineRight {
+		box-sizing: border-box;
+		left: 50%;
+	}
+
+	/* Add arrows to the left container (pointing right) */
+	.timelineLeft::before {
+		box-sizing: border-box;
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		right: 30px;
+		border: medium solid white;
+		border-width: 10px 0 10px 10px;
+		border-color: transparent transparent transparent white;
+	}
+
+	/* Add arrows to the right container (pointing left) */
+	.timelineRight::before {
+		box-sizing: border-box;
+		content: " ";
+		height: 0;
+		position: absolute;
+		top: 22px;
+		width: 0;
+		z-index: 1;
+		left: 30px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	}
+
+	/* Fix the circle for containers on the right side */
+	.timelineRight::after {
+		box-sizing: border-box;
+		left: -16px;
+	}
+
+	/* The actual content */
+	.timelineContent {
+		box-sizing: border-box;
+		padding: 20px 30px;
+		background-color: white;
+		position: relative;
+		border-radius: 6px;
+	}
+
+	/* Media queries - Responsive timeline on screens less than 600px wide */
+	@media screen and (max-width: 600px) {
+	  /* Place the timelime to the left */
+	  .timeline::after {
+		left: 31px;
+	  }
+	  
+	  /* Full-width containers */
+	  .timelineContainer {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 25px;
+	  }
+	  
+	  /* Make sure that all arrows are pointing leftwards */
+	  .timelineContainer::before {
+		left: 60px;
+		border: medium solid white;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent white transparent transparent;
+	  }
+
+	  /* Make sure all circles are at the same spot */
+	  .timelineLeft::after, .right::after {
+		left: 15px;
+	  }
+	  
+	  /* Make all right containers behave like the left ones */
+	  .timelineRight {
+		left: 0%;
+	  }
+	}
+	</style>
+	<!-- icon-bar -->
+	<style>
+
+	.icon-bar {
+		background-color: #555;
+		overflow: auto;
+	}
+
+	.icon-bar a {
+		float: left;
+		width: 20%;
+		text-align: center;
+		transition: all 0.3s ease;
+		color: white;
+		font-size: 20px;
+	}
+
+	.icon-bar a:hover {
+		color: #000;
+	}
+	.Section {
+		display: none;
+	}
+	.reviews {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		border-collapse: collapse;
+		width: 100%;
+	}
+
+	.reviews td, .reviews th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		background-color: #151619;
+		color:white;
+	}
+
+	.reviews tr:nth-child(even){background-color: #f2f2f2;}
+
+	.reviews tr:hover {background-color: #ddd;}
+
+	.reviews th {
+		padding-top: 12px;
+		padding-bottom: 12px;
+		text-align: left;
+		background-color: #35169e;
+		color: white;
+	}
+	</style>
   <style>
+.info {
+	background-color: #151619;
+	border: 2px solid black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
+}
+   /* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #555;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #fff;
+    text-decoration: underline;
+} 
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	.checked {
+		color: orange;
+	}
+	li {
+		font-family: "Arial", Helvetica, sans-serif;
+	}
     body {
       background-color: #151619;
     }
@@ -25,28 +281,24 @@
       border: 7px solid white;
       border-radius: 20px;
     }
-    ul {
+    #Wrapper {
       padding: 10px;
       background-image: linear-gradient(to right, red , yellow);
-      animation: colorchange 7s infinite alternate;
+      animation: colorchange 8s infinite alternate;
     }
-@keyframes colorchange{
-	0% {background:rgb(0, 255, 169)}
-	10% {background:rgb(0, 255, 169)}
-	20% {background:rgb(0, 225, 255)}
-	30% {background:rgb(0, 174, 255)}
-	40% {background:#006eff}
-	50% {background:#0800ff}
-	60% {background:#6e00ff}
-	70% {background:#b200ff}
-	80% {background:#dc00ff}
-	90% {background:#ff00e5}
-	100%{background:#d0ff00}
-}
-    li {
-      display: inline;
-      padding: 0px 10px 0px 10px;
-    }
+	@keyframes colorchange{
+		0% {background:rgb(0, 255, 169)}
+		10% {background:rgb(0, 255, 169)}
+		20% {background:rgb(0, 225, 255)}
+		30% {background:rgb(0, 174, 255)}
+		40% {background:#006eff}
+		50% {background:#0800ff}
+		60% {background:#6e00ff}
+		70% {background:#b200ff}
+		80% {background:#dc00ff}
+		90% {background:#ff00e5}
+		100%{background:#ff00c3}
+	}
     article {
       max-width: 500px;
       padding: 20px;
@@ -63,13 +315,15 @@
       }
     }
     h2 {
-		border : 8px outset #422887;
-		background-color : #422887;
+		border : 8px outset #4a25aa;
+		background-color : #4a25aa;
+		font-family: "Arial", Helvetica, sans-serif;
 	}
     h3 {
-      border-left: 6px solid #0104af;
-      background-color: #2344af;
+      border-left: 6px solid #000175;
+      background-color: #1739a8;
   	  padding: 10px;
+	  font-family: "Arial", Helvetica, sans-serif;
     }
     p {
   	  color: white;
@@ -126,27 +380,316 @@
       right: 0;
     }
   </style>
-  <link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+	<script>
+	function openPage(pageName) {
+		var i, tabcontent, tablinks;
+		tabcontent = document.getElementsByClassName("Section");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+		
+		if (pageName == 'Home') {
+			document.title = 'Squidji';
+			document.getElementById('name').style.fontSize = '70px';
+			document.getElementById('name').innerHTML = 'Squidji';
+			document.getElementById('profile').style.width = '25%';
+			document.getElementById('profile').style.borderWidth = '7px';
+		} else if (pageName == 'VersionData') {
+			document.title = 'Version Data';
+			document.getElementById('name').style.fontSize = '55px';
+			document.getElementById('name').innerHTML = 'Version Data';
+			document.getElementById('profile').style.width = '10%';
+			document.getElementById('profile').style.borderWidth = '4px';
+		} else if (pageName == 'Reviews') {
+			document.title = 'Reviews';
+			document.getElementById('name').style.fontSize = '55px';
+			document.getElementById('name').innerHTML = 'Reviews';
+			document.getElementById('profile').style.width = '10%';
+			document.getElementById('profile').style.borderWidth = '4px';
+		} else if (pageName == 'Snapcode') {
+			document.title = 'Snapcode';
+			document.getElementById('name').style.fontSize = '45px';
+			document.getElementById('name').innerHTML = 'Snapcode';
+			document.getElementById('profile').style.width = '7%';
+			document.getElementById('profile').style.borderWidth = '4px';
+		} else if (pageName == 'Inkwork') {
+			document.title = 'Inkwork';
+			document.getElementById('name').style.fontSize = '45px';
+			document.getElementById('name').innerHTML = 'Inkwork';
+			document.getElementById('profile').style.width = '7%';
+			document.getElementById('profile').style.borderWidth = '4px';
+		} else if (pageName == 'Videos') {
+			document.title = 'Videos';
+			document.getElementById('name').style.fontSize = '45px';
+			document.getElementById('name').innerHTML = 'Videos';
+			document.getElementById('profile').style.width = '7%';
+			document.getElementById('profile').style.borderWidth = '4px';
+		}
+		
+		// Show the specific tab content
+		document.getElementById(pageName).style.display = "block";
+	}
+</script>
+<script>
+let currentdir = 'inkwork';
+let inkwork = {
+	0: 'folder',
+	1: 'Inkwork',
+	techbetas:{
+		0:'folder',
+		1: 'Tech Tests',
+		bootstrap:['file', 'html', 'Bootstrap Test', 'https://squidji.github.io/inkwork/techbetas/tests/bootstrap1.html']
+	},
+	archives:{
+		0:'folder',
+		1:'Archive',
+		panels:{
+			0:'folder',
+			1:'Panels'
+		}
+	}
+};
+
+</script>
 </head>
 <body>
-  <header>
-    <a href='https://squidji.github.io'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25% style='padding:10px'></a>
-    <h1>Squidji</h1>
-    <ul class='wrapper'></ul>
-  </header>
+<header>
+    <a onclick='openPage("Home")'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25% style='padding:10px' id='profile'></a>
+    <h1 id='name'>Squidji</h1>
+    <div class="icon-bar" id='Wrapper'>
+	  <a onclick='openPage("Home")'><i class="fa fa-home"></i></a> 
+	  <a onclick='openPage("Inkwork")'><i class="fa fa-code-fork"></i></a>
+	  <a href='https://squidji.github.io/Panels' target='_blank'><i class="fa fa-th"></i></a> 
+	  <a onclick='openPage("Reviews")'><i class="fa fa-star-half-o"></i></a>
+	  <a onclick='openPage("Videos")'><i class="fa fa-video-camera"></i></a>
+	</div>
+</header>
+<div id='Home' class='Section'>
   <h2>New Stuff</h2>
-<button onclick="location.href='http://squidji.github.io/versiondata'"><span>New Website v2.4 </span></button>
-<button onclick="location.href='http://squidji.github.io/Panels'"><span>Panels Engine Beta v3.0 </span></button>
-<button onclick="location.href='http://squidji.github.io/videos'"><span>New: Videos </span></button>
-<h3>Projects</h3>
-<button class='button' style='vertical-align:middle' onclick='location.href="https://squidji.github.io/Panels"'><span>Panels</span></button>
-<button class="button" style="vertical-align:middle" onclick="location.href='https://squidji.github.io/inkwork'"><span>Inkwork </span></button>
-<button class='button' style='vertical-align:middle' onclick="location.href='https://squidji.github.io/reviews'"><span>Reviews</span></button>
-<button class='button' style='vertical-align:middle' onclick='location.href="https://squidji.github.io/videos"'><span>Videos</span></button>
+<button onclick="openPage('VersionData')"><span>New Website v3.0 </span></button>
 <h3>Social Media</h3>
 <button class="button" style="vertical-align:middle" onclick="location.href='https://www.instagram.com/squidji_spam/'"><span>Instagram </span></button>
 <button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/Squidji'"><span>Github </span></button>
-<button class="button" style="vertical-align:middle" onclick="location.href='https://squidji.github.io/snapchat.html'"><span>Snapchat </span></button>
+<button class="button" style="vertical-align:middle" onclick="openPage('Snapcode');"><span>Snapchat </span></button>
 <button class="button" style="vertical-align:middle" onclick="location.href='https://www.youtube.com/channel/UCStBQGD3RVTzmrKELepZefA'"><span>Youtube </span></button>
+</div>
+<div id='Inkwork' class='Section'>
+ <ul class="breadcrumb" id='inkbread'>
+  <li><a onclick='inkworkSet()'>Inkwork</a></li>
+</ul>
+<div id='inkworkflow'>
+<button class="info" onclick='location.href="https://squidji.github.io/inkwork/techbetas/tests/bootstrap1.html"'><i class="fa fa-file"></i> Bootstrap Test</button>
+</div>
+</div>
+<div id='Panels' class='Section'>
+</div>
+<div id='Reviews' class='Section'><br>
+<button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('MoviesR')"><span>Movies </span></button>
+<button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('VideogamesR')"><span>Video Games </span></button>
+<button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('BooksR')"><span>Books </span></button>
+<button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('TelevisionR')"><span>TV Shows </span></button>
+</div>
+<div id='MoviesR' class='Section'><br>
+<table class='reviews' style='width:75%'>
+	<tr>
+		<th>Movie</th>
+		<th></th>
+		<th>Score</th>
+		<th>Review</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td>Venom</td>
+		<td><img src='posters/Venom.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></td>
+		<td></td>
+		<td>Action; Superhero</td>
+	</tr>
+</table>
+</div>
+<div id='VideogamesR' class='Section'><br>
+<table class='reviews' style='width:75%'>
+	<tr>
+		<th>Game</th>
+		<th></th>
+		<th>Score</th>
+		<th>Review</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td>Splatoon 2</td>
+		<td><img src='posters/Splatoon.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></td>
+		<td>N/A</td>
+		<td>Shooter; 3rd Person</td>
+	</tr>
+	<tr>
+		<td>Super Mario Odyssey</td>
+		<td><img src='posters/Odyssey.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td>N/A</td>
+		<td>Open-World Platformer</td>
+	</tr>
+	<tr>
+		<td>The Legend of Zelda: Breath of the Wild</td>
+		<td><img src='posters/botw.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td>N/A</td>
+		<td>Open-World Adventure</td>
+	</tr>
+</table>
+</div>
+<div id='BooksR' class='Section'><br>
+<table class='reviews' style='width:75%'>
+	<tr>
+		<th>Book</th>
+		<th></th>
+		<th>Score</th>
+		<th>Review</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td>Wings of Fire : The Lost Continent</td>
+		<td><img src='posters/TLC.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td></td>
+		<td>Fiction; Adventure</td>
+	</tr>
+</table>
+</div>
+<div id='TelevisionR' class='Section'><br>
+<table class='reviews' style='width:75%'>
+	<tr>
+		<th>TV Show</th>
+		<th></th>
+		<th>Score</th>
+		<th>Review</th>
+		<th>Genre</th>
+	</tr>
+	<tr>
+		<td>Sherlock</td>
+		<td><img src='posters/Sherlock.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></td>
+		<td>N/A</td>
+		<td>Mystery</td>
+	</tr>
+</table>
+</div>
+<div id='Videos' class='Section'>
+<h4 style='color:#fff;font-size:20px;'>Nothing Here Yet...</h4>
+</div>
+<div id='VersionData' class='Section'>
+<br><br>
+<div class="timeline">
+  <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.0</h2></a>
+		<ul>
+		<li>Updated Colors</li>
+		<li>New Toolbar</li>
+		<li>New Easy to Use Design</li>
+		<li>Updated Version History</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineRight">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v2.4.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.4</h2></a>
+		<ul>
+		<li>Added Videos</li>
+		<li>Added Added Youtube</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v2.3.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.3</h2></a>
+		<ul>
+		<li>Added Inkwork</li>
+		<li>Moved Dungeons and Doggos to Inkwork</li>
+		<li>Bug Fixes to TimeMachine</li>
+		<li>Bug Fixes to Social Media</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineRight">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v2.2.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.2</h2></a>
+		<ul>
+		<li>Added Panels Engine</li>
+		<li>Added TV Shows to Reviews</li>
+		</ul>
+    </div>
+  </div>
+    <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v2.1.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.1</h2></a>
+		<ul>
+		<li>Updated Buttons</li>
+		<li><a onclick='openPage("PanelsTimeMachine")' style='color:black;text-decoration: underline;'>Time Machine for Dungeons & Doggos</a></li>
+		<li>Made header picture home button</li>
+		<li>Added Reviews</li>
+		<li>Updated Headings</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineRight">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v2.0.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.0</h2></a>
+		<ul>
+		<li>Updated header with picture</li>
+		<li>Added color-changing bar</li>
+		<li>Added Time Machine</li>
+		<li>Changed 'Project Panels' to Dungeons and Doggos</li>
+		</ul>
+    </div>
+  </div>
+    <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v1.4.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v1.4</h2></a>
+		<ul>
+		<li>Removed 'Movies'</li>
+		<li>Updated Header</li>
+		<li>Added 'Project Panels'</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineRight">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v1.3.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v1.3</h2></a>
+		<ul>
+		<li>Added 'Movies'</li>
+		<li>Added Github Link</li>
+		<li>Added Background Image to Panels</li>
+		<li>Added 'Version History'</li>
+		<li>Changed Instagram Link</li>
+		</ul>
+    </div>
+  </div>
+    <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v1.2.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v1.2</h2></a>
+		<ul>
+		<li>Changed Header Style</li>
+		<li>Added Background Image</li>
+		</ul>
+    </div>
+  </div>
+  <div class="timelineContainer timelineRight">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v1.1.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v1.1</h2></a>
+    </div>
+  </div>
+  <div class="timelineContainer timelineLeft">
+    <div class="timelineContent">
+      <a href='https://squidji.github.io/timemachine/v1.0.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v1.0</h2></a>
+    </div>
+  </div>
+</div>
+</div>
+<div id='Snapcode' class='Section'>
+<img style='border-width: 0px;width: 20%;align: center;' src='image1.png' class='center'/>
+</div>
+<script>openPage('Home')</script>
 </body>
 </html>
