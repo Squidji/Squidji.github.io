@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Squidji</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8"/>
 	<link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -424,7 +425,15 @@ ul.breadcrumb li a:hover {
 			document.getElementById('name').innerHTML = 'Videos';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
+		} else if (pageName == 'Sandbox') {
+			document.title = 'Sandbox';
+			document.getElementById('name').style.fontSize = '45px';
+			document.getElementById('name').innerHTML = 'Sandbox';
+			document.getElementById('profile').style.width = '7%';
+			document.getElementById('profile').style.borderWidth = '4px';
 		}
+		
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
 		
 		// Show the specific tab content
 		document.getElementById(pageName).style.display = "block";
@@ -451,6 +460,17 @@ let inkwork = {
 };
 
 </script>
+<!-- Mobile -->
+<style>
+@media screen and (max-width: 440px) {
+	.button {
+		width: 96%;
+	}
+	button {
+		width: 96%;
+	}
+}
+</style>
 </head>
 <body>
 <header>
@@ -480,7 +500,6 @@ let inkwork = {
 <div id='inkworkflow'>
 <button class="info" onclick='location.href="https://squidji.github.io/inkwork/techbetas/tests/bootstrap1.html"'><i class="fa fa-file"></i> Bootstrap Test</button>
 <button class="info" onclick='openPage("Sandbox");'><i class="fa fa-file"></i> Squidji's Sandbox</button>
-<button class="info" onclick='location.href="https://squidji.github.io/inkwork/techbetas/tests/mobiletest.html"'><i class="fa fa-file"></i> Mobile Test</button>
 </div>
 </div>
 <div id='Panels' class='Section'>
