@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+.square {
+	width: 6px;
+	height: 6px;
+	background-color : gray;
+	display:inline-block;
+}
+body {
+	font-family: "Arial", Helvetica, sans-serif;
+	line-height: 0%;
+	text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+
+<div id='divin'></div>
+<h1></h1>
+<h2>No Game Loaded</h2>
+<input type='file' id='gamein'>
+
+<script>
+let divin = ''
+for (let y = 0; y < 95; y++) {
+	for (let x = 0; x < 175; x++) {
+		divin += '<div class="square"></div>'
+	}
+	divin += '<br>'
+}
+document.getElementById('divin').innerHTML = divin;
+</script>
+
+</body>
+</html>
