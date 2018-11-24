@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Panels Engine</title>
+<meta charset="utf-8"/>
+<link rel="icon" href="favicon.ico" type="image/ico" sizes="16x16">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Base -->
+<style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #41444c;
+  border: none;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button:hover {
+	animation: colorchange 1s infinite alternate;
+}
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+button:hover span {
+  padding-right: 25px;
+}
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<!-- Sidenav -->
+<style>
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+	font-family: arial;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+	animation: colorchange 1s infinite alternate;
+}
+.main {
+    margin-left: 160px;
+    padding: 0px 0px;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+} 
+#open-nav {display: none; width: 0%;}
+#close-nav {display: none;}
+</style>
+<!-- Tabs -->
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+.tablink {
+  background-color: #41444c;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+.tablink:hover {
+  background-color: #777;
+  animation: colorchange 1s infinite alternate;
+}
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+@keyframes colorchange{
+	0% {background:rgb(0, 255, 169)}
+	10% {background:rgb(0, 255, 169)}
+	20% {background:rgb(0, 225, 255)}
+	30% {background:rgb(0, 174, 255)}
+	40% {background:#006eff}
+	50% {background:#0800ff}
+	60% {background:#6e00ff}
+	70% {background:#b200ff}
+	80% {background:#dc00ff}
+	90% {background:#ff00e5}
+	100%{background:#ff00c3}
+}
+
+#Home {background-color: #0066cc;}
+#Map {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+<script>
+function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+}
+</script>
+
+<!-- Mobile -->
+<style>
+@media screen and (max-width: 500px) {
+	.sidenav {
+		width: 0;
+	}
+	.main {
+		margin-left: 0px;
+	}
+	.sidenav a {
+		font-size: 40px;
+		padding-left: 32px;
+		text-align: 40px
+	}
+	.tablink {
+		width: 21%;
+	}
+	#open-nav {display: block; width: 16%;}
+	#close-nav {display: block;}
+}
+</style>
+<script>
+/* Open when someone clicks on the span element */
+function openNav() {
+    document.getElementById("sidenav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    document.getElementById("sidenav").style.width = "0%";
+} 
+</script>
+
+</head>
+<body>
+
+<div class="sidenav" id='sidenav'>
+	<a id='close-nav' onclick='closeNav()'><i class="fa fa-times"></i></a>
+	<a id='defaultOpen' onclick="openPage('Home', this, '#111')">Home</a>
+	<a>Files</a>
+	<a>Save</a>
+	<a>Load</a>
+	<a>Settings</a>
+</div>
+
+<div class="main" style='height:100%' id='main'>
+<button class='tablink' onclick='openNav()' id='open-nav' style='width:16%;'><i class="fa fa-bars"></i></button>
+<button class="tablink" onclick="openPage('Map', this, 'red')">Map</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Blocks</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Items</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Player</button>
+
+<div id="Home" class="tabcontent">
+  <h1>Panels Engine</h1>
+  <button class='button'><span>About</span></button>
+</div>
+
+<div id="Map" class="tabcontent">
+  <h3>Map</h3>
+  <p>Map is where the heart is..?</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+</div> 
+
+<script>
+document.getElementById("defaultOpen").click();
+console.log(document.getElementById("main").style.marginLeft);
+</script>
+
+</body>
+</html>
