@@ -203,7 +203,7 @@
 		color: white;
 	}
 	</style>
-<style>
+  <style>
 .info {
 	background-color: #151619;
 	border: 2px solid black;
@@ -211,21 +211,12 @@
     font-size: 16px;
     cursor: pointer;
     border-color: #2196F3;
-    color: dodgerblue;
-	animation: colorchangeInfo 4s infinite alternate;
+    color: dodgerblue
 }
-@keyframes colorchangeInfo{
-	0% {border-color:rgb(0, 255, 169); color:rgb(0, 255, 169);}
-	10% {border-color:rgb(0, 255, 169); color:rgb(0, 255, 169);}
-	20% {border-color:rgb(0, 225, 255); color:rgb(0, 225, 255);}
-	30% {border-color:rgb(0, 174, 255); color:rgb(0, 174, 255);}
-	40% {border-color:#006eff; color:#006eff;}
-	50% {border-color:#0800ff; color:#0800ff;}
-	60% {border-color:#6e00ff; color:#6e00ff;}
-	70% {border-color:#b200ff; color:#b200ff;}
-	80% {border-color:#dc00ff; color:#dc00ff;}
-	90% {border-color:#ff00e5; color:#ff00e5;}
-	100%{border-color:#ff00c3; color:#ff00c3;}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
 }
    /* Style the list */
 ul.breadcrumb {
@@ -389,8 +380,8 @@ ul.breadcrumb li a:hover {
       opacity: 1;
       right: 0;
     }
-</style>
-<script>
+  </style>
+	<script>
 	function openPage(pageName) {
 		var i, tabcontent, tablinks;
 		tabcontent = document.getElementsByClassName("Section");
@@ -428,7 +419,6 @@ ul.breadcrumb li a:hover {
 			document.getElementById('name').innerHTML = 'Inkwork';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
-			openWork('InkHome');
 		} else if (pageName == 'Videos') {
 			document.title = 'Videos';
 			document.getElementById('name').style.fontSize = '45px';
@@ -481,8 +471,6 @@ let inkwork = {
 	}
 }
 </style>
-<!-- Tweets -->
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
 <header>
@@ -497,49 +485,21 @@ let inkwork = {
 	</div>
 </header>
 <div id='Home' class='Section'>
-	<h2>New Stuff</h2>
-	<button onclick="openPage('VersionData')"><span>New Website v3.1 </span></button>
-	<h3>Twitter</h3>
-	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Twitter amirite?</p>&mdash; Ben Squidji (@ben_squidji) <a href="https://twitter.com/ben_squidji/status/1067605378391773185?ref_src=twsrc%5Etfw">November 28, 2018</a></blockquote>
-	<h3>Social Media</h3>
-	<button class="button" style="vertical-align:middle" onclick="location.href='https://twitter.com/ben_squidji/'"><span>Twitter </span></button>
-	<button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/Squidji'"><span>Github </span></button>
-	<button class="button" style="vertical-align:middle" onclick="openPage('Snapcode');"><span>Snapchat </span></button>
-	<button class="button" style="vertical-align:middle" onclick="location.href='https://www.youtube.com/channel/UCStBQGD3RVTzmrKELepZefA'"><span>Youtube </span></button>
+  <h2>New Stuff</h2>
+<button onclick="openPage('VersionData')"><span>New Website v3.0 </span></button>
+<h3>Social Media</h3>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://www.instagram.com/squidji_spam/'"><span>Instagram </span></button>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/Squidji'"><span>Github </span></button>
+<button class="button" style="vertical-align:middle" onclick="openPage('Snapcode');"><span>Snapchat </span></button>
+<button class="button" style="vertical-align:middle" onclick="location.href='https://www.youtube.com/channel/UCStBQGD3RVTzmrKELepZefA'"><span>Youtube </span></button>
 </div>
 <div id='Inkwork' class='Section'>
-<style>
-.inkpage {
-	display: none;
-}
-</style>
-<script>
-let br = {
-	InkHome : ["\"InkHome\""],
-	Projects : ["\"InkHome\"", "\"Projects\""]
-}
-function openWork(pageName) {
-    var i, tabcontent;
-	let breadcrumb = br[pageName];
-    tabcontent = document.getElementsByClassName("inkpage");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    document.getElementById(pageName).style.display = "block";
-	let len = breadcrumb.length;
-	let bread = document.getElementById('bread').innerHTML = "";
-	for (i = 0; i < len; i++) {
-		document.getElementById('bread').innerHTML += '<li><a onclick=\'openWork("' + breadcrumb[i].split('"').join('') + '")\'>' + breadcrumb[i].split('"').join('') + '</a></li>';
-	}
-}
-</script>
-<ul class="breadcrumb" id='bread'>
-<li><a onclick='openWork("InkHome")'>InkHome</a></li>
+ <ul class="breadcrumb" id='inkbread'>
+  <li><a onclick='inkworkSet()'>Inkwork</a></li>
 </ul>
-<div id='InkHome' class='inkpage'>
-<button class="info" onclick='openWork("Projects");'><i class="fa fa-folder"></i> Projects</button>
-</div>
-<div id='Projects' class='inkpage'>
+<div id='inkworkflow'>
+<button class="info" onclick='location.href="https://squidji.github.io/inkwork/techbetas/tests/bootstrap1.html"'><i class="fa fa-file"></i> Bootstrap Test</button>
+<button class="info" onclick='openPage("Sandbox");'><i class="fa fa-file"></i> Squidji's Sandbox</button>
 <button class="info" onclick='location.href="https://squidji.github.io/rebirthtemplate.html"'><i class="fa fa-file"></i> Rebirth - Projects Template</button>
 </div>
 </div>
@@ -644,18 +604,9 @@ function openWork(pageName) {
 <div id='VersionData' class='Section'>
 <br><br>
 <div class="timeline">
-  <div class="timelineContainer timelineRight">
-    <div class="timelineContent">
-      <a href='https://squidji.github.io/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.1</h2></a>
-		<ul>
-		<li>Added Twitter</li>
-		<li>Updated Inkwork</li>
-		</ul>
-    </div>
-  </div>
   <div class="timelineContainer timelineLeft">
     <div class="timelineContent">
-      <a href='https://squidji.github.io/timemachine/v3.0.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.0</h2></a>
+      <a href='https://squidji.github.io/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.0</h2></a>
 		<ul>
 		<li>Updated Colors</li>
 		<li>New Toolbar</li>
@@ -698,7 +649,7 @@ function openWork(pageName) {
       <a href='https://squidji.github.io/timemachine/v2.1.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v2.1</h2></a>
 		<ul>
 		<li>Updated Buttons</li>
-		<li>Time Machine for Dungeons & Doggos</li>
+		<li><a onclick='openPage("PanelsTimeMachine")' style='color:black;text-decoration: underline;'>Time Machine for Dungeons & Doggos</a></li>
 		<li>Made header picture home button</li>
 		<li>Added Reviews</li>
 		<li>Updated Headings</li>
@@ -761,6 +712,9 @@ function openWork(pageName) {
 </div>
 <div id='Snapcode' class='Section'>
 <img style='border-width: 0px;width: 20%;align: center;' src='image1.png' class='center'/>
+</div>
+<div id='Sandbox' class='Section'>
+
 </div>
 <script>openPage('Home')</script>
 </body>
