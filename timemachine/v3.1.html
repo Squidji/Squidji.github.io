@@ -472,19 +472,12 @@ let inkwork = {
 </script>
 <!-- Mobile -->
 <style>
-#profile {
-	padding: 10px;
-}
-
 @media screen and (max-width: 440px) {
 	.button {
 		width: 96%;
 	}
 	button {
 		width: 96%;
-	}
-	#profile {
-		padding: 7px;
 	}
 }
 </style>
@@ -493,7 +486,7 @@ let inkwork = {
 </head>
 <body>
 <header>
-    <a onclick='openPage("Home")'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25% id='profile'></a>
+    <a onclick='openPage("Home")'><img src="https://avatars1.githubusercontent.com/u/34148795?s=460v=4" width=25% style='padding:10px' id='profile'></a>
     <h1 id='name'>Squidji</h1>
     <div class="icon-bar" id='Wrapper'>
 	  <a onclick='openPage("Home")'><i class="fa fa-home"></i></a> 
@@ -505,14 +498,14 @@ let inkwork = {
 </header>
 <div id='Home' class='Section'>
 	<h2>New Stuff</h2>
-	<button onclick="openPage('VersionData')"><span>New Website v3.2 </span></button>
+	<button onclick="openPage('VersionData')"><span>New Website v3.1 </span></button>
 	<h3>Twitter</h3>
 	<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Twitter amirite?</p>&mdash; Ben Squidji (@ben_squidji) <a href="https://twitter.com/ben_squidji/status/1067605378391773185?ref_src=twsrc%5Etfw">November 28, 2018</a></blockquote>
 	<h3>Social Media</h3>
-	<a target='_blank' href='https://twitter.com/ben_squidji/'><button class="button" style="vertical-align:middle"><span>Twitter </span></button></a>
-	<a target='_blank' href='https://github.com/Squidji/'><button class="button" style="vertical-align:middle"><span>Github </span></button></a>
+	<button class="button" style="vertical-align:middle" onclick="location.href='https://twitter.com/ben_squidji/'"><span>Twitter </span></button>
+	<button class="button" style="vertical-align:middle" onclick="location.href='https://github.com/Squidji'"><span>Github </span></button>
 	<button class="button" style="vertical-align:middle" onclick="openPage('Snapcode');"><span>Snapchat </span></button>
-	<a target='_blank' href='https://youtube.com/channel/UCStBQGD3RVTzmrKELepZefA'><button class="button" style="vertical-align:middle"><span>Youtube </span></button></a>
+	<button class="button" style="vertical-align:middle" onclick="location.href='https://www.youtube.com/channel/UCStBQGD3RVTzmrKELepZefA'"><span>Youtube </span></button>
 </div>
 <div id='Inkwork' class='Section'>
 <style>
@@ -547,7 +540,7 @@ function openWork(pageName) {
 <button class="info" onclick='openWork("Projects");'><i class="fa fa-folder"></i> Projects</button>
 </div>
 <div id='Projects' class='inkpage'>
-<a href='https://squidji.github.io/rebirthtemplate.html' target='_blank'><button class="info"><i class="fa fa-file"></i> Rebirth - Projects Template</button></a>
+<button class="info" onclick='location.href="https://squidji.github.io/rebirthtemplate.html"'><i class="fa fa-file"></i> Rebirth - Projects Template</button>
 </div>
 </div>
 <div id='Panels' class='Section'>
@@ -558,97 +551,90 @@ function openWork(pageName) {
 <button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('VideogamesR')"><span>Video Games </span></button>
 <button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('BooksR')"><span>Books </span></button>
 <button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('TelevisionR')"><span>TV Shows </span></button>
-<button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('MusicR')"><span>Music </span></button>
 </div>
 <div id='MoviesR' class='Section'><br>
-<table class='reviews' style='width:50%'>
+<table class='reviews' style='width:75%'>
 	<tr>
 		<th>Movie</th>
 		<th></th>
 		<th>Score</th>
+		<th>Review</th>
 		<th>Genre</th>
 	</tr>
 	<tr>
 		<td>Venom</td>
 		<td><img src='posters/Venom.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
 		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></td>
+		<td></td>
 		<td>Action; Superhero</td>
 	</tr>
 </table>
 </div>
 <div id='VideogamesR' class='Section'><br>
-<table class='reviews' style='width:50%'>
+<table class='reviews' style='width:75%'>
 	<tr>
 		<th>Game</th>
 		<th></th>
 		<th>Score</th>
+		<th>Review</th>
 		<th>Genre</th>
 	</tr>
 	<tr>
 		<td>Splatoon 2</td>
 		<td><img src='posters/Splatoon.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>6/7</td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span></td>
+		<td>N/A</td>
 		<td>Shooter; 3rd Person</td>
 	</tr>
 	<tr>
 		<td>Super Mario Odyssey</td>
 		<td><img src='posters/Odyssey.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>7/7</td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td>N/A</td>
 		<td>Open-World Platformer</td>
 	</tr>
 	<tr>
 		<td>The Legend of Zelda: Breath of the Wild</td>
 		<td><img src='posters/botw.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>7/7</td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td>N/A</td>
 		<td>Open-World Adventure</td>
 	</tr>
 </table>
 </div>
 <div id='BooksR' class='Section'><br>
-<table class='reviews' style='width:50%'>
+<table class='reviews' style='width:75%'>
 	<tr>
 		<th>Book</th>
 		<th></th>
 		<th>Score</th>
+		<th>Review</th>
 		<th>Genre</th>
 	</tr>
 	<tr>
 		<td>Wings of Fire : The Lost Continent</td>
 		<td><img src='posters/TLC.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>7/7</td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span></td>
+		<td></td>
 		<td>Fiction; Adventure</td>
 	</tr>
 </table>
 </div>
 <div id='TelevisionR' class='Section'><br>
-<table class='reviews' style='width:50%'>
+<table class='reviews' style='width:75%'>
 	<tr>
 		<th>TV Show</th>
 		<th></th>
 		<th>Score</th>
+		<th>Review</th>
 		<th>Genre</th>
 	</tr>
 	<tr>
 		<td>Sherlock</td>
 		<td><img src='posters/Sherlock.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>5/7</span></td>
+		<td><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star"></span><span class="fa fa-star"></span></td>
+		<td>N/A</td>
 		<td>Mystery</td>
-	</tr>
-</table>
-</div>
-<div id='MusicR' class='Section'><br>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th>Song</th>
-		<th></th>
-		<th>Score</th>
-		<th>Genre</th>
-	</tr>
-	<tr>
-		<td>Gangplank Galleon</td>
-		<td><img src='posters/smash.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>8/10</td>
-		<td>Jazz</td>
 	</tr>
 </table>
 </div>
@@ -658,19 +644,9 @@ function openWork(pageName) {
 <div id='VersionData' class='Section'>
 <br><br>
 <div class="timeline">
-   <div class="timelineContainer timelineLeft">
-    <div class="timelineContent">
-      <a href='https://squidji.github.io/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.2</h2></a>
-		<ul>
-		<li>Updated Mobile Website CSS</li>
-		<li>Changed Domain from <a target='_blank' href='https://squidji.github.io/' style='color:black;'>squidji.github.io</a> to <a target='_blank' href='https://squidji.tk/'style='color:black;'>squidji.tk</a></li>
-		<li>Added Music to Reviews</li>
-		</ul>
-    </div>
-  </div>
   <div class="timelineContainer timelineRight">
     <div class="timelineContent">
-      <a href='https://squidji.github.io/timemachine/v3.1.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.1</h2></a>
+      <a href='https://squidji.github.io/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.1</h2></a>
 		<ul>
 		<li>Added Twitter</li>
 		<li>Updated Inkwork</li>
