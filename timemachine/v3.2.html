@@ -402,35 +402,30 @@ ul.breadcrumb li a:hover {
 			document.title = 'Squidji';
 			document.getElementById('name').style.fontSize = '70px';
 			document.getElementById('name').innerHTML = 'Squidji';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '25%';
 			document.getElementById('profile').style.borderWidth = '7px';
 		} else if (pageName == 'VersionData') {
 			document.title = 'Version Data';
 			document.getElementById('name').style.fontSize = '55px';
 			document.getElementById('name').innerHTML = 'Version Data';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '10%';
 			document.getElementById('profile').style.borderWidth = '4px';
 		} else if (pageName == 'Reviews') {
 			document.title = 'Reviews';
 			document.getElementById('name').style.fontSize = '55px';
 			document.getElementById('name').innerHTML = 'Reviews';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '10%';
 			document.getElementById('profile').style.borderWidth = '4px';
 		} else if (pageName == 'Snapcode') {
 			document.title = 'Snapcode';
 			document.getElementById('name').style.fontSize = '45px';
 			document.getElementById('name').innerHTML = 'Snapcode';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
 		} else if (pageName == 'Inkwork') {
 			document.title = 'Inkwork';
 			document.getElementById('name').style.fontSize = '45px';
 			document.getElementById('name').innerHTML = 'Inkwork';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
 			openWork('InkHome');
@@ -438,23 +433,14 @@ ul.breadcrumb li a:hover {
 			document.title = 'Videos';
 			document.getElementById('name').style.fontSize = '45px';
 			document.getElementById('name').innerHTML = 'Videos';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
 		} else if (pageName == 'Sandbox') {
 			document.title = 'Sandbox';
 			document.getElementById('name').style.fontSize = '45px';
 			document.getElementById('name').innerHTML = 'Sandbox';
-			document.getElementById('profile').src = 'https://avatars1.githubusercontent.com/u/34148795?s=460v=4';
 			document.getElementById('profile').style.width = '7%';
 			document.getElementById('profile').style.borderWidth = '4px';
-		} else if (pageName == 'SmashBros') {
-			document.title = 'Super Smash Bros.';
-			document.getElementById('name').style.fontSize = '55px';
-			document.getElementById('name').innerHTML = 'Super Smash Bros.';
-			document.getElementById('profile').src = 'posters/smashball.png';
-			document.getElementById('profile').style.width = '10%';
-			document.getElementById('profile').style.borderWidth = '0px';
 		}
 		
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -491,16 +477,16 @@ ul.breadcrumb li a:hover {
     <div class="icon-bar" id='Wrapper'>
 	  <a onclick='openPage("Home")'><i class="fa fa-home"></i></a> 
 	  <a onclick='openPage("Inkwork")'><i class="fa fa-code-fork"></i></a>
-	  <a onclick='openPage("SmashBros")'><i class="fa fa-superpowers"></i></a>
-	  <a onclick='location.href="https://squidji.github.io/biti/"'><i class="fa fa-th"></i></a>
+	  <a onclick='alert("Panels is under construction.")'><i class="fa fa-th"></i></a> 
 	  <a onclick='openPage("Reviews")'><i class="fa fa-star-half-o"></i></a>
+	  <a onclick='openPage("Videos")'><i class="fa fa-video-camera"></i></a>
 	</div>
 </header>
 <div id='Home' class='Section'>
 	<h2>New Stuff</h2>
-	<button onclick="openPage('VersionData')"><span>New Website v3.3 </span></button>
-	<button onclick="openPage('SmashBros')"><span>New: Smash Bros. </span></button>
-	<button onclick="location.href='https://squidji.github.io/biti/'"><span>New: Biti </span></button>
+	<button onclick="openPage('VersionData')"><span>New Website v3.2 </span></button>
+	<h3>Twitter</h3>
+	<blockquote class="twitter-tweet" data-lang="en"><p lang="fr" dir="ltr">Super Smash Bros. Ultimate DLC Predictions<br><br>1. Arle from PuyoPuyo<br>2. Minecraft Steve<br>3. Banjo Kazooie</p>&mdash; Ben Squidji (@ben_squidji) <a href="https://twitter.com/ben_squidji/status/1071429937717018624?ref_src=twsrc%5Etfw">December 8, 2018</a></blockquote>
 	<h3>Social Media</h3>
 	<a target='_blank' href='https://twitter.com/ben_squidji/'><button class="button" style="vertical-align:middle"><span>Twitter </span></button></a>
 	<a target='_blank' href='https://github.com/Squidji/'><button class="button" style="vertical-align:middle"><span>Github </span></button></a>
@@ -543,263 +529,8 @@ function openWork(pageName) {
 <a href='https://squidji.tk/rebirthtemplate.html' target='_blank'><button class="info"><i class="fa fa-file"></i> Rebirth - Projects Template</button></a>
 </div>
 </div>
-<div id='SmashBros' class='Section'>
-	<img src='posters/64.jpg' height=230px onclick='openPage("64")'/>
-	<img src='posters/melee.png' height=230px onclick='openPage("Melee")'/>
-	<img src='posters/brawl.jpg' height=230px onclick='openPage("Brawl")'/>
-	<img src='posters/3ds.jpg' height=230px onclick='openPage("3ds")'/>
-	<img src='posters/wiiu.png' height=230px onclick='openPage("WiiU")'/>
-	<img src='posters/smash.jpg' height=230px onclick='openPage("Ultimate")'/>
-	<h2>Best Game</h2>
-	<table class='reviews' style='width:50%'>
-		<tr>
-			<th>Rank</th>
-			<th>Game</th>
-			<th></th>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: gold; color: black;'>#1</td>
-			<td>Super Smash Bros. Ultimate</td>
-			<td><img src='posters/smash.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: silver; color: black;'>#2</td>
-			<td>Super Smash Bros. Brawl</td>
-			<td><img src='posters/brawl.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: #CD7F32; color: black;'>#3</td>
-			<td>Super Smash Bros. Melee</td>
-			<td><img src='posters/melee.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px;'>#4</td>
-			<td>Super Smash Bros. for 3ds / Wii U</td>
-			<td><img src='posters/wiiu.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px;'>#5</td>
-			<td>Super Smash Bros.</td>
-			<td><img src='posters/64.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-	</table>
-	<h2>Best Newcomers</h2>
-	<table class='reviews' style='width:50%'>
-		<tr>
-			<th>Rank</th>
-			<th>Game</th>
-			<th></th>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: gold; color: black;'>#1</td>
-			<td>Super Smash Bros. for 3ds / Wii U</td>
-			<td><img src='posters/wiiu.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: silver; color: black;'>#2</td>
-			<td>Super Smash Bros. Ultimate</td>
-			<td><img src='posters/smash.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: #CD7F32; color: black;'>#3</td>
-			<td>Super Smash Bros. Melee</td>
-			<td><img src='posters/melee.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px;'>#4</td>
-			<td>Super Smash Bros. Brawl</td>
-			<td><img src='posters/brawl.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-	</table>
-	<h2>Best Theme Song</h2>
-	<table class='reviews' style='width:50%'>
-		<tr>
-			<th>Rank</th>
-			<th>Game</th>
-			<th></th>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: gold; color: black;'>#1</td>
-			<td>Super Smash Bros. for 3ds / Wii U</td>
-			<td><img src='posters/wiiu.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: silver; color: black;'>#2</td>
-			<td>Super Smash Bros. Ultimate</td>
-			<td><img src='posters/smash.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px; background-color: #CD7F32; color: black;'>#3</td>
-			<td>Super Smash Bros. Brawl</td>
-			<td><img src='posters/brawl.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px;'>#4</td>
-			<td>Super Smash Bros. Melee</td>
-			<td><img src='posters/melee.png'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-		<tr>
-			<td style='font-size: 30px;'>#5</td>
-			<td>Super Smash Bros.</td>
-			<td><img src='posters/64.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		</tr>
-	</table>
-</div>
-<div id='64' class='Section'>
-<h1 style='color: white;'>Super Smash Bros.</h1>
-<img src='posters/64.jpg' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>April 26th, 1999</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Nintendo 64</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>12</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>9</td>
-	</tr>
-</table>
-</div>
-<div id='Melee' class='Section'>
-<h1 style='color: white;'>Super Smash Bros. Melee</h1>
-<img src='posters/melee.png' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>December 3rd, 2001</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Gamecube</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>26</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>29</td>
-	</tr>
-</table>
-</div>
-<div id='Brawl' class='Section'>
-<h1 style='color: white;'>Super Smash Bros. Brawl</h1>
-<img src='posters/brawl.jpg' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>January 31st, 2008</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Wii</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>37</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>41</td>
-	</tr>
-</table>
-</div>
-<div id='3ds' class='Section'>
-<h1 style='color: white;'>Super Smash Bros. for Nintendo 3ds</h1>
-<img src='posters/3ds.jpg' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>September 13th, 2014</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Nintendo 3ds</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>58</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>42</td>
-	</tr>
-</table>
-</div>
-<div id='WiiU' class='Section'>
-<h1 style='color: white;'>Super Smash Bros. for Wii U</h1>
-<img src='posters/wiiu.png' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>November 21st, 2014</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Wii U</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>58</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>55</td>
-	</tr>
-</table>
-</div>
-<div id='Ultimate' class='Section'>
-<h1 style='color: white;'>Super Smash Bros. Ultimate</h1>
-<img src='posters/smash.jpg' height=300px style='margin-top: 0px;'/>
-<table class='reviews' style='width:50%'>
-	<tr>
-		<th></th>
-		<th></th>
-	</tr>
-	<tr>
-		<td>Release</td>
-		<td>December 7th, 2018</td>
-	</tr>
-	<tr>
-		<td>Console</td>
-		<td>Nintendo Switch</td>
-	</tr>
-	<tr>
-		<td>Characters</td>
-		<td>80</td>
-	</tr>
-	<tr>
-		<td>Stages</td>
-		<td>103</td>
-	</tr>
-</table>
+<div id='Panels' class='Section'>
+
 </div>
 <div id='Reviews' class='Section'><br>
 <button class="button" style="vertical-align:middle;width:99%;" onclick="openPage('MoviesR')"><span>Movies </span></button>
@@ -900,31 +631,31 @@ function openWork(pageName) {
 	<tr>
 		<td>Sherlock [All]</td>
 		<td><img src='posters/Sherlock.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>5/7</td>
+		<td>5/7</span></td>
 		<td>Mystery</td>
 	</tr>
 	<tr>
 		<td>Agents of Sheild [S1-2]</td>
 		<td><img src='posters/sheild.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>4/7</td>
+		<td>4/7</span></td>
 		<td>Action</td>
 	</tr>
 	<tr>
 		<td>Agents of Sheild [S3-4]</td>
 		<td><img src='posters/sheild2.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>6/7</td>
+		<td>6/7</span></td>
 		<td>Action</td>
 	</tr>
 	<tr>
 		<td>Attack on Titan [S1]</td>
 		<td><img src='posters/aot.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>6/7</td>
+		<td>6/7</span></td>
 		<td>Anime</td>
 	</tr>
 	<tr>
 		<td>My Hero Acadamia [S1]</td>
 		<td><img src='posters/myhero.jpg'  height=134 style='border-width:1px; border-radius:0px'/></td>
-		<td>7/7</td>
+		<td>7/7</span></td>
 		<td>Anime</td>
 	</tr>
 </table>
@@ -959,21 +690,9 @@ function openWork(pageName) {
 <div id='VersionData' class='Section'>
 <br><br>
 <div class="timeline">
-  <div class="timelineContainer timelineRight">
-    <div class="timelineContent">
-      <a href='https://squidji.tk/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.3</h2></a>
-		<ul>
-		<li>Added "Super Smash Bros." Section</li>
-		<li>Added Biti</li>
-		<li>Removed Twitter</li>
-		<li>Removed Videos</li>
-		<li>Bug Fixes</li>
-		</ul>
-    </div>
-  </div>
    <div class="timelineContainer timelineLeft">
     <div class="timelineContent">
-      <a href='https://squidji.tk/timemachine/v3.2.html' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.2</h2></a>
+      <a href='https://squidji.tk/' target="_blank" style='color:black;text-decoration: underline;'><h2 class='timelineh2'>v3.2</h2></a>
 		<ul>
 		<li>Updated Mobile Website CSS</li>
 		<li>Changed Domain from <a target='_blank' href='https://squidji.github.io/' style='color:black;'>squidji.github.io</a> to <a target='_blank' href='https://squidji.tk/'style='color:black;'>squidji.tk</a></li>
