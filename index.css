@@ -1,0 +1,127 @@
+body {
+	background-color: #151619;
+	margin: 0px;
+}
+header {
+	text-align: center;
+	background: url('https://squidji.github.io/blue.jpg');
+	background-size: cover;
+	color: white;
+	height: 100%;
+}
+h1 {
+	font-size: 70px;
+	font-family: "Arial", Helvetica, sans-serif;
+}
+h2 {
+	font-size: 40px;
+	color: white;
+	font-family: "Arial", Helvetica, sans-serif;
+	border-width: 0px;
+	border-left-width: 4px;
+	border-right-width: 4px;
+	border-style: solid;
+	border-color: white;
+}
+button {
+	color: white;
+	border-width: 2px;
+	border-color: white;
+	font-size: 28px;
+	background: none;
+	border-style: solid;
+	transition: 0.2s;
+	display: inline-block;
+	border-radius: 4px;
+	padding: 20px;
+	text-align: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+button:hover {
+	color: #151619;
+	background-color: white;
+}
+header img {
+	margin: 40px 0px 0px 0px;
+	border: 7px solid white;
+	border-radius: 20px;
+	padding: 10px;
+	transition: 0.5s;
+}
+header img:hover {
+	border-width: 2px;
+	padding: 15px;
+	border-radius: 30px;
+}
+.page {
+	display: none;
+	margin: 8px;
+	margin-left: 15px;
+	margin-right: 15px;
+	text-align: center;
+}
+.inkpage {
+	display: none;
+}
+#icon-bar {
+	padding: 10px;
+	background-image: linear-gradient(to right, blue, purple);
+	background-color: #555;
+	overflow: auto;
+}
+#icon-bar a {
+	float: left;
+	width: 20%;
+	text-align: center;
+	transition: all 0.5s ease;
+	color: white;
+	font-size: 25px;
+}
+#icon-bar a:hover {
+	font-size: 35px;
+}
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background: none;
+	font-family: "Arial", Helvetica, sans-serif;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: white;
+	transition: 0.5s;
+}
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "/\00a0";
+}
+ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+    text-decoration: underline;
+}
+table {
+	width: 100%;
+	font-family: "Arial", Helvetica, sans-serif;
+	color: white;
+	font-size: 28px;
+}
+th, td {
+	border-bottom: 1px solid #ddd;
+}
+td img {
+	height: 100px;
+}
+.smashtable {
+	width: 100%;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: 28px;
+}
