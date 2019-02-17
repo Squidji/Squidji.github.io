@@ -1,18 +1,127 @@
-@media screen and (max-width: 500px) {
-	#title {
-		margin-top: 25px;
+#MobileHeader {
+	background-color: white;
+	overflow: hidden;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	display: none;
+}
+
+#MobileHeader #myLinks {
+  display: none;
+}
+
+#MobileHeader a {
+  color: white;
+  padding: 14px 16px;
+  background-color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+#MobileHeader a.icon {
+  background: black;
+  display: block;
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@media screen and (max-width: 1175px) {
+	#DesktopHeader {
+		display: none;
 	}
-	header img {
-		border-width: 4px;
+	#MobileHeader {
+		display: inline;
+	}
+	#homeprofile {
+		width: 200px;
+	}
+	#homeprofile:hover {
+		width: 225px;
+	}
+	#Home h1 {
+		margin-top: 0px;
+	}
+	h1 {
+		font-size: 45px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#Home {
+		margin: 15px;
+		margin-top: 70px;
+	}
+	#homeprofile {
+		width: 100px;
+	}
+	#homeprofile:hover {
+		width: 115px;
+	}
+	h1 {
+		font-size: 40px;
+	}
+	footer {
+		font-size: 17px;
+	}
+	h3 {
+		font-size: 10px;
+	}
+	#About {
+		margin-left: 10%;
+	}
+	.button {
+		width: 150px;
+	}
+	#Inkwork, #Portfolio {
+		margin-left: 30px;
+	}
+	#Inkwork .box, #Portfolio .box, #Review .box, #Archive .box {
+		margin-left: 0px;
+	}
+	.Revbutton {
+		margin-left: 0px;
+		width: 290px;
+		font-size: 20px;
 		padding: 5px;
-		border-radius: 15px;
 	}
-	header img:hover {
-		border-width: 1.5px;
-		padding: 7.5px;
-		border-radius: 20px;
+	.RevTitle {
+		font-size: 25px;
 	}
-	.smashtable {
-		font-size: 18px;
+	th, td {
+		font-size: 20px;
+	}
+	#RevMovie, #RevTelevision, #RevVideogame {
+		margin-left: 5px;
+	}
+	#RevVideogame .RevTitle {
+		font-size: 20px;
+	}
+	#RevVideogame th, #RevVideogame td {
+		font-size: 15px;
+	}
+	#RevTelevision th, #RevTelevision td {
+		font-size: 19px;
+	}
+	h4 {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	#homeprofile {
+		width: 200px;
+	}
+	#homeprofile:hover {
+		width: 225px;
+	}
+	#Home h1 {
+		margin-top: 10px;
+		float: left;
+		text-align: left;
 	}
 }
