@@ -17,7 +17,7 @@
   padding: 14px 16px;
   background-color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
   display: block;
 }
 
@@ -43,12 +43,19 @@
 	#homeprofile:hover {
 		width: 225px;
 	}
+	#Home {
+		margin-top: 96px;
+	}
 	#Home h1 {
 		margin-top: 0px;
 	}
 	h1 {
 		font-size: 45px;
 	}
+	.Revbutton {
+		width: 600px;
+	}
+	
 }
 
 @media screen and (max-width: 600px) {
@@ -83,12 +90,6 @@
 	#Inkwork .box, #Portfolio .box, #Review .box, #Archive .box {
 		margin-left: 0px;
 	}
-	.Revbutton {
-		margin-left: 0px;
-		width: 290px;
-		font-size: 20px;
-		padding: 5px;
-	}
 	.RevTitle {
 		font-size: 25px;
 	}
@@ -97,6 +98,12 @@
 	}
 	#RevMovie, #RevTelevision, #RevVideogame {
 		margin-left: 5px;
+	}
+	.Revbutton {
+		margin-left: 0px;
+		width: 290px;
+		font-size: 20px;
+		padding: 5px;
 	}
 	#RevVideogame .RevTitle {
 		font-size: 20px;
