@@ -25,11 +25,7 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 }
-#name {
-	float:left;
-	color:black;
-}
-.tab:hover {
+#DesktopHeader a:hover {
 	color: #1faee3;
 }
 h1 {
