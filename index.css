@@ -203,17 +203,46 @@ h4 {
 	margin: 40px;
 	margin-top: 96px;
 }
+#PortArt img {
+	border-radius: 10px;
+	height: 200px;
+	transition: 0.5s;
+}
+#PortArt img:hover {
+	border-radius: 20px;
+	height: 225px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.38);
+	cursor: pointer;
+}
 #PortGraphic {
 	margin: 40px;
 	margin-top: 96px;
+}
+#PortGraphic img {
+	border-radius: 10px;
+	height: 200px;
+	transition: 0.5s;
+}
+#PortGraphic img:hover {
+	border-radius: 20px;
+	height: 225px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.38);
+	cursor: pointer;
 }
 #PortPhoto {
 	margin: 40px;
 	margin-top: 96px;
 }
-#PortMisc {
-	margin: 40px;
-	margin-top: 96px;
+#PortPhoto img {
+	border-radius: 10px;
+	height: 200px;
+	transition: 0.5s;
+}
+#PortPhoto img:hover {
+	border-radius: 20px;
+	height: 225px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.38);
+	cursor: pointer;
 }
 
 /* REVIEWS */
@@ -307,4 +336,15 @@ h4 {
 }
 #ArchTime li {
 	font-size: 20px;
+}
+#ArchMusic img {
+	border-radius: 10px;
+	height: 200px;
+	transition: 0.5s;
+}
+#ArchMusic img:hover {
+	border-radius: 20px;
+	height: 215px;
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.38);
+	cursor: pointer;
 }
