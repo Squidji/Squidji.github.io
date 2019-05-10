@@ -33,7 +33,7 @@ h1 {
 }
 .button {
 	border: solid 7px;
-	color: white;
+	color: black;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -42,7 +42,7 @@ h1 {
 	cursor: pointer;
 }
 .button:hover {
-	color: black;
+	color: white;
 }
 .page {
 	display: none;
@@ -160,6 +160,7 @@ h4 {
 	display: inline-block;
 	margin-left: 10px;
 	cursor: pointer;
+	margin-bottom: 13px;
 }
 #Inkwork .box:hover {
 	color: #1faee3;
@@ -192,8 +193,8 @@ h4 {
 	cursor: pointer;
 }
 #Portfolio .box:hover {
-	border-color: #1faee3;
-	color: #1faee3;
+	border-color: white;
+	color: white;
 }
 #PortArt {
 	margin: 40px;
@@ -262,6 +263,7 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 #Review .box:hover {
 	border-color: black;
@@ -282,6 +284,7 @@ h4 {
 	background-size: cover;
 	cursor: pointer;
 	padding: 10px;
+	margin-bottom: 10px;
 }
 .Revbutton:hover {
 	border-color: black;
@@ -321,6 +324,7 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 #Archive .box:hover {
 	border-color: white;
