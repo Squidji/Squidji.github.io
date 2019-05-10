@@ -191,6 +191,7 @@ h4 {
 	background-position: center;
 	background-size: cover;
 	cursor: pointer;
+	margin-bottom: 10px;
 }
 #Portfolio .box:hover {
 	border-color: white;
