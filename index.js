@@ -56,7 +56,7 @@ function openPost(post_id) {
 const timelogs = {
 	'6.0' : {
 		'title' : 'Dragon Roll v6.0',
-		'release' : '- - -',
+		'release' : 'May 27th, 2019',
 		'image_url' : 'img/v6.0.jpg',
 		'link' : 'https://squidji.tk/',
 		'logs' : [
