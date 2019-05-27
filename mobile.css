@@ -29,106 +29,274 @@
   right: 0;
   top: 0;
 }
+#MobileHeader #mobileName {
+	color:black;
+	background-color:white;
+}
 
-@media screen and (max-width: 1175px) {
+@media screen and (max-width: 910px) {
 	#DesktopHeader {
 		display: none;
 	}
 	#MobileHeader {
 		display: inline;
 	}
-	#homeprofile {
-		width: 200px;
-	}
-	#homeprofile:hover {
-		width: 225px;
-	}
-	#Home {
-		margin-top: 96px;
-	}
 	#Home h1 {
-		margin-top: 0px;
+		float: none;
+		text-align: left;
+		width: 100%;
 	}
-	h1 {
-		font-size: 45px;
+	#projects div::after {
+		content: none;
+		display: none;
 	}
-	.Revbutton {
-		width: 600px;
+	#projects div:hover::after {
+		content: none;
+		display: none;
 	}
-	
+	.rvbar {
+		font-size: 26px;
+		width: 90%;
+	}
+	.rvbar:hover {
+		letter-spacing: 2px;
+	}
+	#ReviPost img {
+		height: 300px;
+	}
+	#ReviPost img:hover {
+		height: 325px;
+	}
+	.gradient-button {
+		width: 100%;
+	}
+	#Cascade h1 {
+		font-size: 80px;
+		margin-top: 50px;
+	}
+	#Cascade #go {
+		font-size: 60px;
+	}
 }
 
-@media screen and (max-width: 600px) {
-	#Home {
-		margin: 15px;
-		margin-top: 90px;
+@media screen and (max-width: 575px) {
+	#Home h1 {
+		font-size: 35px;
 	}
 	#homeprofile {
-		width: 100px;
+		width: 100%;
 	}
 	#homeprofile:hover {
-		width: 115px;
-	}
-	h1 {
-		font-size: 40px;
+		width: 100%;
 	}
 	footer {
-		font-size: 17px;
+		font-size: 20px;
 	}
-	h3 {
-		font-size: 10px;
-	}
-	#About {
-		margin-left: 10%;
-	}
-	.button {
-		width: 150px;
-	}
-	#Inkwork, #Portfolio {
-		margin-left: 30px;
-	}
-	#Inkwork .box, #Portfolio .box, #Review .box, #Archive .box {
-		margin-left: 0px;
-	}
-	.RevTitle {
+	#posts div {
 		font-size: 25px;
 	}
-	th, td {
-		font-size: 20px;
+	#BlogPost p {
+		width: 80%;
 	}
-	#RevMovie, #RevTelevision, #RevVideogame {
-		margin-left: 5px;
-	}
-	.Revbutton {
-		margin-left: 0px;
-		width: 290px;
-		font-size: 20px;
-		padding: 5px;
-	}
-	#RevVideogame .RevTitle {
-		font-size: 20px;
-	}
-	#RevVideogame th, #RevVideogame td {
+	.gradient-button {
 		font-size: 15px;
 	}
-	#RevTelevision th, #RevTelevision td {
-		font-size: 19px;
+	#rev-groups {
+		margin-left: 40px;
 	}
-	h4 {
+	#rev-groups div {
+		font-size: 30px;
+	}
+	#rev-groups div:hover {
+		font-size: 34px;
+	}
+	#rev-groups div:hover {
+		width: 80%;
+	}
+	.rvtable {
+		margin-left: 20px;
+	}
+	.rvbar::after {
+		font-size: 15px;
+	}
+	.rvbar:hover {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 477px) {
+	#posts div {
+		line-height: 50px;
+	}
+	#posts div::after {
+		font-size: 15px;
+	}
+	#posts div:hover {
+		margin-left: 15px;
+		letter-spacing: 1.5px;
+	}
+	#BlogPost p {
+		font-size: 25px;
+	}
+	#projects {
+		margin-left: 30px;
+	}
+	#projects div:hover {
+		padding-left: 20px;
+	}
+	#rev-groups div:hover {
+		font-size: 27px;
+		padding-left: 20px;
+	}
+	#RMovie h1, #RGame h1, #RTele h1 {
+		font-size: 50px;
+	}
+	.rvtable {
+		margin-left: 0px;
+	}
+	.rvbar:hover {
+		letter-spacing: 0px;
+	}
+	#ReviPost h1 {
+		width: 100%;
+		font-size: 45px;
+	}
+	#ReviPost h1::after {
+		float: none;
+	}
+	#RevImage {
+		display: none;
+	}
+	#ReviPost p {
+		width: 100%;
+		padding-left: 10px;
+		font-size: 25px;
+	}
+	#ReviPost h2 {
+		width: 100%;
+	}
+	.reviback {
+		width: 100%;
+	}
+	.reviback:hover {
+		font-size: 30px;
+	}
+	#Archivals .book {
+		font-size: 30px;
+		border-width: 2px;
+	}
+	#Archivals .book:hover {
+		font-size: 35px;
+		border-width: 3px;
+		letter-spacing: 1px;
+	}
+	#Archivals {
+		margin-left: 10px;
+	}
+	#TimeMachine h2 {
+		font-size: 40px;
+		letter-spacing: 1px;
+	}
+	#TimeMachine h2:hover {
+		letter-spacing: 2px;
+	}
+	.webp {
+		width: 100%;
+		height: 200px;
+	}
+	.webp:hover {
+		width: 100%;
+	}
+	#TImage {
+		width: 100%;
+	}
+	.timeback {
+		width: 100%;
+	}
+	.timeback:hover {
+		font-size: 30px;
+	}
+	#Cascade h1 {
+		font-size: 40px;
+		margin-top: 125px;
+	}
+	#Cascade #go {
+		font-size: 40px;
+		margin-top: 40px;
+	}
+	.artcollection {
+		width: 100%;
+	}
+	.artcollection:hover {
+		width: 100%;
+		transform: rotate(-7deg);
+	}
+	.artpro {
+		width: 100%;
+		height: auto;
+	}
+	.artpro:hover {
+		width: 100%;
+		height: auto;
+	}
+	.artback {
+		width: 100%;
+	}
+	.artback:hover {
+		width: 100%;
 		font-size: 30px;
 	}
 }
 
-@media screen and (max-width: 440px) {
-	#homeprofile {
-		width: 200px;
+@media screen and (max-width: 380px) {
+	#projects {
+		margin-left: 10px;
 	}
-	#homeprofile:hover {
-		width: 225px;
+	#Blog h1 {
+		font-size: 70px;
+		margin-bottom: 40px;
 	}
-	#Home h1 {
-		margin-top: 10px;
-		float: left;
-		text-align: left;
+	#Inkwork h1 {
+		font-size: 70px;
+		margin-bottom: 40px;
+	}
+	#posts div {
+		line-height: 20px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	#rev-groups {
+		margin-left: 10px;
+	}
+	#rev-groups div {
+		width: 100%;
+		font-size: 30px;
+	}
+	#rev-groups div:hover {
+		width: 100%;
+		font-size: 30px;
+		padding-left: 10px;
+		letter-spacing: 1px;
+	}
+	#Review h1 {
+		font-size: 70px;
+		margin-bottom: 40px;
+	}
+	#Archivals .book::before {
+		opacity: 1;
+	}
+	#Archivals .book:hover {
+		font-size: 30px;
+		letter-spacing: 0px;
+	}
+	#Cascade {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	#Cascade h1 {
+		font-size: 40px;
+	}
+	#Cascade #go {
+		font-size: 30px;
 	}
 }
