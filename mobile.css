@@ -202,7 +202,8 @@
 	}
 	.webp {
 		width: 100%;
-		height: 200px;
+		height: 170px;
+		line-height: 170px;
 	}
 	.webp:hover {
 		width: 100%;
@@ -245,6 +246,47 @@
 	.artback:hover {
 		width: 100%;
 		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	#Blog, #Review{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#RMovie, #RGame, #RTele, #ReviPost {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#TimeMachine, #TimeMachine-Version {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#Inkwork, #SobbleBot_Inkwork, #Ikagaku_Inkwork, #Biti_Inkwork {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#Cascade h1 {
+		font-size: 35px;
+		margin-top: 200px;
+	}
+	#Portfolio, #Photography_Portfolio, #Drawings_Portfolio, #GraphicDesign_Portfolio {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.artcollection {
+		margin-left: 10px;
+		margin-right: 10px;
+		width: 90%;
+	}
+	#Music, #Memes, #Tier {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#Archive {
+		margin-left: 15px;
+		margin-right: 20px;
+		width: 85%;
 	}
 }
 
