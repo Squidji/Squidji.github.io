@@ -15,7 +15,7 @@ function openPage(pageName) {
 	// Show the specific tab content
 	document.getElementById(pageName).style.display = "block";
 	
-	var inkworkpages = ['Inkwork', 'SobbleBot_Inkwork', 'Ikagaku_Inkwork', 'Biti_Inkwork'];
+	var inkworkpages = ['Inkwork', 'SobbleBot_Inkwork', 'Ikagaku_Inkwork', 'Biti_Inkwork', 'Pentano_Inkwork'];
 	var cascadepages = ['Cascade'];
 	var revpages = ['Review', 'RMovie', 'RGame', 'RTele', 'ReviPost'];
 

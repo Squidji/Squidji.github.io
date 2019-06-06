@@ -229,15 +229,15 @@ h4 {
 	opacity: 1;
 	letter-spacing: 0px;
 }
-#SobbleBot_Inkwork, #Ikagaku_Inkwork, #Biti_Inkwork {
+#SobbleBot_Inkwork, #Ikagaku_Inkwork, #Biti_Inkwork, #Pentano_Inkwork {
 	margin: 40px;
 	margin-top: 96px;
 }
-#SobbleBot_Inkwork h1, #Ikagaku_Inkwork h1, #Biti_Inkwork h1 {
+#SobbleBot_Inkwork h1, #Ikagaku_Inkwork h1, #Biti_Inkwork h1, #Pentano_Inkwork h1 {
 	color: #af00af;
 	font-size: 60px;
 }
-#SobbleBot_Inkwork p, #Ikagaku_Inkwork p, #Biti_Inkwork p  {
+#SobbleBot_Inkwork p, #Ikagaku_Inkwork p, #Biti_Inkwork p, #Pentano_Inkwork p {
 	color: white;
 	font-size: 40px;
 }
