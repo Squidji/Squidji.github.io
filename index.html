@@ -1,268 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Squidji.tk</title>
-<meta charset="utf-8"/>
-<link rel="icon" href="logo.ico" type="image/ico" sizes="16x16">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="index.css">
-<link rel="stylesheet" href="mobile.css">
-<link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src='index.js'></script>
-
+	<title>AERAKI アエラキ</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="index.css">
+	<script src='index.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"> 
 </head>
-
 <body>
 
-<header>
-	<div id='DesktopHeader'>
-		<a id='name' onclick='openPage("Home")'>Squidji</a>
-		<a class='tab' onclick='openPage("Archive")' japa='アーカイブ'>Archive</a>
-		<a class='tab' onclick='openPage("Review")' japa='見直し'>Reviews</a>
-		<a class='tab' onclick='openPage("Inkwork")' japa='プロジェクト'>Projects</a>
-		<a class='tab' onclick='openPage("Blog")' japa='ブログ'>Blog</a>
-	</div>
-
-	<div id='MobileHeader'>
-		<a id='mobileName' onclick='openPage("Home")'>Squidji</a>
-		<div id='myLinks'>
-			<a onclick='openPage("Blog")' japa='ブログ'>Blog</a>
-			<a onclick='openPage("Inkwork")' japa='プロジェクト'>Projects</a>
-			<a onclick='openPage("Review")' japa='見直し'>Reviews</a>
-			<a onclick='openPage("Archive")' japa='アーカイブ'>Archive</a>
-		</div>
-		<a class='icon' onclick='toggleBar();'>
-			<i class='fa fa-bars'></i>
-		</a>
-	</div>
-</header>
-
-<div class='page' id='Home' style='display:block;'>
-	<img src='img/logo.png' id='homeprofile' onclick='openPage("Blog")'/>
-	<h1>My name is <a>Ben Squidji</a>. I web design, program, take photos, draw, and make reviews.
-		This website is a collection of the stuff I love to do.</h1>
-</div>
-
-<div class='page' id='Blog'>
-	<h1 japa='ブログ'>Blog</h1>
-	<div id='posts'>
-		<div date=' - May 27th, 2019' onclick='openPost(0)'>Welcome!</div>
-	</div>
-</div>
-
-<div class='page' id='BlogPost'>
-	<h1 id='blogpost_title'></h1>
-	<h2 id='blogpost_date'></h2>
-	<p id='blogpost_desc'></p>
-</div>
-
-<div class='page' id='Inkwork'>
-	<h1 japa='プロジェクト'>Inkwork</h1>
-	<div id='projects'>
-		<div info=' - A JS RPG that runs in your browser.' onclick='openPage("Pentano_Inkwork")'>Pentano</div>
-		<div info=' - A Fun Multipurpose Discord Bot' onclick='openPage("SobbleBot_Inkwork")'>SobbleBot</div>
-		<div info=' - Some Computer-Crashing Batch Files' onclick='openPage("Ikagaku_Inkwork")'>Ikagaku</div>
-		<div info=' - A Small HTML Based Experiment' onclick='openPage("Biti_Inkwork")'>Biti</div>
-	</div>
-</div>
-
-<div class='page' id='Pentano_Inkwork'>
-		<h1>Pentano</h1>
-		<div class='gradient-button' onclick=
-		'window.open("https://pentano.tk/","_blank");'>
-			Open Pentano
-		</div>
-		<p>
-			Documentation Coming Soon
-		</p>
-	</div>
-<div class='page' id='SobbleBot_Inkwork'>
-	<h1>SobbleBot</h1>
-	<div class='gradient-button' onclick=
-	'window.open("https://discordapp.com/oauth2/authorize?client_id=551422166307045408&scope=bot&permissions=8","_blank");'>
-		Invite to Discord Server
-	</div>
-	<p>
-		Documentation Coming Soon
-	</p>
-</div>
-<div class='page' id='Ikagaku_Inkwork'>
-	<h1>Ikagaku</h1>
-	<div class='gradient-button' onclick=
-	'window.open("https://squidji.tk/inkwork/Ikagaku.zip","_blank");'>
-		Download
-	</div>
-	<p>
-		Documentation Coming Soon
-	</p>
-</div>
-<div class='page' id='Biti_Inkwork'>
-	<h1>Biti</h1>
-	<div class='gradient-button' onclick=
-	'window.open("https://squidji.tk/biti/","_blank");'>
-		Open Biti
-	</div>
-	<p>
-		Documentation Coming Soon
-	</p>
-</div>
-
-<div class='page' id='Portfolio'>
-	<h1 num='02 '>Art</h1>
-	<div id='collections'>
-		<div class='artcollection' onclick='openPage("Photography_Portfolio")'>Photography</div>
-		<div class='artcollection' onclick='openPage("Drawings_Portfolio")'>Drawings</div>
-		<div class='artcollection' onclick='openPage("GraphicDesign_Portfolio")'>Graphic Design</div>
-	</div>
-</div>
-
-<div class='page' id='Photography_Portfolio'>
-	<div class='artback' onclick='openPage("Portfolio")'><< Back</div>
-	<h1>Photography</h1>
-	<div class='arts'>
-		<img class='artpro' src='img/art/photo004.jpg' onclick='window.open("img/art/photo004.jpg","_blank");'/>
-	</div>
-</div>
-<div class='page' id='Drawings_Portfolio'>
-	<div class='artback' onclick='openPage("Portfolio")'><< Back</div>
-	<h1>Drawings</h1>
-	<div class='arts'>
-	</div>
-</div>
-<div class='page' id='GraphicDesign_Portfolio'>
-	<div class='artback' onclick='openPage("Portfolio")'><< Back</div>
-	<h1>Graphic Design</h1>
-	<div class='arts'>
-	</div>
-</div>
-
-<div class='page' id='Archive'>
-	<h1 japa='アーカイブ'>Archive</h1>
-	<div id='Archivals'>
-		<div class='book' id='timebook' num='00 ' onclick='openPage("TimeMachine")'>TIME MACHINE</div>
-		<div class='book' id='cascadebook' num='01 ' onclick='openPage("Cascade")'>CASCADE</div>
-		<div class='book' id='artbook' num='02 ' onclick='openPage("Portfolio")'>ART PORTFOLIO</div>
-		<div class='book' id='musicbook' num='03 ' onclick='openPage("Music")'>MUSIC I LIKE</div>
-		<div class='book' id='memebook' num='04 ' onclick='openPage("Memes")'>MEMES BY ME</div>
-		<div class='book' id='tierbook' num='05 ' onclick='openPage("Tier")'>TIER LISTS</div>
-	</div>
-</div>
-
-<div class='page' id='TimeMachine'>
-	<h1 num='00 '>Time Machine</h1>
-	<h2>Dragon Roll v6</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("6.0")' style='background-image: url("img/v6.0.jpg");'>v6.0</div>
-	</div>
-	<h2>Unagi Roll v5</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("5.0")' style='background-image: url("img/v5.0.jpg");'>v5.0</div>
-	</div>
-	<h2>California Roll v4</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("4.1")' style='background-image: url("img/v4.1.jpg");'>v4.1</div>
-		<div class='webp' onclick='openTime("4.0")' style='background-image: url("img/v4.0.jpg");'>v4.0</div>
-	</div>
-	<h2>Website v3</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("3.3")' style='background-image: url("img/v3.3.jpg");'>v3.3</div>
-		<div class='webp' onclick='openTime("3.2")' style='background-image: url("img/v3.2.jpg");'>v3.2</div>
-		<div class='webp' onclick='openTime("3.1")' style='background-image: url("img/v3.1.jpg");'>v3.1</div>
-		<div class='webp' onclick='openTime("3.0")' style='background-image: url("img/v3.0.jpg");'>v3.0</div>
-	</div>
-	<h2>Website v2</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("2.4")' style='background-image: url("img/v2.4.jpg");'>v2.4</div>
-		<div class='webp' onclick='openTime("2.3")' style='background-image: url("img/v2.3.jpg");'>v2.3</div>
-		<div class='webp' onclick='openTime("2.2")' style='background-image: url("img/v2.2.jpg");'>v2.2</div>
-		<div class='webp' onclick='openTime("2.1")' style='background-image: url("img/v2.1.jpg");'>v2.1</div>
-		<div class='webp' onclick='openTime("2.0")' style='background-image: url("img/v2.0.jpg");'>v2.0</div>
-	</div>
-	<h2>Website v1</h2>
-	<div class='mver'>
-		<div class='webp' onclick='openTime("1.4")' style='background-image: url("img/v1.4.jpg");'>v1.4</div>
-		<div class='webp' onclick='openTime("1.3")' style='background-image: url("img/v1.3.jpg");'>v1.3</div>
-		<div class='webp' onclick='openTime("1.2")' style='background-image: url("img/v1.2.jpg");'>v1.2</div>
-		<div class='webp' onclick='openTime("1.1")' style='background-image: url("img/v1.1.jpg");'>v1.1</div>
-		<div class='webp' onclick='openTime("1.0")' style='background-image: url("img/v1.0.jpg");'>v1.0</div>
-	</div>
-</div>
-
-<div class='page' id='TimeMachine-Version'>
-	<div class='timeback' onclick='openPage("TimeMachine")'><< Back</div>
-	<h1 id='TVersion'></h1>
-	<h2 id='TDate'></h2>
-	<img id='TImage'/>
-	<div id='TGo' class='gradient-button'>Visit</div>
-	<ul id='TLogs'></ul>
-</div>
-
-<div class='page' id='Cascade'>
-	<h1>「 c a s c a d e 」</h1>
-	<div id='go'>EXPLORE</div>
-</div>
-
-<div class='page' id='Review'>
-	<h1>Reviews</h1>
-	<div id='rev-groups'>
-		<div onclick='openPage("RMovie");'><i class="fa fa-film" aria-hidden="true"></i> Movies</div>
-		<div  onclick='openPage("RGame");'><i class="fa fa-gamepad" aria-hidden="true"></i> Videogames</div>
-		<div  onclick='openPage("RTele");'><i class="fa fa-television" aria-hidden="true"></i> TV Shows</div>
-	</div>
-</div>
-
-<div class='page' id='RMovie'>
-	<div class='reviback' onclick='openPage("Review")'><< Back</div>
-	<h1>Movies</h1>
-	<div class='rvtable'>
-		<div class='rvbar' revi='10/10' onclick='openRev("STARKDED")'>AVENGERS ENDGAME</div>
-		<div class='rvbar' revi='9/10' onclick='openRev("CHRISPRATT2")'>THE LEGO MOVIE 2</div>
-		<div class='rvbar' revi='4/10' onclick='openRev("YOUONLYZINGONCE")'>HOTEL TRANSYLVANIA 3</div>
-	</div>
-</div>
-<div class='page' id='RGame'>
-	<div class='reviback' onclick='openPage("Review")'><< Back</div>
-	<h1>Videogames</h1>
-	<div class='rvtable'>
-		<div class='rvbar' revi='10/10' onclick='openRev("PLANTGANG")'>SUPER SMASH BROS. ULTIMATE</div>
-	</div>
-</div>
-<div class='page' id='RTele'>
-	<div class='reviback' onclick='openPage("Review")'><< Back</div>
-	<h1>TV Shows</h1>
-	<div class='rvtable'>
-		<div class='rvbar' revi='7/10' onclick='openRev("ITWASMEDIO")'>JOJO'S BIZZARE ADVENTURE P1</div>
-	</div>
-</div>
-
-<div class='page' id='ReviPost'>
-	<img id='RevImage'/>
-	<div class='reviback' id='RevBackCusti'><< Back</div>
-	<h1 id='RevTitle'></h1>
-	<h2 id='RevDate'></h2>
-	<p id='RevPost'></p>
-</div>
-
-<div class='page' id='Music'>
-	<h1 num='03 '>Music I Like</h1>
+<div class='page' id='Start'>
+	<h1 onclick='openPage("Start")'>Aeraki アエラキ</h1>
 	<h2>Under Construction</h2>
+	<div id='lock'>
+		<!--<div class='key' onclick='openPage("About")'>Links リンク</div>
+		<div class='key' onclick='openPage("Projects")'>Projects コード</div>!-->
+	</div>
 </div>
 
-<div class='page' id='Memes'>
-	<h1 num='04 '>Memes</h1>
+<div class='page' id='About'>
+	<h1>About リンク</h1>
 	<h2>Under Construction</h2>
+	<div class='buttons'>
+		<div>INSTAGRAM</div>
+		<div>TWITTER</div>
+		<div>GITHUB</div>
+	</div>
 </div>
 
-<div class='page' id='Tier'>
-	<h1 num='05 '>Tier Lists</h1>
+<div class='page' id='Projects'>
+	<h1>Projects コード</h1>
 	<h2>Under Construction</h2>
+	<div class='buttons'>
+		<div>Pentano</div>
+		<div>SobbleBot</div>
+	</div>
 </div>
 
-<footer>
-Website Dragon v6.0.3 Created by Ben Squidji
-</footer>
+<!--<footer>META 7 メタ</footer>!-->
+
+<script>findTag();</script>
 
 </body>
 </html>
