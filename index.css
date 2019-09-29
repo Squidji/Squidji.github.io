@@ -1,37 +1,98 @@
 body {
 	background-color: black;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
-	color: black;
+	color: white;
 	margin: 0px;
 	padding: 0px;
 	background-image: url('background.png');
-	background-size: 130%;
-	background-attachment: cover;
+	background-size: 150vw 125vh;
 }
 .page {
-	background-color: white;
+	background-color: #00000080;
 	margin-left: 100px;
 	margin-right: 100px;
-	margin-top: 200px;
+	margin-top: 0px;
 	padding: 20px;
+	height: 100%;
 	cursor: default;
-	box-shadow: 0px 0px 20px black;
-	margin-bottom: 30px;
+	margin-top: 20px;
 }
 h1 {
 	margin-top: 0px;
-	font-size: 32px;
+	font-size: 37px;
+	margin-bottom: 0px;
 }
 h2 {
-	font-size: 20;
+	font-size: 25px;
+	margin-bottom: 0px;
+}
+.tabButton {
+	padding: 4px;
+	padding-left: 20px;
+	padding-right: 20px;
+	border: 3px solid white;
+	display: inline-block;
+	font-size: 17px;
+	transition: 0.5s;
+	border-radius: 5px;
+	margin-right: 15px;
+	cursor: pointer;
+}
+.tabButton:hover {
+	border-radius: 15px;
+	background-color: white;
+	color: black;
+}
+#tabButtonActive {
+	background-color: #ffffff80;
+	color: black;
+	transition: 0.5s;
+}
+#tabButtonActive:hover {
+	background-color: white;
+}
+#Announcements {
+	margin-top: 25px;
+}
+#Announcements div {
+	padding: 7px;
+	font-size: 21px;
+	border: 3px white solid;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	border-radius: 10px;
+}
+#Announcements div:hover {
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 20px;
+	background-color: white;
+	color: black;
+}
+.listGroup {
+	margin-left: 20px;
+}
+.listGroup p {
+	border-left: 2px white solid;
+	padding-left: 5px;
+	font-size: 17px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.listGroup p:hover {
+	letter-spacing: 2px;
+	border-left-width: 4px;
 }
 
 @media screen and (max-width: 1025px) {
 	h1 {font-size: 27px;}
 	h2 {font-size: 20px;}
-	body{background-size: 1025px 100vh;}
 }
 
 @media screen and (max-width: 500px) {
-	.page {margin-left: 50px; margin-right: 50px;}
+	.page {margin-left: 0px; margin-right: 0px;}
+	.tabButton {width: 30%; margin-bottom: 4px;}
 }
