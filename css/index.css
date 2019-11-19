@@ -6,7 +6,7 @@ body {
 	padding: 0px;
 	background-image: url('./background.png');
 	background-size: 150vw 125vh;
-	background-attachment: fixed;
+	background-attachment: fixed !important;
 }
 .page {
 	background-color: #0000009c;
@@ -138,6 +138,8 @@ pre {
 @media screen and (max-width: 500px) {
 	.page {margin-left: 0px; margin-right: 0px;margin-bottom: 60px;}
 	.tabButton {width: 30%; margin-bottom: 4px;}
+	#Start {margin-bottom: 0px;}
+	#Tabs {margin-bottom: 0px;}
 	#Tabs div {
 		width: 85%;
 		margin-bottom: 10px;
