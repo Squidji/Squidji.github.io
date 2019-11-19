@@ -80,6 +80,7 @@ i.fa-node-js {
 	transition: 0.5s;
 	border-radius: 10px;
 	margin-right: 10px;
+	margin-bottom: 10px;
 }
 .boxGroup div:hover {
 	padding-left: 30px;
@@ -136,4 +137,14 @@ pre {
 @media screen and (max-width: 500px) {
 	.page {margin-left: 0px; margin-right: 0px;}
 	.tabButton {width: 30%; margin-bottom: 4px;}
+	#Tabs div {
+		width: 60%;
+		margin-bottom: 10px;
+	}
+	.profileImage {
+		width: 80%;
+		height: auto;
+		float: left;
+		margin-bottom: 10px;
+	}
 }
