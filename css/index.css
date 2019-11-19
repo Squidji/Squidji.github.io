@@ -136,7 +136,14 @@ pre {
 }
 
 @media screen and (max-width: 500px) {
-	.page {margin-left: 0px; margin-right: 0px;margin-bottom: 60px;}
+	body {
+		background-image: url('vertical.png');
+	}
+	.page {
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 60px;
+	}
 	.tabButton {width: 30%; margin-bottom: 4px;}
 	#Start {margin-bottom: 0px;}
 	#Tabs {margin-bottom: 0px;}
