@@ -4,11 +4,11 @@ body {
 	color: white;
 	margin: 0px;
 	padding: 0px;
-	background-image: url('background.png');
+	background-image: url('./background.png');
 	background-size: 150vw 125vh;
 }
 .page {
-	background-color: #00000080;
+	background-color: #0000009c;
 	margin-left: 100px;
 	margin-right: 100px;
 	margin-top: 0px;
@@ -16,6 +16,7 @@ body {
 	height: 100%;
 	cursor: default;
 	margin-top: 20px;
+	display: none;
 }
 h1 {
 	margin-top: 0px;
@@ -25,8 +26,21 @@ h1 {
 h2 {
 	font-size: 25px;
 	margin-bottom: 0px;
+	margin-top: 0px;
 }
-.tabButton {
+p {
+	font-size: 17px;
+	margin-left: 20px;
+}
+.footer {
+	font-size: 12px;
+	margin: 0px;
+	margin-top: 50px;
+}
+i.fa-node-js {
+	color: yellowgreen;
+}
+#Tabs div {
 	padding: 4px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -38,23 +52,24 @@ h2 {
 	margin-right: 15px;
 	cursor: pointer;
 }
-.tabButton:hover {
+#Tabs div:hover {
 	border-radius: 15px;
 	background-color: white;
 	color: black;
 }
-#tabButtonActive {
+.tabButtonActive {
 	background-color: #ffffff80;
 	color: black;
 	transition: 0.5s;
 }
-#tabButtonActive:hover {
+.tabButtonActive:hover {
 	background-color: white;
 }
-#Announcements {
+.boxGroup {
 	margin-top: 25px;
+	margin-bottom: 25px;
 }
-#Announcements div {
+.boxGroup div {
 	padding: 7px;
 	font-size: 21px;
 	border: 3px white solid;
@@ -64,12 +79,19 @@ h2 {
 	cursor: pointer;
 	transition: 0.5s;
 	border-radius: 10px;
+	margin-right: 10px;
 }
-#Announcements div:hover {
+.boxGroup div:hover {
 	padding-left: 30px;
 	padding-right: 30px;
 	border-radius: 20px;
 	background-color: white;
+	color: black;
+}
+.boxGroup div i {
+	transition: 0.5s;
+}
+.boxGroup div:hover i {
 	color: black;
 }
 .listGroup {
@@ -77,14 +99,33 @@ h2 {
 }
 .listGroup p {
 	border-left: 2px white solid;
-	padding-left: 5px;
-	font-size: 17px;
+	padding-left: 10px;
+	font-size: 20px;
 	cursor: pointer;
 	transition: 0.4s;
+	display: inline-block;
+	margin-bottom: 0px;
+	padding-right: 10px;
 }
 .listGroup p:hover {
 	letter-spacing: 2px;
 	border-left-width: 4px;
+	background-color: white;
+	color: black;
+	border-radius: 10px;
+}
+.profileImage {
+	float: right;
+	height: 250px;
+	width: 250px;
+	border-radius: 20px;
+}
+pre {
+	border-top: white 2px solid;
+	border-bottom: white 2px solid;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
 }
 
 @media screen and (max-width: 1025px) {

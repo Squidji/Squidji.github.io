@@ -4,9 +4,11 @@
 	<title>AERAKI アエラキ</title>
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="./css/index.css">
 	<link rel="icon" href="icon.ico">
-	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet"> 
+	<script src='index.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
 
@@ -15,26 +17,58 @@
 </div>
 
 <div class='page' id='Tabs'>
-	<div class='tabButton' id='tabButtonActive'>Home</div>
-	<div class='tabButton' onclick='window.open("./code.html","_self")'>Code</div>
-	<div class='tabButton' onclick='window.open("./netcustom.html","_self")'>NetCustom</div>
-	<div class='tabButton' onclick='window.open("./sobblebot.html","_self")'>SobbleBot</div>
-	<div class='tabButton'>TomoDreams</div>
-	<div class='tabButton'>W I R E S</div>
+	<div class='tabButtonActive' onclick='openPage("Home")'><i class="fas fa-home"></i> Home</div>
+	<div onclick='openPage("Code")'><i class="fas fa-file-code"></i> Code</div>
+	<div onclick='openPage("Writing")'><i class="fas fa-pen"></i> Writing</div>
 </div>
 
 <div class='page' id='Home'>
-	<h2>Announcements</h2>
+	<h2>Whats New...</h2>
 	<div class='boxGroup' id='Announcements'>
-		<div>New Website 「 v1 」</div>
+		<div>New Website 「 v1 PETRICHOR 」</div>
+		<div onclick='openPage("Megubot")'>New Project 「 MEGUBOT 」</div>
 	</div>
-	<h2>Talk to Me on..</h2>
+	<h2>See me on...</h2>
 	<div class='listGroup'>
-		<p onclick='window.open("https://twitter.com/_aeraki","_blank")'>Twitter</p>
-		<p onclick='window.open("https://www.instagram.com/aeraki7907/","_blank")'>Instagram</p>
-		<p onclick='window.open("https://www.reddit.com/u/BenSquidji","_blank")'>Reddit</p>
+		<p onclick='window.open("https://twitter.com/_aeraki","_blank")'>
+			<i class="fab fa-twitter"></i> Twitter</p><br>
+		<p onclick='window.open("https://www.instagram.com/aeraki7907/","_blank")'>
+			<i class="fab fa-instagram"></i> Instagram</p><br>
+		<p onclick='window.open("https://www.reddit.com/u/BenSquidji","_blank")'>
+			<i class="fab fa-reddit"></i> Reddit</p><br>
+		<p onclick='window.open("https://github.com/Squidji","_blank")'>
+			<i class="fab fa-github"></i> Github</p>
+	</div>
+	<p class='footer'>Website v1.0.0 PETRICHOR Created by Ben AEraki</p>
+</div>
+
+<div class='page' id='Code'>
+	<h2>Projects</h2>
+	<div class='boxGroup' id='CodeProjects'>
+		<div onclick='openPage("Megubot")'>MeguBot <i class="fab fa-node-js"></i></div>
 	</div>
 </div>
+
+<div class='page' id='Writing'>
+	<h2>Coming Soon...</h2>
+</div>
+
+<div class='page' id='Megubot'>
+	<img class='profileImage' src='megupfp.jpg'/>
+	<h1>MeguBot - Discord Bot <i class="fab fa-node-js"></i></h1>
+	<div class='boxGroup'>
+		<div onclick='window.open(
+		"https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160"
+		, "_blank")'>Invite to Your Server</div>
+		<div onclick='window.open("https://gist.github.com/Squidji/e4452b6aa5ece60d6eaa7a51fa6545f3",
+		 "_blank")'>Source Code</div>
+	</div>
+	<h2>Snippets</h2>
+	<p>Coming Soon...</p>
+</div>
+
+
+<script>openPage('Home')</script>
 
 </body>
 </html>
