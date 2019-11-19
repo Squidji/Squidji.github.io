@@ -6,6 +6,7 @@ body {
 	padding: 0px;
 	background-image: url('./background.png');
 	background-size: 150vw 125vh;
+	background-attachment: fixed;
 }
 .page {
 	background-color: #0000009c;
@@ -135,16 +136,20 @@ pre {
 }
 
 @media screen and (max-width: 500px) {
-	.page {margin-left: 0px; margin-right: 0px;}
+	.page {margin-left: 0px; margin-right: 0px;margin-bottom: 60px;}
 	.tabButton {width: 30%; margin-bottom: 4px;}
 	#Tabs div {
-		width: 60%;
+		width: 85%;
 		margin-bottom: 10px;
 	}
 	.profileImage {
 		width: 80%;
 		height: auto;
 		float: left;
-		margin-bottom: 10px;
+		margin-left: 10%;
+		margin-bottom: 20px;
+	}
+	.boxGroup div {
+		width: 85%;
 	}
 }
