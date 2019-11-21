@@ -12,3 +12,10 @@ function openPage(pagename, start=true, tabs=true) {
 	};
 	document.getElementById(pagename).style.display = 'block';
 };
+
+function openLog(logid) {
+	openPage('Log');
+	document.getElementById('logTitle').innerText = logData[logid].title;
+	document.getElementById('logDate').innerText = logData[logid].date;
+	document.getElementById('logBody').innerText = logData[logid].text;
+};

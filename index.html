@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/index.css">
 	<link rel="icon" href="icon.ico">
+	<script src='data/logs.js'></script>
 	<script src='index.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/all.css">
@@ -39,7 +40,7 @@
 		<p onclick='window.open("https://github.com/Squidji","_blank")'>
 			<i class="fab fa-github"></i> Github</p>
 	</div>
-	<p class='footer'>Website v1.0.1 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website v1.0.2 PETRICHOR Created by Ben AEraki</p>
 </div>
 
 <div class='page' id='Code'>
@@ -50,7 +51,11 @@
 </div>
 
 <div class='page' id='Writing'>
-	<h2>Coming Soon...</h2>
+	<h2>Season One - Null</h2>
+	<div class='boxGroup'>
+		<div onclick='openLog(0)'>Log 0 - Introduction</div><br>
+		<div onclick='openLog(1)'>Log 1 - Where There's Darkness</div>
+	</div>
 </div>
 
 <div class='page' id='Megubot'>
@@ -80,6 +85,13 @@
 	<p>Coming Soon...</p>
 </div>
 
+<div class='page' id='Log'>
+	<div class='backButton' onclick='openPage("Writing")'>
+		<i class="fas fa-angle-left"></i> Back</div>
+	<h1 id='logTitle'></h1>
+	<h2 id='logDate'></h2>
+	<p id='logBody'></p>
+</div>
 
 <script>openPage('Home')</script>
 
