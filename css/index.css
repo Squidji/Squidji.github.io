@@ -6,7 +6,7 @@ body {
 	padding: 0px;
 	background-image: url('./background.png');
 	background-size: 150vw 125vh;
-	background-attachment: fixed !important;
+	background-attachment: fixed;
 }
 .page {
 	background-color: #0000009c;
@@ -43,6 +43,12 @@ p {
 }
 i.fa-node-js {
 	color: yellowgreen;
+}
+i.fa-html5 {
+	color: orangered;
+}
+i.fa-js {
+	color: yellow;
 }
 #Tabs div {
 	padding: 4px;
