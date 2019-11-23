@@ -5,11 +5,11 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/all.css">
 	<link rel="icon" href="icon.ico">
 	<script src='data/logs.js'></script>
 	<script src='index.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
 
@@ -26,6 +26,7 @@
 <div class='page' id='Home'>
 	<h2>Whats New...</h2>
 	<div class='boxGroup' id='Announcements'>
+		<div onclick='openPage("Aeta")'>New Project 「 AETA 」</div>
 		<div onclick='openPage("Megubot")'>New Project 「 MEGUBOT 」</div>
 	</div>
 	<h2>See me on...</h2>
@@ -39,7 +40,7 @@
 		<p onclick='window.open("https://github.com/Squidji","_blank")'>
 			<i class="fab fa-github"></i> Github</p>
 	</div>
-	<p class='footer'>Website v1.0.3 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website v1.1.0 PETRICHOR Created by Ben AEraki</p>
 </div>
 
 <div class='page' id='Code'>
@@ -62,6 +63,7 @@
 <div class='page' id='Megubot'>
 	<img class='profileImage' src='megupfp.jpg'/>
 	<h1>MeguBot <i class="fab fa-node-js"></i></h1>
+	<h2>Multipurpose Discord Bot</h2>
 	<div class='boxGroup'>
 		<div onclick='window.open(
 		"https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160"
@@ -88,7 +90,11 @@
 
 <div class='page' id='Aeta'>
 	<h1>AEta <i class="fab fa-html5"></i></h1>
-	<h2>Coming Soon...</h2>
+	<h2>Website Design Test Lab</h2>
+	<div class='boxGroup'>
+		<div onclick='window.open("aeta.html", "_self")'>
+			<i class="fas fa-angle-right"></i> Open</div>
+	</div>
 </div>
 
 <div class='page' id='Shimau'>

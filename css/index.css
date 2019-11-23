@@ -42,13 +42,13 @@ p {
 	margin-top: 50px;
 }
 i.fa-node-js {
-	color: yellowgreen;
+	color: #8cc84b;
 }
 i.fa-html5 {
-	color: orangered;
+	color: #E44D26;
 }
 i.fa-js {
-	color: yellow;
+	color: #f0db4f;
 }
 #Tabs div {
 	padding: 4px;
@@ -66,6 +66,9 @@ i.fa-js {
 	border-radius: 15px;
 	background-color: white;
 	color: black;
+}
+#Tabs .backButton {
+	margin-bottom: 0px;
 }
 .tabButtonActive {
 	background-color: #ffffff80;

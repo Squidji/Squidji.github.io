@@ -2,11 +2,11 @@ let logData = {
 	0: {
 		'title': 'Introduction',
 		'text': 'Dark, pitch black, but calm.\n\nLights of the laptop screen illuminating their face.\n\nMusic buzzing in their ear.\n\nTyping, typing, typing..\n\nThe sounds of a person who wants to create\n\nbut has no idea how.\n\nIdeas they don\'t know they have or know how to use them.\n\nThe curse of having a brain, so lost and yet so fixated.\n\nWhat would they create..\n\nif they were given the power..\n\nto control a world of no limits.',
-		'date': 'Nov. 23th, 2019'
+		'date': 'Nov. 9th, 2019'
 	},
 	1: {
 		'title': 'Where There\'s Darkness',
 		'text': 'I saw nothing, everything was pitch black.\n\nI could move, but I felt nothing.\n\nWhy was I here? Who put me here?\n\nI came to the realization that I didn\'t even know who I was.\n\nI ended up lost in thought for too long.\n\nIts all I could do here.\n\nFood? Did that exist or was it a memory? An illusion?\n\nCan I have any answers?\n\n\nForever later. Forever. Forever.\n\nHow long had it been?\n\nI was starving, but I must not need to eat as I haven\'t died yet.\n\nThe concept of death sounded great about now.\n\nI had to do something.\n\nI moved my arms, and moved more.\n\nI kept moving until some feeling came back into me.\n\nMy arms were strapped together behind my back.\n\nThe ground under me was solid and flat.\n\nMy eyes were covered, I couldn\'t see a thing.\n\nI moved more. I came to a wall. I felt something.\n\nIt moved when I pressed against it.\n\nI pushed on it with the little bit of strength I had.\n\n\nI was free. I could see. I moved my hands up to my neck.\n\nI could finally finish it.\n\nIts all I wanted for so long.\n\nAnd although I could\'ve continued a free life,\n\nmy first decision was to end it.\n\nI yearned for death for so long.\n\nIt was just within my reach.\n\nI felt around my head, regaining some more strength.\n\nI moved my arms, and snap.\n\nDeath.\n\n\nBut it didn\'t kill me.\n\nI couldn\'t move. My nervous system stopped working.\n\nI was stuck with my neck in a position it shouldn\'t have been,\n\nstuck for another eternity, staring at the darkness around me.\n\nA greedy choice for death had left me stuck forever more.\n\nAnd there was no second chance.',
-		'date': 'Nov. 23th 2019'
+		'date': 'Nov. 9th 2019'
 	}
 }
