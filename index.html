@@ -19,7 +19,7 @@
 
 <div class='page' id='Tabs'>
 	<div class='tabButtonActive' onclick='openPage("Home")'><i class="fas fa-home"></i> Home</div>
-	<div onclick='openPage("Code")'><i class="fas fa-file-code"></i> Code</div>
+	<div onclick='openPage("Projects")'><i class="fas fa-folder-open"></i> Projects</div>
 	<div onclick='openPage("Writing")'><i class="fas fa-pen"></i> Writing</div>
 </div>
 
@@ -40,22 +40,24 @@
 		<p onclick='window.open("https://github.com/Squidji","_blank")'>
 			<i class="fab fa-github"></i> Github</p>
 	</div>
-	<p class='footer'>Website v1.1.1 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website v1.2.0 PETRICHOR Created by Ben AEraki</p>
 </div>
 
-<div class='page' id='Code'>
-	<h2>Projects</h2>
-	<div class='boxGroup' id='CodeProjects'>
-		<div onclick='openPage("Megubot")'>MeguBot <i class="fab fa-node-js"></i></div>
-		<div onclick='openPage("Aeta")'>AEta <i class="fab fa-css3"></i></div>
-		<div onclick='openPage("Shimau")'>Shimau <i class="fab fa-js"></i></div>
+<div class='page' id='Projects'>
+	<div class='workGroup' id='CodeProjects'>
+		<div onclick='openPage("Megubot")'>MeguBot <i class="fab fa-node-js"></i>
+			<p> Multipurpose Discord Bot</p></div>
+		<div onclick='openPage("Aeta")'>AEta <i class="fab fa-css3"></i>
+			<p>Website Design Test Lab</p></div>
+		<div onclick='openPage("Shimau")'>Shimau <i class="fab fa-js"></i>
+			<p>Advanced Text Based Roleplaying Game</p></div>
 	</div>
 </div>
 
 <div class='page' id='Writing'>
 	<h2>Season One - Null</h2>
-	<div class='boxGroup'>
-		<div onclick='openLog(0)'>Log 0 - Introduction</div><br>
+	<div class='workGroup'>
+		<div onclick='openLog(0)'>Log 0 - Introduction</div>
 		<div onclick='openLog(1)'>Log 1 - Where There's Darkness</div>
 	</div>
 </div>
@@ -109,12 +111,15 @@
 </div>
 
 <div class='page' id='Shimau'>
+	<img class='profileImage' src='shimau.png'/>
 	<h1>Shimau <i class="fab fa-js"></i></h1>
-	<h2>Advanced Choose Your Own Adventure</h2>
+	<h2>Advanced Text Based Roleplaying Game</h2>
 	<div class='boxGroup'>
 		<div onclick='window.open("shimau.html", "_self")'>
 				<i class="fas fa-angle-right"></i> Open Page</div>
 	</div>
+	<h2>Default Story</h2>
+	<p>Coming Soon...</p>
 </div>	
 
 <div class='page' id='Log'>

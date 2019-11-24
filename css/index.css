@@ -128,6 +128,29 @@ i.fa-js {
 	color: black;
 	border-radius: 10px;
 }
+.workGroup {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.workGroup div {
+	border-bottom: solid white 2px;
+	font-size: 25px;
+	margin-bottom: 20px;
+	padding: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+.workGroup div:hover {
+	background-color: white;
+	border-radius: 15px;
+	color: black;
+	letter-spacing: 1px;
+	padding-left: 15px;
+}
+.workGroup p {
+	display: inline;
+	font-size: 17px;
+}
 .profileImage {
 	float: right;
 	height: 250px;
@@ -188,5 +211,8 @@ pre {
 	}
 	.boxGroup div {
 		width: 85%;
+	}
+	.workGroup p {
+		display: none;
 	}
 }
