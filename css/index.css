@@ -14,7 +14,6 @@ body {
 	margin-right: 100px;
 	margin-top: 0px;
 	padding: 20px;
-	height: 100%;
 	cursor: default;
 	margin-top: 20px;
 	display: none;
@@ -52,6 +51,9 @@ i.fa-js {
 }
 i.fa-d-and-d {
 	color: #ec2127;
+}
+i.fa-microchip {
+	color: gray;
 }
 #Tabs div {
 	padding: 4px;
