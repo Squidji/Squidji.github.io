@@ -1,3 +1,12 @@
 body {
 	background-image: url('./shimau.png');
 }
+.page {
+	background-color: #000000c0;
+}
+#Loading i {
+	margin-right: 10px;
+}
+.workgroup div {
+	font-size: 16px;
+}

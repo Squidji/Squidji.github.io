@@ -9,6 +9,8 @@
 	<link rel="stylesheet" href="./css/shimau.css">
 	<link rel="icon" href="icon.ico">
 	<script src='index.js'></script>
+	<script src='shimau.js'></script>
+	<script src='./data/shimaudata.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,14 +22,21 @@
 <div class='page' id='Tabs'>
 	<div onclick='window.open("index.html", "_self")'>
 		<i class="fas fa-angle-left"></i> Back to Main Site</div>
-	<div>New Game</div>
+	<div onclick='newGame()'>New Game</div>
 	<div>Load Game</div>
+	<div>Export Data</div>
 </div>
 
-<div class='page' id='Home'>
-	<h1>Chapter 1 Coming Soon...</h1>
+<div class='page' id='Loading'>
+	<h2 id='LoadingText'></h2>
 </div>
 
-<script>openPage('Home')</script>
+<div class='page' id='Display'>
+	<h2 id='DisplayHead'></h2>
+	<p  id='DisplayBody'></p>
+	<div class='workGroup' id='DisplayChoices'></div>
+</div>	
+
+<script>openPage('Tabs')</script>
 </body>
 </html>
