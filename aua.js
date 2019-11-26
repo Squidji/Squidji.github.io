@@ -5,32 +5,7 @@ var savebuffer = {};
 var choicebuffer = {};
 
 function newGame() {
-	loadingScreen('Preparing Variables');
-	// Player Variables - Class B
-	savebuffer.B.MaxHealth = 20;
-	savebuffer.B.Health = 20;
-	savebuffer.B.Speed = 10;
-	savebuffer.B.Hunger = 5;
-	savebuffer.B.Attack = 10;
-	savebuffer.B.MaxMana = 10;
-	savebuffer.B.Mana = 10;
-	savebuffer.B.Energy = 99;
-	savebuffer.B.Defense = 10;
-	savebuffer.B.Accuracy = 80;
-	savebuffer.B.Thirst = 5;
-	// Player Variables - Class C
-	savebuffer.C.Charisma = randomNumber(45, 55);
-	savebuffer.C.Extrovertedness = randomNumber(45, 55);
-	savebuffer.C.Luck = randomNumber(45, 55);
-	savebuffer.C.Intelligence = randomNumber(45, 55);
-	savebuffer.C.Seriousness = randomNumber(45, 55);
-	savebuffer.C.Stealth = randomNumber(45, 55);
-	savebuffer.C.Strength = randomNumber(45, 55);
-	savebuffer.C.Trustfulness = randomNumber(45, 55);
-	savebuffer.C.Dexterity = randomNumber(45, 55);
-	openPage('Tabs');
-	gamedat.vars.A.Name = 'Kibo';
-	console.log(gamedat.vars);
+	savebuffer = gamedat.defaultvars;
 	runChapter(0, 0);
 };
 
@@ -40,12 +15,8 @@ function loadingScreen(text) {
 	'<i class="fas fa-circle-notch fa-spin"></i> ' + text;
 };
 
-function compressData() {
-
-};
-
 function randomNumber(min, max) {
-	let range = max - min;
+	let range = (max + 1) - min;
 	let random = Math.floor(Math.random() * Math.floor(range));
 	return min + random;
 };
@@ -64,13 +35,14 @@ function executeRun(run) {
 	} else if (run[0] === 'cleardisplay') {
 		document.getElementById('DisplayHead').innerText = '';
 		document.getElementById('DisplayBody').innerText = '';
-		console.log('Cleared the Display.');
+		document.getElementById('DisplayChoices').innerHTML = '';
+		console.clear();
 
 	} else if (run[0] === 'write') {
 		let text = '';
 		for (let i=0; i<run[1].length; i++) {
 			if (run[1][i][1] === '!') {
-				let getvar = gamedat.vars[run[1][i][0]][run[1][i].slice(2)];
+				let getvar = savebuffer[run[1][i][0]][run[1][i].slice(2)];
 				text += getvar;
 			} else {
 				text += run[1][i];
@@ -82,15 +54,64 @@ function executeRun(run) {
 		openPage('Display');
 
 	} else if (run[0] === 'modvar'){
-		gamedat.vars[run[1][0]][run[1].slice(2)] += run[2];
+		savebuffer[run[1][0]][run[1].slice(2)] += run[2];
 		console.log('Mod Var: ' + run[1] + ' ' + run[2]);
 
 	} else if (run[0] === 'setvar') {
-		gamedat.vars[run[1][0]][run[1].slice(2)] = run[2];
+		savebuffer[run[1][0]][run[1].slice(2)] = run[2];
 		console.log('Set Var: ' + run[1] + ' ' + run[2]);
 
 	} else if (run[0] === 'loading') {
 		loadingScreen(run[1]);
+
+	} else if (run[0] === 'setrand') {
+		let decis = undefined;
+		if (run[2][0] === 'nm') { // Random Number
+			decis = randomNumber(run[2][1], run[2][2]);
+		} else if (run[2][0] === 'ch') {
+			decis = run[2][1][randomNumber(0, run[2][1].length)];
+		};
+		savebuffer[run[1][0]][run[1].slice(2)] = decis;
+		console.log('Set Var: ' + run[1] + ' ' + decis);
+
+	} else if (run[0] === 'goto') {
+		console.log('GOTO Chapter ' + run[1] + ' Bookmark ' + run[2]);
+		runChapter(run[1], run[2]);
+
+	} else if (run[0] === 'if') {
+		let vari = savebuffer[run[1][0][0]][run[1][0].slice(2)];
+		console.log(vari + ' ' + run[1][1] + ' ' + run[1][2]);
+		if (run[1][1] === 'is') { // true
+			if (vari === run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		} else if (run[1][1] === 'isnt') { // false
+			if (vari !== run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		} else if (run[1][1] === 'gt') { // >
+			if (vari > run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		} else if (run[1][1] === 'lt') { // <
+			if (vari < run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		} else if (run[1][1] === 'gte') { // >=
+			if (vari >= run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		} else if (run[1][1] === 'lte') { // <=
+			if (vari <= run[1][2]) {
+				executeBuffer(run[2]);
+			};
+
+		};
 
 	} else if (run[0] === 'choices') {
 		let html = '';
@@ -108,9 +129,8 @@ function executeRun(run) {
 
 function runChapter(X, Y) {
 	chptr = X; bkmk = Y;
-	for (let i=0; i<gamedat[chptr].Script[bkmk].length; i++) {
-		let run = gamedat[chptr].Script[bkmk][i];
-		console.log(run);
+	for (let i=0; i<gamedat[chptr][bkmk].length; i++) {
+		let run = gamedat[chptr][bkmk][i];
 		executeRun(run);
 	};
 };
