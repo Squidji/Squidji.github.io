@@ -116,7 +116,7 @@ i.fa-microchip {
 .listGroup {
 	margin-left: 20px;
 }
-.listGroup p, .listGroup a {
+.listGroup p {
 	border-left: 2px white solid;
 	padding-left: 10px;
 	font-size: 20px;
@@ -125,12 +125,8 @@ i.fa-microchip {
 	display: inline-block;
 	margin-bottom: 0px;
 	padding-right: 10px;
-	margin-left: 20px;
-	margin-top: 20px;
-	text-decoration: none;
-	color: white;
 }
-.listGroup p:hover, .listGroup a:hover {
+.listGroup p:hover {
 	letter-spacing: 2px;
 	border-left-width: 4px;
 	background-color: white;
@@ -200,7 +196,7 @@ pre {
 
 @media screen and (max-width: 500px) {
 	body {
-		background-image: linear-gradient(-45deg, #0091ad, #005075)
+		background-image: url('vertical.png');
 	}
 	.page {
 		margin-left: 0px;
