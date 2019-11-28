@@ -24,10 +24,12 @@
 </div>
 
 <div class='page' id='Home'>
-	<h2>Whats New...</h2>
-	<div class='boxGroup' id='Announcements'>
-		<div onclick='openPage("Writing")'>New Logs in Writing</div>
-	</div>
+	<h2>About me...</h2>
+	<p>
+		My name is Ben AEraki, and I am a 15 year-old sophomore in high school.<br>
+		I am a programmer, web designer, and writer.<br>
+		This website was created by me to showcase what I create.
+	</p>
 	<h2>See me on...</h2>
 	<div class='listGroup'>
 		<a href='https://twitter.com/_aeraki'>
@@ -39,7 +41,7 @@
 		<a href='https://github.com/Squidji'>
 			<i class="fab fa-github"></i> Github</a>
 	</div>
-	<p class='footer'>Website v1.4.0 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website v1.4.1 PETRICHOR Created by Ben AEraki</p>
 </div>
 
 <div class='page' id='Projects'>
@@ -57,28 +59,6 @@
 			<p>Advanced Text Based Roleplaying Game Engine</p></div>
 		<div onclick='openPage("Kazotai")'>Kazotai Engine <i class="fas fa-microchip"></i>
 			<p>HTML Roleplaying Game Engine</p></div>
-	</div>
-</div>
-
-<div class='page' id='Writing'>
-	<h2>Season One - Null</h2>
-	<div class='workGroup'>
-		<div onclick='openLog(0)'>Log 0 - Introduction
-			<p>Nov. 9th, 2019</p></div>
-		<div onclick='openLog(1)'>Log 1 - Where There's Darkness
-			<p>Nov. 9th, 2019</p></div>
-		<div onclick='openLog(2)'>Log 2 - Existence
-			<p>Nov. 10th, 2019</p></div>
-		<div onclick='openLog(3)'>Log 3 - Colors
-			<p>Nov. 11th, 2019</p></div>
-		<div onclick='openLog(4)'>Log 4 - Moss
-			<p>Nov. 12th, 2019</p></div>
-		<div onclick='openLog(5)'>Log 5 - Music
-			<p>Nov. 13th, 2019</p></div>
-		<div onclick='openLog(6)'>Log 6 - Change
-			<p>Nov. 14th, 2019</p></div>
-		<div onclick='openLog(7)'>Log 7 - Aesthetics Part One
-			<p>Nov. 15th, 2019</p></div>
 	</div>
 </div>
 
@@ -118,8 +98,10 @@
 		<div onclick='window.open("shimau.html", "_self")'>
 				<i class="fas fa-angle-right"></i> Open Page</div>
 	</div>
-	<h2>Default Story</h2>
-	<p>Coming Soon...</p>
+	<h2>Game Engine</h2>
+	<div class='boxGroup'>
+		<div onclick='openPage("AUA")'><i class="fas fa-bookmark"></i> AUA Engine</div>
+	</div>
 </div>
 
 <div class='page' id='Anomon'>
@@ -139,7 +121,8 @@
 	<h1>AUA Engine <i class="fas fa-microchip"></i></h1>
 	<h2>Advanced Text Based Roleplaying Game Engine</h2>
 	<div class='boxGroup'>
-		<div><i class="fa fa-play"></i> Open Engine</div>
+		<div onclick='window.open("aua.html", "_self")'>
+			<i class="fa fa-play"></i> Open Engine</div>
 		<div><i class="fa fa-wrench"></i> Open Studio</div>
 	</div>
 	<h2>Games Made With AUA</h2>
@@ -160,6 +143,40 @@
 	<h1 id='logTitle'></h1>
 	<h2 id='logDate'></h2>
 	<p id='logBody'></p>
+</div>
+
+<div class='page' id='Writing'>
+	<h2>Writing Series</h2>
+	<div class='workGroup'>
+		<div onclick='openPage("Logs")'>Essence Logs
+			<p>Small writings on life.</p></div>
+		<div>Crimson Menagerie <p>Coming Soon...</p></div>
+		<div>JoJo's Bizzare Adventure: Cisco Disco <p>Coming Soon...</p></div>
+	</div>
+</div>
+
+<div class='page' id='Logs'>
+	<h2>Season One - Null</h2>
+	<div class='workGroup'>
+		<div onclick='openLog(0)'>Log 0 - Introduction
+			<p>Nov. 9th, 2019</p></div>
+		<div onclick='openLog(1)'>Log 1 - Where There's Darkness
+			<p>Nov. 9th, 2019</p></div>
+		<div onclick='openLog(2)'>Log 2 - Existence
+			<p>Nov. 10th, 2019</p></div>
+		<div onclick='openLog(3)'>Log 3 - Colors
+			<p>Nov. 11th, 2019</p></div>
+		<div onclick='openLog(4)'>Log 4 - Moss
+			<p>Nov. 12th, 2019</p></div>
+		<div onclick='openLog(5)'>Log 5 - Music
+			<p>Nov. 13th, 2019</p></div>
+		<div onclick='openLog(6)'>Log 6 - Change
+			<p>Nov. 14th, 2019</p></div>
+		<div onclick='openLog(7)'>Log 7 - Aesthetics Part One
+			<p>Nov. 15th, 2019</p></div>
+	</div>
+	<h2>Season Two - Indefinite</h2>
+	<p>Coming Soon...</p>
 </div>
 
 <script>openPage('Home')</script>
