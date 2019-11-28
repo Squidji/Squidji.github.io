@@ -3,7 +3,7 @@
 <head>
 
 <title>Christmas 2019</title>
-<link rel="icon" href="https://squidji.github.io/favicon.ico" type="image/ico" sizes="16x16">
+<link rel="icon" href="./icon.ico" type="image/ico" sizes="16x16">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8"/>
 
@@ -13,16 +13,20 @@
 <canvas id="snow"></canvas>
 <div class="center">
 	<div class="text-center">
-		<h1>Ben Christmas 2019</h1>
+		<h1>Ben's Christmas List 2019</h1>
 		<div class="tooltip"><p>iPhone 11</p>
 		</div><br>
 		<div class="tooltip"><p>Dungeons & Dragons: Player's Handbook</p>
 		</div><br>
-		<div class="tooltip"><p>Dungeons & Dragons: Master's Guide</p>
+		<div class="tooltip"><p>Dungeons & Dragons: Dungeon Master's Guide</p>
 		</div><br>
 		<div class="tooltip"><p>Dungeons & Dragons: Monster Manual</p>
 		</div><br>
-		<div class="tooltip"><p>Pair of 7 Dice</p>
+		<div class="tooltip"><p>Pair of 7 Die for D&D</p>
+		</div><br>
+		<div class="tooltip"><p>Demon Slayer: Kimetsu no Yaiba, Vol. 1</p>
+		</div><br>
+		<div class="tooltip"><p>My Hero Academia, Vol. 1</p>
 		</div><br>
 	</div>
 </div>
@@ -134,6 +138,29 @@ body, html{
   margin: 0px;
 }
 
+h1 {
+	font-size: 34px;
+	border-bottom: white 2px solid;
+	padding-bottom: 10px;
+	transition: 0.2s;
+	cursor: default;
+}
+
+p {
+	cursor: default;
+	transition: 0.2s;
+	font-size: 16px;
+}
+
+h1:hover {
+	letter-spacing: 4px;
+}
+
+p:hover {
+	font-size: 22px;
+	color: #adf4ff;
+}
+
 .center{
   position:absolute;
   top:0;
@@ -141,10 +168,6 @@ body, html{
   color:#fff;
   display:flex;
   align-items:center;
-  .text-center{
-    text-align:center;
-    width:100%;
-  }
 }
 
 .text-center {
@@ -152,10 +175,6 @@ body, html{
   display:inline-block;
   padding-right:5px;
   text-align: center;
-  @media screen and (max-width: 370px){
-    font-size:14px;
-    border-right:4px solid #fff;
-  }
 }
 
 canvas{
