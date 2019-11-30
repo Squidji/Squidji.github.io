@@ -115,13 +115,22 @@ var gamedat = {
 					['cleardisplay'],
 					['write', [
 						'You leave the poor hermit crab alone as he scuttles toward the forest.'
-					]]
+					]],
+					['goto', 1, 1]
 				]]
 			]]
 		],
 		1: [
-			['choices', [
-				['Under Construction', []]
+			['write', [
+				' Out of the corner of your eye, you see a green dragon carrying a ' +
+				'net of fish. He\'s pretty far away, so if you tried to yell,' +
+				' he wouldnt hear you.'
+			]],
+			['if', ['C!Intelligence', 'gt', 49], [
+				['write', ' He could be dangerous, so it might be best not to approach him.']
+			]],
+			['if', ['C!Intelligence', 'lt', 50], [
+				['write', ' He looks like a friendly dragon, so he could probably help you.']
 			]]
 		]
 	}
