@@ -18,9 +18,14 @@
 </div>
 
 <div class='page' id='Tabs'>
-	<div class='tabButtonActive' onclick='openPage("Home")'><i class="fas fa-home"></i> Home</div>
-	<div onclick='openPage("Projects")'><i class="fas fa-folder-open"></i> Projects</div>
-	<div onclick='openPage("Writing")'><i class="fas fa-pen"></i> Writing</div>
+	<div class='tabButtonActive' onclick='openPage("Home")'>
+		<i class="fas fa-home"></i> Home</div>
+	<div onclick='openPage("Projects")'>
+		<i class="fas fa-folder-open"></i> Projects</div>
+	<div onclick='openPage("Writing")'>
+		<i class="fas fa-pen"></i> Writing</div>
+	<div onclick='openPage("Worldbuild")'>
+		<i class="fas fa-map-marker-alt"></i> Worldbuilding Project</div>
 </div>
 
 <div class='page' id='Home'>
@@ -41,7 +46,7 @@
 		<a href='https://github.com/Squidji'>
 			<i class="fab fa-github"></i> Github</a>
 	</div>
-	<p class='footer'>Website v1.4.4 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website v1.4.5 PETRICHOR Created by Ben AEraki</p>
 </div>
 
 <div class='page' id='Projects'>
@@ -113,14 +118,6 @@
 	</div>
 </div>
 
-<div class='page' id='Log'>
-	<div class='backButton' onclick='openPage(pagehistory.Previous)'>
-		<i class="fas fa-angle-left"></i> Back</div>
-	<h1 id='logTitle'></h1>
-	<h2 id='logDate'></h2>
-	<p id='logBody'></p>
-</div>
-
 <div class='page' id='Writing'>
 	<h2>Writing Series</h2>
 	<div class='workGroup'>
@@ -157,8 +154,8 @@
 			<p>Nov. 30th, 2019</p></div>
 		<div onclick='openLog(9)'>Log 9 - What Makes People
 			<p>Dec. 1st, 2019</p></div>
-		<div>Log 10 - Awake
-			<p>Coming Soon...</p></div>
+		<div onclick='openLog(10)'>Log 10 - Awake
+			<p>Dec. 2nd, 2019</p></div>
 		<div>Log 11 - Dystopian Utopia
 			<p>Coming Soon...</p></div>
 		<div>Log 12 - Neverending Time
@@ -167,6 +164,25 @@
 			<p>Coming Soon...</p></div>
 		<div>Log 14 - Aesthetics Part Two
 			<p>Coming Soon...</p></div>
+	</div>
+</div>
+
+<div class='page' id='Log'>
+	<div class='backButton' onclick='openPage(pagehistory.Previous)'>
+		<i class="fas fa-angle-left"></i> Back</div>
+	<h1 id='logTitle'></h1>
+	<h2 id='logDate'></h2>
+	<p id='logBody'></p>
+</div>
+
+<div class='page' id='Worldbuild'>
+	<h2>Worldbuilding Project</h2>
+	<div class='boxGroup'>
+		<div><i class="fas fa-meteor"></i> The World & Space</div>
+		<div><i class="fas fa-flag"></i> Nations</div>
+		<div><i class="fas fa-book-open"></i> Written Works</div>
+		<div><i class="fas fa-user-circle"></i> People</div>
+		<div><i class="fas fa-seedling"></i> Plants</div>
 	</div>
 </div>
 

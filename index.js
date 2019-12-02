@@ -8,7 +8,7 @@ function openPage(pagename) {
 	for (let i=0; i<allpages.length; i++) {
 		allpages[i].style.display = 'none';
 	};
-	document.body.scrollTop = 0;
+	window.scrollTo(0,0);
 	pagehistory.Previous = pagehistory.Current;
 	pagehistory.Current = pagename;
 	document.getElementById('Start').style.display = 'block';
