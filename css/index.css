@@ -192,6 +192,36 @@ pre {
 	padding-top: 20px;
 	padding-left: 20px;
 }
+textarea {
+	width: 98%;
+	margin-top: 15px;
+	background-color: #002337;
+	border: solid white 2px;
+	resize: none;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	font-size: 17px;
+	color: gray;
+	padding: 10px;
+	transition: 0.3s;
+	border-radius: 10px;
+}
+textarea:focus {
+	color: white;
+	border-radius: 15px;
+	resize: vertical;
+}
+input.title[type=text] {
+	color: white;
+	font-size: 25px;
+	border-width: 0px;
+	padding: 0px;
+	background-color: #002337;
+	width: 100%;
+}
+#Tabs div.Writing {
+	margin: 10px;
+	margin-left: 0px;
+}
 
 @media screen and (max-width: 1025px) {
 	h1 {font-size: 27px;}
