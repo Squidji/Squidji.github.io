@@ -222,10 +222,34 @@ input.title[type=text] {
 	margin: 10px;
 	margin-left: 0px;
 }
-
-@media screen and (max-width: 1025px) {
-	h1 {font-size: 27px;}
-	h2 {font-size: 20px;}
+#Log .backButton {
+	display: inline-block;
+}
+.next, .prev {
+	display: inline-block;
+	padding-bottom: 5px;
+	border-bottom: white solid 2px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+	width: 40%;
+	transition: 0.3s;
+}
+.next {
+	text-align: right;
+}
+.prev {
+	margin-left: 20px;
+}
+.next i {
+	margin-left: 10px;
+}
+.prev i {
+	margin-right: 10px;
+}
+.next:hover, .prev:hover {
+	letter-spacing: 1px;
 }
 
 @media screen and (max-width: 500px) {
@@ -256,5 +280,9 @@ input.title[type=text] {
 	}
 	.workGroup p {
 		display: none;
+	}
+	.next, .prev {
+		width: 95%;
+		margin-left: 5px;
 	}
 }

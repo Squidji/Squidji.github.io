@@ -24,8 +24,8 @@
 		<i class="fas fa-folder-open"></i> Projects</div>
 	<div onclick='openPage("Writing")'>
 		<i class="fas fa-pen"></i> Writing</div>
-	<div onclick='openPage("Worldbuild")'>
-		<i class="fas fa-map-marker-alt"></i> Worldbuilding Project</div>
+<!-- 	<div onclick='openPage("Worldbuild")'>
+		<i class="fas fa-map-marker-alt"></i> Worldbuilding Project</div> -->
 </div>
 
 <div class='page' id='Home'>
@@ -46,7 +46,7 @@
 		<a href='https://github.com/Squidji'>
 			<i class="fab fa-github"></i> Github</a>
 	</div>
-	<p class='footer'>Website v1.5.1 PETRICHOR Created by Ben AEraki</p>
+	<p class='footer'>Website PETRICHOR v1.5.2 by Ben AEraki</p>
 </div>
 
 <div class='page' id='Projects'>
@@ -123,7 +123,6 @@
 	<div class='workGroup'>
 		<div onclick='openPage("Logs")'>Short Logs
 			<p>Small writings on life.</p></div>
-		<div>Crimson Menagerie <p>Coming Soon...</p></div>
 		<div>JoJo's Bizzare Adventure: Cisco Disco <p>Coming Soon...</p></div>
 	</div>
 </div>
@@ -166,12 +165,28 @@
 			<p>Dec. 6th, 2019</p></div>
 	</div>
 	<h2>Season Three - Error</h2>
-	<p>Under Development</p>
+	<div class='workGroup'>
+		<div onclick='openLog(15)'>Log 15 - Broken
+			<p>Dec 14th, 2019</p></div>
+		<div onclick=''>Log 16 - Not Me
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 17 - Things Look Up
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 18 - Happiness
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 19
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 20
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 21
+			<p>Coming Soon...</p></div>
+	</div>
 </div>
 
 <div class='page' id='Log'>
 	<div class='backButton' onclick='openPage(pagehistory.Previous)'>
 		<i class="fas fa-angle-left"></i> Back</div>
+	<div class='prev' id='logPrev'>Previous Log</div><div class='next' id='logNext'>Next Log</div>
 	<h1 id='logTitle'></h1>
 	<h2 id='logDate'></h2>
 	<p id='logBody'></p>

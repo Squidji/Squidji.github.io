@@ -73,5 +73,10 @@ let logData = {
 		'title': 'Aesthetics Part Two',
 		'text': "Another week has passed.\nIt's been busy and frantic, but also calm at the same time.\nIt sounds like a paradox- the way the week's mood and tempo can change.\nIt changes by the flick of a switch, immediately and without hesitation.\n\nThe week has been mellow: Thanksgiving passed and I barely did anything.\nThe week has been fast paced: I had multiple final tests that built up stress inside of me.\nThe week has been happy: I relaxed by the fire as it snowed outside.\nThe week has been sad: I missed my friends during the long break.\n\nIt is always important to reflect on your own aesthetic.\nTo reflect upon how you've felt over the course of the week.\nTo think about who you are- what makes you different from the rest.\nTo feel free. To rest after the week. To explore in your free time.\n\nYou have to keep other people in mind too.\nHow have they been feeling? Can you help them?\nWhat can you do to make them happier.\nThat is what aestheticism is all about:\nTo be comfortable with ones self, \nand to help others become comfortable too.\n\nSo now move forward.\nDon't stop or look back.\nBecome the moment.\nI've felt the pain of stopping.\nOf looking back. Of thinking.\nYou have to run towards your aesthetic.\nBefore you lose it, and have little chance of getting a new one.",
 		'date': 'Dec. 6th, 2019'
+	},
+	15: {
+		'title': 'Broken',
+		'text': "I walked for what felt like so long.\nI took a break and couldn't get back up.\nI feel broken inside.\nMy soul, glass shards on the floor.\n\nMy body feels slower.\nMy eyes are dreary.\nI cant think quite straight.\nIve failed to complete my difficult path.\n\nThey say its OK, that its good.\nBut I don't see it that way.\nAnd then they've left me,\nas I fall behind on the path.\n\nThen I'm alone, by myself.\nWho can I turn to for help,\nbecause no one likes people\nwho sleep on the difficult path.\n\nI feel a layer of  unhealthy self-hatred.\nI hate myself. I hate hating myself.\nWhy should people care about me?\nIve fallen behind anyways.",
+		'date': 'Dec. 14th, 2019'
 	}
 }
