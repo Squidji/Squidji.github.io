@@ -83,5 +83,10 @@ let logData = {
 		'title': 'Not Me',
 		'text': "I've worn a toxic persona.\nI've lost my sense of kindness.\nI hate myself for it.\nMy family and friends, have to deal with that persona.\nI want to change, but its already happened.\nAnd if I do change, will they forgive me?\nThey won't forget the toxic persona I wore.\n\nTime moves forward when I'm not ready.\nIt pushes me into obstacles as I try to fight back.\nI stopped on the path for a break, but it wont let me rest.\nIt pushes me onward, unwavering.\n\nI forget how to act, and I put on this mask.\nBut I hate the mask, I hate how it makes me feel.\nBut I've still worn it.\nNow it has become a part of me.\nAnd even if it is a just mask,\nmy actions have not been excused.\nI've chosen the mask, and now I regret it.\n\nThe mask has attached itself to my face.\nIf I take it off, my real face will come with it.\nWhat is me and what isn't?\nThis persona clearly isn't.",
 		'date': 'Dec. 15th, 2019'
+	},
+	17: {
+		'title': 'Things Look Up',
+		'text': "Pain is only temporary.\nIt comes, a reminder of sadness,\nbut then it leaves as soon as it came.\nThings always start to look up.\n\nYou can't expect things to fix on their own.\nYou have to out seek that change yourself.\nTalk with your friends. Share your worries.\nIf you hold it inside, it just becomes scarier.\nIt might be difficult.\nYou might think they don't understand.\nBut more often than not, they do.\nThey want to help you.\n\nThe sun sets but it always rises the next morning.\nYou stay up at night, angry and upset at it.\nYour friends worry about you.\nYou have to ask for help.\nAnd they'll tell you to sleep at night,\nto get rest for when the sun next appears.\n\nThe sub rises into the sky, and you look up.\nIts there now, waiting for you.\nThings always look up.\nWaiting will never help though.\nYou have to create change yourself.\n\nThe sun always sets at the end of the day,\nand although its sad to see it leave,\nits still beautiful in the darkening sky.\nJust remember to look up in the morning,\nwhen the sun rises once again.",
+		'date': 'Dec. 16th, 2019'
 	}
 }
