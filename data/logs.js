@@ -76,7 +76,12 @@ let logData = {
 	},
 	15: {
 		'title': 'Broken',
-		'text': "I walked for what felt like so long.\nI took a break and couldn't get back up.\nI feel broken inside.\nMy soul, glass shards on the floor.\n\nMy body feels slower.\nMy eyes are dreary.\nI cant think quite straight.\nIve failed to complete my difficult path.\n\nThey say its OK, that its good.\nBut I don't see it that way.\nAnd then they've left me,\nas I fall behind on the path.\n\nThen I'm alone, by myself.\nWho can I turn to for help,\nbecause no one likes people\nwho sleep on the difficult path.\n\nI feel a layer of  unhealthy self-hatred.\nI hate myself. I hate hating myself.\nWhy should people care about me?\nIve fallen behind anyways.",
+		'text': "I walked for what felt like so long.\nI took a break and couldn't get back up.\nI feel broken inside.\nMy soul, glass shards on the floor.\n\nMy body feels slower.\nMy eyes are dreary.\nI cant think quite straight.\nI've failed to complete my difficult path.\n\nThey say its OK, that its good.\nBut I don't see it that way.\nAnd then they've left me,\nas I fall behind on the path.\n\nThen I'm alone, by myself.\nWho can I turn to for help,\nbecause no one likes people\nwho sleep on the difficult path.\n\nI feel a layer of  unhealthy self-hatred.\nI hate myself. I hate hating myself.\nWhy should people care about me?\nI've fallen behind anyways.",
 		'date': 'Dec. 14th, 2019'
+	},
+	16: {
+		'title': 'Not Me',
+		'text': "I've worn a toxic persona.\nI've lost my sense of kindness.\nI hate myself for it.\nMy family and friends, have to deal with that persona.\nI want to change, but its already happened.\nAnd if I do change, will they forgive me?\nThey won't forget the toxic persona I wore.\n\nTime moves forward when I'm not ready.\nIt pushes me into obstacles as I try to fight back.\nI stopped on the path for a break, but it wont let me rest.\nIt pushes me onward, unwavering.\n\nI forget how to act, and I put on this mask.\nBut I hate the mask, I hate how it makes me feel.\nBut I've still worn it.\nNow it has become a part of me.\nAnd even if it is a just mask,\nmy actions have not been excused.\nI've chosen the mask, and now I regret it.\n\nThe mask has attached itself to my face.\nIf I take it off, my real face will come with it.\nWhat is me and what isn't?\nThis persona clearly isn't.",
+		'date': 'Dec. 15th, 2019'
 	}
 }
