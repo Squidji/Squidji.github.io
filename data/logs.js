@@ -88,5 +88,18 @@ let logData = {
 		'title': 'Things Look Up',
 		'text': "Pain is only temporary.\nIt comes, a reminder of sadness,\nbut then it leaves as soon as it came.\nThings always start to look up.\n\nYou can't expect things to fix on their own.\nYou have to out seek that change yourself.\nTalk with your friends. Share your worries.\nIf you hold it inside, it just becomes scarier.\nIt might be difficult.\nYou might think they don't understand.\nBut more often than not, they do.\nThey want to help you.\n\nThe sun sets but it always rises the next morning.\nYou stay up at night, angry and upset at it.\nYour friends worry about you.\nYou have to ask for help.\nAnd they'll tell you to sleep at night,\nto get rest for when the sun next appears.\n\nThe sub rises into the sky, and you look up.\nIts there now, waiting for you.\nThings always look up.\nWaiting will never help though.\nYou have to create change yourself.\n\nThe sun always sets at the end of the day,\nand although its sad to see it leave,\nits still beautiful in the darkening sky.\nJust remember to look up in the morning,\nwhen the sun rises once again.",
 		'date': 'Dec. 16th, 2019'
+	},
+	18: {
+		'title': 'Happiness',
+		'text': "The pain seems to stick out the most.\nIt seems to consume my attention.\nBut happiness still exists.\nI forget to acknowledge it.\n\nHappiness is weird to feel.\nYou don't think about it until you aren't.\nEveryone wants it, and everyone remembers it.\nThey spend so much time looking for it,\nthey might pass right by it.\n\nPeople make me happy.\nI feel comfortable with my friends.\nWe can talk and joke.\nWe take the edge off of life.\nWe understand what each other go through.\nWe are there for each other.\nThey are the reason I can move forward.\n\nFood makes me happy. All of the flavors and textures.\nIt makes you forget your troubles. \nIt fills you up, filling the holes of your soul.\nIn addition to happiness, you need it to live.\n\nHappiness seems to live in the same category as aesthetics,\nbut its really only a part of what makes aestheticism important.\nYou can have aesthetic without happiness, and vice versa.\n\nHappiness is important.\nYou need it to survive.\nYou have to do what makes you happy,\neven if it doesn't always make you feel that way.\nTo be happy is to be complete.\nYou feel great, a weight of sadness lifted off of you.\nYou feel as though you are unstoppable.",
+		'date': 'Dec. 17th, 2019'
+	},
+	19: {
+		'title': 'Boredom',
+		'text': "I stare at my ceiling, resting myself on my bed.\nWhat do I do with my life now?\nMy mind is a tangle of strings,\ncrossing over one another. Disorganized. A mess.\n\nThere lies all the things I want to create.\nThe expansive ideas I have, that never become anything.\nI still want to do something. Make something.\nI want to leave behind something of my own.\nA mark on the world when I'm gone.\n\nThe days pass, and I feel as if I've made no progress.\nAm I not motivated enough to program?\nAm I not talented enough to draw?\nAm I not inspired enough to write?\n\nI want to look back on what I made, proud.\nTo know that I created something great,\nwith my own two hands and my brain.\nBut I sit here and ponder.\nI don't know how to do this.\nHow am I supposed to know?\n\nBoredom wastes me.\nUnable to sit still.\nUnable to relax or play.\nI want to create.\nBut I can't. I'm unable to.\nHere I write my thoughts.\nNothing else comes to my mind.\nI want some meaning in this world.\nWhy can't I just make it?",
+		'date': 'Dec. 28th, 2019'
+	},
+	20: {
+		'title': '???'
 	}
 }

@@ -1,0 +1,27 @@
+body {
+	background-color: white;
+	color: black;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+h1 {
+	margin: 0px;
+	margin-bottom: 10px;
+}
+#Base {
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 100px;
+	padding: 2%;
+	background-color: white;
+	border: 5px black solid;
+}
+#grid {
+	font-size: 0px;
+	text-align: center;
+}
+#grid .box {
+	width: 64px;
+	height: 64px;
+	border: 1px solid black;
+	display: inline-block;
+}
