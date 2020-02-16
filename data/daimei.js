@@ -1,7 +1,7 @@
 function daimei() {
 	let res = '';
 	var consonants = [
-		'k', 'r', 'l', 'n', 'f', 'd', 'h', 't', 'v', ''
+		'k', 'r', 'l', 'n', 'f', 'd', 'h', 't', 'v', 's', ''
 	];
 	var vowels = [
 		'a', 'e', 'i', 'o', 'u'

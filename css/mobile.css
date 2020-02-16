@@ -11,7 +11,12 @@
 		font-size: 26px;
 	}
 
-	.workg .workt:hover {padding: 0; padding-left: 5px;}
+	.workg .workt:hover {
+		padding: 0;
+		padding-left: 0;
+		background-color: #00000000;
+		color: white;
+	}
 	.workg .workt h1 {font-size: 24px;}
 	.workg .workt h2 {font-size: 16px;}
 	.workp {margin-left: 10px;}
