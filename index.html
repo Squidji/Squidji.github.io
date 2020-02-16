@@ -5,10 +5,12 @@
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/mobile.css">
 	<link rel="stylesheet" href="./css/all.css">
-	<link rel="icon" href="icon.ico">
-	<script src='data/logs.js'></script>
-	<script src='index.js'></script>
+	<link rel="icon" href="./icon.ico">
+	<script src='./data/logs.js'></script>
+	<script src='./data/daimei.js'></script>
+	<script src='./index.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,7 +18,19 @@
 <div class='page' id='Header'>
 	<h1>Aeraki</h1>
 	<h2>アエラキ</h2>
-	<a class='blk' href='./indexold.html'>Old Website</a>
+	<i class='fas fa-bars' onclick='openNav()'></i>
+</div>
+
+<div id='Nav'>
+	<div onclick='closeNav()' id='X'>&times;</div>
+	<div id='NavTabs'>
+		<h2 f='y' onclick='openTab("Projects")' id='Nav_Projects'>
+			<i class='fas fa-scroll'></i>Projects</h2>
+		<h2 f='n' onclick='openTab("Writing")' id='Nav_Writing'>
+				<i class='fas fa-pen-nib'></i>Writing</h2>
+		<h2 f='n' onclick='openTab("Social")' id='Nav_Social'>
+			<i class='fas fa-share-alt'></i>Social Media</h2>
+	</div>
 </div>
 
 <div class='page' id='Base'>
@@ -36,10 +50,6 @@
 						<h2>Multipurpose Discord Bot</h2>
 					</div>
 					<div class='workp' id='MeguBot'>
-						<a class='blk' target='_blank' 
-							href='https://gist.github.com/Squidji/e4452b6aa5ece60d6eaa7a51fa6545f3'>
-							Source Code
-						</a>
 						<a class='blk' target='_blank'
 						href='https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160'>
 							Invite to Server
@@ -50,7 +60,11 @@
 						<h2>Aeraki-esque Name Generator</h2>
 					</div>
 					<div class='workp' id='DaimeiMachine'>
-						<div class='blk'>Coming Soon</div>
+						<div class='blk'
+							onclick='document.getElementById("DaimeiResults").innerText=multidaimei()'>
+							Click to Generate Names
+						</div>
+						<p id='DaimeiResults'>No names generated.</p>
 					</div>
 					<div class='workt' onclick='openWork("GengoMachine")'>
 						<h1>Gengo Machine</h1>

@@ -1,0 +1,79 @@
+@media screen and (max-width: 550px) {
+	.page {
+		margin-left: 0;
+		margin-right: 0;
+		border-radius: 0;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+
+	.workg .workt:hover {padding: 0; padding-left: 5px;}
+	.workg .workt h1 {font-size: 24px;}
+	.workg .workt h2 {font-size: 16px;}
+	.workp {margin-left: 10px;}
+
+	.list a:nth-child(odd), .list div:nth-child(odd) {
+		margin-right: 0;
+	}
+	.list a:nth-child(even), .list div:nth-child(even) {
+		margin-left: 0;
+	}
+
+	#Header i {
+		display: block;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+		font-size: 32px;
+		cursor: pointer;
+	}
+	#Header .blk {
+		display: none;
+	}
+
+	#Nav {
+		display: block;
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		background-color: rgba(0, 61, 104, 0.89);
+		overflow-x: hidden;
+		transition: 0.4s;
+	}
+	#Nav #X {
+		margin-top: 27px;
+		margin-right: 30px;
+		font-size: 50px;
+		float: right;
+		cursor: pointer;
+	}
+	#Nav #NavTabs {
+		margin-top: 200px;
+	}
+	#Nav h2 {
+		margin: 30px;
+		cursor: pointer;
+		display: block;
+	}
+	#Nav h2[f=y] {
+		background-color: white;
+		color: black;
+		border-radius: 20px;
+		padding: 10px;
+	}
+
+	#Tabs h2 {
+		display: none;
+	}
+	#Tabs h2[f=y] {
+		display: block;
+		width: 100%;
+	}
+}

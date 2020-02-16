@@ -93,6 +93,9 @@ a {
 	display: none;
 	animation: fadeIn 1s;
 }
+.workp p {
+	margin-left: 20px;
+}
 
 .list a:nth-child(odd), .list div:nth-child(odd) {
 	margin-right: 100px;
@@ -138,9 +141,9 @@ a {
 	color: gray;
 	margin-left: 5px;
 }
-#Header .blk {
-	margin-left: 20px;
-}
+#Header i {display: none;}
+
+#Nav {display: none;}
 
 #Base {
 	animation: fadeIn 1.25s;
