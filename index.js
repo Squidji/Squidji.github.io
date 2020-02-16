@@ -19,11 +19,15 @@ function openTab(tabname) {
 }
 
 function openWork(workname) {
-	let allworks = document.getElementsByClassName('workp');
-	for (let i=0; i<allworks.length; i++) {
-		allworks[i].style.display = 'none';
+	if (document.getElementById(workname).style.display == 'block') {
+		document.getElementById(workname).style.display = 'none';
+	} else {
+		let allworks = document.getElementsByClassName('workp');
+		for (let i=0; i<allworks.length; i++) {
+			allworks[i].style.display = 'none';
+		}
+		document.getElementById(workname).style.display = 'block';
 	}
-	document.getElementById(workname).style.display = 'block';
 }
 
 function openLog(i) {

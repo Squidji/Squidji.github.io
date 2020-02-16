@@ -27,6 +27,10 @@
 	.list a:nth-child(even), .list div:nth-child(even) {
 		margin-left: 0;
 	}
+	.list a:hover, .list div:hover {
+		background-color: none;
+		color: white;
+	}
 
 	#Header i {
 		display: block;
