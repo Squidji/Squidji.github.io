@@ -10,6 +10,7 @@
 	<link rel="icon" href="./icon.ico">
 	<script src='./data/logs.js'></script>
 	<script src='./data/daimei.js'></script>
+	<script src='./data/songs.js'></script>
 	<script src='./index.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
 </head>
@@ -55,22 +56,34 @@
 							Invite to Server
 					</a>
 					</div>
-					<div class='workt' onclick='openWork("DaimeiMachine")'>
+					<div class='workt' onclick='openWork("Daimei")'>
 						<h1>Daimei Machine</h1>
 						<h2>Aeraki-esque Name Generator</h2>
 					</div>
-					<div class='workp' id='DaimeiMachine'>
+					<div class='workp' id='Daimei'>
 						<div class='blk'
 							onclick='document.getElementById("DaimeiResults").innerText=multidaimei()'>
 							Click to Generate Names
 						</div>
 						<p id='DaimeiResults'>No names generated.</p>
 					</div>
-					<div class='workt' onclick='openWork("GengoMachine")'>
+					<div class='workt' onclick='openWork("Tamashi")'>
+						<h1>Tamashi Machine</h1>
+						<h2>Character Generator</h2>
+					</div>
+					<div class='workp' id='Tamashi'>
+						<div class='blk'>Coming Soon</div>
+						<div id='TamashiResults'>
+							<p id='Tamashi_Name'></p>
+							<p id='Tamashi_Age'></p>
+							<p id='Tamashi_Location'></p>
+						</div>
+					</div>
+					<div class='workt' onclick='openWork("Gengo")'>
 						<h1>Gengo Machine</h1>
 						<h2>Automatic Story Generator</h2>
 					</div>
-					<div class='workp' id='GengoMachine'>
+					<div class='workp' id='Gengo'>
 						<div class='blk'>Coming Soon</div>
 					</div>
 					<div class='workt' onclick='openWork("StudioWrite")'>

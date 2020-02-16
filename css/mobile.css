@@ -11,6 +11,11 @@
 		font-size: 26px;
 	}
 
+	.workg {
+		border-left-width: 0px;
+		padding: 0;
+		margin: 0;
+	}
 	.workg .workt:hover {
 		padding: 0;
 		padding-left: 0;
@@ -28,7 +33,7 @@
 		margin-left: 0;
 	}
 	.list a:hover, .list div:hover {
-		background-color: none;
+		background-color: #00000000;
 		color: white;
 	}
 
@@ -76,13 +81,19 @@
 		color: black;
 		border-radius: 20px;
 		padding: 10px;
+		padding-left: 20px;
 	}
 
-	#Tabs h2 {
-		display: none;
+	#Base {
+		margin-top: 0;
+		padding-top: 0;
 	}
+
+	#Tabs h2 {display: none;}
 	#Tabs h2[f=y] {
 		display: block;
 		width: 100%;
+		padding-top: 10px;
+		border-top: 2px solid white;
 	}
 }

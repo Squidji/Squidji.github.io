@@ -1,4 +1,4 @@
-let logData = {
+const logData = {
 	0: {
 		'title': 'Introduction',
 		'text': 'Dark, pitch black, but calm.\n\nLights of the laptop screen illuminating their face.\n\nMusic buzzing in their ear.\n\nTyping, typing, typing..\n\nThe sounds of a person who wants to create\n\nbut has no idea how.\n\nIdeas they don\'t know they have or know how to use them.\n\nThe curse of having a brain, so lost and yet so fixated.\n\nWhat would they create..\n\nif they were given the power..\n\nto control a world of no limits.',

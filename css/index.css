@@ -59,13 +59,15 @@ a {
 	margin: 10px;
 	padding: 10px;
 	padding-left: 20px;
+	margin-left: 10px;
 }
 .workg .workt {
 	cursor: pointer;
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 10px;
 	font-size: 0;
 	transition: 0.4s;
+	cursor: pointer;
 }
 .workg .workt:hover {
 	background-color: white;
@@ -157,11 +159,12 @@ a {
 	display: inline-block;
 	margin-right: 20px;
 	cursor: pointer;
-	padding-bottom: 5px;
-	transition: color 0.4s;
+	padding-bottom: 10px;
+	transition: 0.4s;
+	border-bottom: 2px solid #ffffff00;
 }
 #Tabs h2[f=y] {
-	border-bottom: 2px solid white;
+	border-color: #ffffff;
 }
 #Tabs h2[f=n] {
 	color: gray;
@@ -182,6 +185,7 @@ a {
 	margin-left: 20px;
 	border-left: 4px solid gray;
 	padding-left: 20px;
+	width: 60%;
 }
 #Page_ShortLogs .prevnext {
 	display: inline-block;
@@ -195,6 +199,10 @@ a {
 	color: black;
 	background-color: white;
 	border-radius: 10px;
+}
+
+#TamashiResults {
+	display: none;
 }
 
 @keyframes fadeIn {
