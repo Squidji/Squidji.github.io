@@ -43,10 +43,8 @@ function openLog(i) {
 }
 
 function openNav() {
-	document.getElementById('Nav').style.opacity = '100%';
 	document.getElementById('Nav').style.width = '100%';
 }
 function closeNav() {
-	document.getElementById('Nav').style.opacity = '0';
 	document.getElementById('Nav').style.width = '0';
 }
