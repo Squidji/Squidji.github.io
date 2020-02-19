@@ -23,12 +23,8 @@ body {
 }
 
 h1, h2 {margin: 0px;}
-h1 {
-	font-size: 40px;
-}
-h2 {
-	font-size: 32px;
-}
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
 h2 i {
 	font-size: 27px;
 	margin-right: 10px;
@@ -36,6 +32,20 @@ h2 i {
 a {
 	color: white;
 	text-decoration: none;
+}
+footer {
+	opacity: 0;
+	color: white;
+	bottom: 0;
+	right: 0;
+	font-size: 28px;
+	position: fixed;
+	transition: 0.4s;
+	cursor: default;
+}
+footer:hover {
+	opacity: 100;
+	font-size: 36px;
 }
 
 .blk {
@@ -86,6 +96,9 @@ a {
 	color: gray;
 	display: inline;
 }
+.workg .workt h1 i {
+	margin-right: 10px;
+}
 .workp {
 	border-left: 4px solid gray;
 	margin: 10px;
@@ -99,12 +112,6 @@ a {
 	margin-left: 20px;
 }
 
-.list a:nth-child(odd), .list div:nth-child(odd) {
-	margin-right: 100px;
-}
-.list a:nth-child(even), .list div:nth-child(even) {
-	margin-left: 100px;
-}
 .list a, .list div {
 	border: 3px solid white;
 	border-radius: 20px;
@@ -115,6 +122,7 @@ a {
 	cursor: pointer;
 	padding-left: 15px;
 	transition: 0.4s;
+	margin-right: 100px;
 }
 .list a:hover, .list div:hover {
 	margin-left: 0;
@@ -122,9 +130,15 @@ a {
 	background-color: white;
 	color: black;
 }
-.list a i {
+.list a i, .list div i {
 	font-size: 20px;
 	margin-right: 10px;
+}
+.list div h2 {
+	font-size: 20px;
+	display: inline-block;
+	color: gray;
+	margin-left: 10px;
 }
 
 
@@ -154,6 +168,7 @@ a {
 
 #Tabs {
 	margin-bottom: 20px;
+	font-size: 0;
 }
 #Tabs h2 {
 	display: inline-block;
@@ -177,6 +192,9 @@ a {
 #Page_Projects {
 	display: block;
 }
+#Page_Works {
+	display: block;
+}
 
 #Page_ShortLogs h1 {
 	display: inline-block;
@@ -186,23 +204,6 @@ a {
 	border-left: 4px solid gray;
 	padding-left: 20px;
 	width: 60%;
-}
-#Page_ShortLogs .prevnext {
-	display: inline-block;
-	font-size: 30px;
-	margin-left: 10px;
-	margin-right: 10px;
-	cursor: pointer;
-	transition: 0.4s;
-}
-#Page_ShortLogs .prevnext:hover {
-	color: black;
-	background-color: white;
-	border-radius: 10px;
-}
-
-#TamashiResults {
-	display: none;
 }
 
 @keyframes fadeIn {

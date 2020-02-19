@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="./css/all.css">
 	<link rel="icon" href="./icon.ico">
 	<script src='./data/logs.js'></script>
-	<script src='./data/daimei.js'></script>
+	<script src='./data/gen.js'></script>
 	<script src='./data/songs.js'></script>
 	<script src='./index.js'></script>
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
@@ -46,6 +46,7 @@
 	<div id='TabPages'>
 		<div class='tabpage' id='Page_Projects'>
 			<div class='workg'>
+
 					<div class='workt' onclick='openWork("MeguBot")'>
 						<h1>MeguBot</h1>
 						<h2>Multipurpose Discord Bot</h2>
@@ -54,31 +55,34 @@
 						<a class='blk' target='_blank'
 						href='https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160'>
 							Invite to Server
-					</a>
+						</a>
 					</div>
+
+
 					<div class='workt' onclick='openWork("Daimei")'>
 						<h1>Daimei Machine</h1>
 						<h2>Aeraki-esque Name Generator</h2>
 					</div>
 					<div class='workp' id='Daimei'>
-						<div class='blk'
-							onclick='document.getElementById("DaimeiResults").innerText=multidaimei()'>
-							Click to Generate Names
+						<div class='blk'onclick='multidaimei();'>
+							Generate Names
 						</div>
 						<p id='DaimeiResults'>No names generated.</p>
 					</div>
+
+
 					<div class='workt' onclick='openWork("Tamashi")'>
 						<h1>Tamashi Machine</h1>
 						<h2>Character Generator</h2>
 					</div>
 					<div class='workp' id='Tamashi'>
-						<div class='blk'>Coming Soon</div>
-						<div id='TamashiResults'>
-							<p id='Tamashi_Name'></p>
-							<p id='Tamashi_Age'></p>
-							<p id='Tamashi_Location'></p>
+						<div class='blk' onclick='tamashi();'>
+							Generate Character
 						</div>
+						<p id='TamashiResults'>Tamashi Machine under development.</p>
 					</div>
+
+
 					<div class='workt' onclick='openWork("Gengo")'>
 						<h1>Gengo Machine</h1>
 						<h2>Automatic Story Generator</h2>
@@ -86,6 +90,8 @@
 					<div class='workp' id='Gengo'>
 						<div class='blk'>Coming Soon</div>
 					</div>
+
+
 					<div class='workt' onclick='openWork("StudioWrite")'>
 						<h1>StudioWrite</h1>
 						<h2>Notetaking Tool</h2>
@@ -93,16 +99,14 @@
 					<div class='workp' id='StudioWrite'>
 						<div class='blk'>Coming Soon</div>
 					</div>
+
 				</div>
 		</div>
 		<div class='tabpage' id='Page_Writing'>
 			<div class='workg'>
-				<div class='workt' onclick='openWork("SongofSpace")'>
+				<div class='workt' onclick='window.open("./song.html", "_self");'>
 					<h1>Song of Space</h1>
 					<h2>A Connected World of Stories</h2>
-				</div>
-				<div class='workp' id='SongofSpace'>
-					<div class='blk'>Coming Soon</div>
 				</div>
 				<div class='workt' onclick='openWork("CiscoDisco")'>
 					<h1>Cisco Disco</h1>
@@ -158,6 +162,8 @@
 		</div>
 	</div>
 </div>
+
+<footer>liquify v2.0.0</footer>
 
 </body>
 </html>

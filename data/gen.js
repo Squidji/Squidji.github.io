@@ -29,5 +29,7 @@ function multidaimei() {
 	for (let i=0; i<10; i++) {
 		res += daimei() + '\n';
 	};
-	return res;
+	document.getElementById('DaimeiResults').innerText=res;
 }
+
+function tamashi() {}

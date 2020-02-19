@@ -1,4 +1,4 @@
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 850px) {
 	.page {
 		margin-left: 0;
 		margin-right: 0;
@@ -9,6 +9,9 @@
 	}
 	h2 {
 		font-size: 26px;
+	}
+	footer {
+		display: none;
 	}
 
 	.workg {
@@ -26,17 +29,20 @@
 	.workg .workt h2 {font-size: 16px;}
 	.workp {margin-left: 10px;}
 
-	.list a:nth-child(odd), .list div:nth-child(odd) {
+	.list a, .list div {
 		margin-right: 0;
-	}
-	.list a:nth-child(even), .list div:nth-child(even) {
-		margin-left: 0;
+		font-size: 20px;
 	}
 	.list a:hover, .list div:hover {
 		background-color: #00000000;
 		color: white;
 	}
 
+	#Header {
+		position: fixed;
+		top: 0;
+		width: calc(100% - 40px);
+	}
 	#Header i {
 		display: block;
 		float: right;
@@ -57,7 +63,7 @@
 		z-index: 1;
 		left: 0;
 		top: 0;
-		background-color: rgba(0, 61, 104, 0.89);
+		background-color: #003d68e3;
 		overflow-x: hidden;
 		transition: 0.4s;
 	}
@@ -75,6 +81,7 @@
 		margin: 30px;
 		cursor: pointer;
 		display: block;
+		padding-left: 10px;
 	}
 	#Nav h2[f=y] {
 		background-color: white;
@@ -85,7 +92,7 @@
 	}
 
 	#Base {
-		margin-top: 0;
+		margin-top: 111px;
 		padding-top: 0;
 	}
 

@@ -27,6 +27,7 @@ function openWork(workname) {
 			allworks[i].style.display = 'none';
 		}
 		document.getElementById(workname).style.display = 'block';
+		return document.getElementById(workname);
 	}
 }
 
