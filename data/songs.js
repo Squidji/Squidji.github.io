@@ -62,6 +62,9 @@ function open_a(id) {
 
 	document.getElementById('A_H1').innerText = get.title;
 	document.getElementById('A_H2').innerText = get.dateWritten;
+	if (get.revised !== undefined) {
+		document.getElementById('A_H2').innerText += ', Revised ' + get.revised
+	};
 	document.getElementById('A_H3').innerText = get.timelineWritten;
 	document.getElementById('A_P' ).innerText = get.text;
 
