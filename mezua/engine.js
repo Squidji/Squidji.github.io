@@ -65,10 +65,15 @@ function drawtroops() {
 		};
 	};
 	for (let i=0; i<troops.red.length; i++) {
-		setIN(troops.red[i].x, troops.red[i].y, troopinit[troops.red[i].type].img);
+		setIN(troops.red[i].x, troops.red[i].y, troopinit[troops.red[i].type].rimg);
 	};
 	for (let i=0; i<troops.blue.length; i++) {
-		setIN(troops.blue[i].x, troops.blue[i].y, troopinit[troops.blue[i].type].img);
+		setIN(troops.blue[i].x, troops.blue[i].y, troopinit[troops.blue[i].type].bimg);
+	};
+	if (turn === 'red') {
+		document.getElementById('turn').innerText = 'Red Turn';
+	} else if (turn === 'blue') {
+		document.getElementById('turn').innerText = 'Blue Turn';
 	};
 };
 

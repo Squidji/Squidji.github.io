@@ -1,19 +1,3 @@
-const wh = [20, 10]
-const tileinit = {
-	g: {solid: false},
-	b: {solid: false},
-	w: {solid: true}
-}
-var turn = {
-	turn: 'red'
-};
-const troopinit = {
-	t: {
-		img: './t.png',
-		movement: '4d',
-		position: 'lower'
-	}
-};
 var troops = {
 	red: [
 		{type: 't', x: 0, y: wh[1]-1},
@@ -24,7 +8,6 @@ var troops = {
 	]
 };
 var turn = 'red';
-var selection = [];
 
 function troopmenu(x, y) { if (getTroop(x, y).side === turn) {
 
