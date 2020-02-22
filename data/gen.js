@@ -31,5 +31,3 @@ function multidaimei() {
 	};
 	document.getElementById('DaimeiResults').innerText=res;
 }
-
-function tamashi() {}

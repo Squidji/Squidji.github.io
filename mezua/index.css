@@ -1,0 +1,43 @@
+body {
+	background-color: black;
+	text-align: center;
+}
+
+#MAP {
+	line-height: 0px;
+}
+
+.box {
+	width: 50px;
+	height: 50px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	display: inline-block;
+	background-size: 50px 50px;
+	position: relative;
+}
+.box img {
+	width: 40px;
+	height: 40px;
+	margin: 5px;
+	display: none;
+	cursor: default;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box img.t {}
+.box img.v {
+	display: block;
+	cursor: pointer;
+}
+.box img.pointimg {
+	display: block;
+	display: none;
+	cursor: pointer;
+}
+.box.g {background-image: url('./g.png');}
+.box.w {background-image: url('./w.png');}
+.box.b {background-image: url('./b.png');}
+.box.f_red {background-image: url('./flagred.png');}
+.box.f_blue {background-image: url('./flagblue.png');}
