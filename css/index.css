@@ -196,8 +196,8 @@ footer:hover {
 	display: block;
 }
 
-#Page_ShortLogs h1 {
-	display: inline-block;
+#ShortLogs_H2 {
+	color: gray;
 }
 #Page_ShortLogs p {
 	margin-left: 20px;
