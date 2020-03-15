@@ -199,7 +199,10 @@ footer:hover {
 #ShortLogs_H2 {
 	color: gray;
 }
-#Page_ShortLogs p {
+#Page_Songs h2 {
+	color: gray;
+}
+#Page_ShortLogs p, #Page_Songs p {
 	margin-left: 20px;
 	border-left: 4px solid gray;
 	padding-left: 20px;

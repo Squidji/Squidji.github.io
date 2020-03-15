@@ -1,84 +1,3 @@
-function createlist(order, todivid) {
-	let olist = [];
-	if (order === 'release') {
-
-		for (let i=0; i<songData.length; i++) {
-			if (songData[i].canon) {
-				olist.push(songData[i]);
-			};
-		};
-
-	} else if (order === 'chronological') {
-
-	} else if (order === 'alphabet') {
-
-		let alist = [];
-		for (let i=0; i<songData.length; i++) {alist.push(songData[i].title)};
-		alist = alist.sort();
-		for (let a=0; a<alist.length; a++) {
-			for (let b=0; b<songData.length; b++) {
-				if (songData[b].title === alist[a] && songData[b].canon) {
-					olist.push(songData[b]);
-				};
-			};
-		};
-		console.log(olist);
-
-	} else if (order === 'noncanon') {
-
-		for (let i=0; i<songData.length; i++) {
-			if (songData[i].canon === false) {
-				olist.push(songData[i]);
-			};
-		};
-
-	};
-
-	for (let i=0; i<olist.length; i++) {
-		let item = document.createElement('div');
-		item.appendChild(document.createTextNode(olist[i].title));
-
-		let c = document.createAttribute('onclick');
-		c.value = 'open_a(' + olist[i].id + ');';
-		item.setAttributeNode(c);
-
-		let h = document.createElement('h2');
-		if (order === 'release' || order === 'noncanon') {
-			h.appendChild(document.createTextNode(olist[i].dateWritten));
-		};
-		item.appendChild(h);
-
-		document.getElementById(todivid).appendChild(item);
-	};
-};
-
-function open_a(id) {
-	let get;
-	for (let i=0; i<songData.length; i++) {
-		if (songData[i].id == id) {
-			get = songData[i];
-		};
-	};
-
-	document.getElementById('A_H1').innerText = get.title;
-	document.getElementById('A_H2').innerText = get.dateWritten;
-	if (get.revised !== undefined) {
-		document.getElementById('A_H2').innerText += ', Revised ' + get.revised
-	};
-	if (get.pov !== undefined) {
-		document.getElementById('A_H3').innerText = 'From ' + get.pov;
-	};
-	document.getElementById('A_H4').innerText = get.timelineWritten;
-	document.getElementById('A_P' ).innerText = get.text;
-
-	let alltabs = document.getElementsByClassName('tabpage');
-	for (let i=0; i<alltabs.length; i++) {
-		alltabs[i].style.display = 'none';
-	};
-	document.getElementById('Page_A').style.display = 'block';
-
-};
-
 const timeDates = {
 	'months': [
 		'Elisue', 'Ature',
@@ -98,15 +17,7 @@ const timeDates = {
 	]
 };
 
-const chronorder = [
-	3, // Jackal's Apple
-	6, // Song of Nature
-	1, // Jazz Knives
-	2.1, // Song of Darkness 1 
-	2.2, // Song of Darkness 2
-]
-
-const songData = [ // In timeline order
+const songData = [
 	{
 		'title': 'Song of Space',
 		'id': 0,

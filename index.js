@@ -43,6 +43,25 @@ function openLog(i) {
 	document.getElementById('Page_ShortLogs').style.display = 'block';
 }
 
+function openSong(i) {
+	document.getElementById('Songs_H1').innerText = songData[i].title;
+	document.getElementById('Songs_H2').innerText = songData[i].dateWritten;
+	if (songData[i].revised !== undefined) {
+		document.getElementById('Songs_H2').innerText += ', Revised ' + songData[i].revised;
+	};
+	if (songData[i].pov !== undefined) {
+		document.getElementById('Songs_H3').innerText = 'From ' + songData[i].pov;
+	};
+	document.getElementById('Songs_H4').innerText = songData[i].timelineWritten;
+	document.getElementById('Songs_P' ).innerText = songData[i].text;
+
+	let alltabs = document.getElementsByClassName('tabpage');
+	for (let i=0; i<alltabs.length; i++) {
+		alltabs[i].style.display = 'none';
+	};
+	document.getElementById('Page_Songs').style.display = 'block';
+};
+
 function openNav() {
 	document.getElementById('Nav').style.width = '100%';
 }
