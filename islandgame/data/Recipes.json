@@ -1,0 +1,110 @@
+[
+null,
+{
+	"ID": 1,
+	"Name": "Bread",
+	"IconIndex": 266,
+	"Result": [{
+		"Type": "item",
+		"ID": 11,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 6,
+		"Amount": 2
+	}],
+	"Discipline": 2,
+	"Category": ["Baking"],
+	"XP": 10,
+	"LevelReq": 1,
+	"Learned": "start"
+},
+{
+	"ID": 2,
+	"Name": "Wooden Sword",
+	"IconIndex": 97,
+	"Result": [{
+		"Type": "weapon",
+		"ID": 1,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 8,
+		"Amount": 2
+	}],
+	"Discipline": 1,
+	"Category": ["Weapons"],
+	"XP": 10,
+	"LevelReq": 1,
+	"Learned": "start"
+},
+{
+	"ID": 3,
+	"Name": "Mothshot",
+	"IconIndex": 290,
+	"Result": [{
+		"Type": "item",
+		"ID": 14,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 9,
+		"Amount": 1
+		}, {
+		"Type": "item",
+		"ID": 13,
+		"Amount": 1
+	}],
+	"Discipline": 3,
+	"Category": ["Spellbooks"],
+	"XP": 100,
+	"LevelReq": 1,
+	"Learned": "start"
+},
+{
+	"ID": 4,
+	"Name": "Wooden Pickaxe",
+	"IconIndex": 216,
+	"Result": [{
+		"Type": "item",
+		"ID": 15,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 8,
+		"Amount": 2
+	}],
+	"Discipline": 1,
+	"Category": ["Tools"],
+	"XP": 10,
+	"LevelReq": 1,
+	"Learned": "start"
+},{
+	"ID": 5,
+	"Name": "Featherstab",
+	"IconIndex": 225,
+	"Result": [{
+		"Type": "item",
+		"ID": 19,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 9,
+		"Amount": 1
+		}, {
+		"Type": "item",
+		"ID": 17,
+		"Amount": 1
+	}],
+	"Discipline": 3,
+	"Category": ["Spellbooks"],
+	"XP": 100,
+	"LevelReq": 1,
+	"Learned": "start"
+}
+]

@@ -1,0 +1,30 @@
+[
+null,
+{
+	"ID": 1,
+	"Name": "Crafter's Table",
+	"IconID": 223,
+	"ExpFormula": "100*level",
+	"MaxLevel": 1,
+	"Categories": ["Weapons", "Tools"],
+	"Background": "Crafting"
+},
+{
+	"ID": 2,
+	"Name": "Furnace",
+	"IconID": 64,
+	"ExpFormula": "100*level",
+	"MaxLevel": 1,
+	"Categories": ["Baking"],
+	"Background": "Crafting"
+},
+{
+	"ID": 3,
+	"Name": "Magic Alchemy",
+	"IconID": 72,
+	"ExpFormula": "1000*level",
+	"MaxLevel": 1,
+	"Categories": ["Spellbooks"],
+	"Background": "Crafting"
+}
+]
