@@ -1,15 +1,15 @@
 [
 null,
 {"id":1,"expanded":false,"name":"MAP1","order":2,"parentId":0,"scrollX":1228.5,"scrollY":717},
-{"id":2,"expanded":true,"name":"Weystone","order":3,"parentId":0,"scrollX":4118.666666666667,"scrollY":3753.3333333333335},
+{"id":2,"expanded":true,"name":"Weystone","order":3,"parentId":0,"scrollX":1982,"scrollY":3776.6666666666665},
 {"id":3,"expanded":false,"name":"Weystone House 1","order":4,"parentId":2,"scrollX":832,"scrollY":640},
 {"id":4,"expanded":false,"name":"START","order":1,"parentId":0,"scrollX":832,"scrollY":640},
-{"id":5,"expanded":false,"name":"Ignis Shrine","order":5,"parentId":2,"scrollX":1786.909090909091,"scrollY":1042.909090909091},
-{"id":6,"expanded":false,"name":"Weystone Crafters","order":6,"parentId":2,"scrollX":1228.5,"scrollY":717},
+{"id":5,"expanded":false,"name":"Ignis Shrine","order":5,"parentId":2,"scrollX":1404,"scrollY":819.4285714285713},
+{"id":6,"expanded":false,"name":"Weystone Crafters","order":6,"parentId":2,"scrollX":1404,"scrollY":819.4285714285713},
 {"id":7,"expanded":false,"name":"Weystone House 2","order":7,"parentId":2,"scrollX":1092,"scrollY":637.3333333333334},
 {"id":8,"expanded":false,"name":"Weystone House 3","order":8,"parentId":2,"scrollX":546,"scrollY":318.6666666666667},
 {"id":9,"expanded":false,"name":"Weystone House 4","order":9,"parentId":2,"scrollX":728,"scrollY":424.8888888888889},
-{"id":10,"expanded":false,"name":"Weystone House 4 Basement","order":10,"parentId":2,"scrollX":1228.5,"scrollY":717},
-{"id":11,"expanded":false,"name":"Weystone Castle","order":11,"parentId":2,"scrollX":1216.5,"scrollY":1155},
-{"id":12,"expanded":false,"name":"End Island","order":12,"parentId":0,"scrollX":832,"scrollY":640}
+{"id":10,"expanded":false,"name":"Weystone House 4 Basement","order":10,"parentId":2,"scrollX":655.2,"scrollY":382.4},
+{"id":11,"expanded":false,"name":"Weystone Castle","order":11,"parentId":2,"scrollX":648.8,"scrollY":1043.2},
+{"id":12,"expanded":false,"name":"End Island","order":12,"parentId":0,"scrollX":648.8,"scrollY":872}
 ]
