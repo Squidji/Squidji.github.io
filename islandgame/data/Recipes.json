@@ -56,7 +56,7 @@ null,
 		}, {
 		"Type": "item",
 		"ID": 13,
-		"Amount": 1
+		"Amount": 3
 	}],
 	"Discipline": 3,
 	"Category": ["Spellbooks"],
@@ -83,7 +83,8 @@ null,
 	"XP": 10,
 	"LevelReq": 1,
 	"Learned": "start"
-},{
+},
+{
 	"ID": 5,
 	"Name": "Featherstab",
 	"IconIndex": 225,
@@ -99,7 +100,55 @@ null,
 		}, {
 		"Type": "item",
 		"ID": 17,
+		"Amount": 5
+	}],
+	"Discipline": 3,
+	"Category": ["Spellbooks"],
+	"XP": 100,
+	"LevelReq": 1,
+	"Learned": "start"
+},
+{
+	"ID": 6,
+	"Name": "Shindig",
+	"IconIndex": 68,
+	"Result": [{
+		"Type": "item",
+		"ID": 20,
 		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 9,
+		"Amount": 1
+		}, {
+		"Type": "item",
+		"ID": 16,
+		"Amount": 4
+	}],
+	"Discipline": 3,
+	"Category": ["Spellbooks"],
+	"XP": 100,
+	"LevelReq": 1,
+	"Learned": "start"
+},
+{
+	"ID": 7,
+	"Name": "Hornspear",
+	"IconIndex": 293,
+	"Result": [{
+		"Type": "item",
+		"ID": 22,
+		"Amount": 1
+	}],
+	"Requires": [{
+		"Type": "item",
+		"ID": 9,
+		"Amount": 1
+		}, {
+		"Type": "item",
+		"ID": 22,
+		"Amount": 4
 	}],
 	"Discipline": 3,
 	"Category": ["Spellbooks"],
