@@ -68,3 +68,15 @@ function openNav() {
 function closeNav() {
 	document.getElementById('Nav').style.width = '0';
 }
+
+function openLyric(i) {
+	document.getElementById('ShortLogs_H1').innerHTML = lightlyrics[i].title;
+	document.getElementById('ShortLogs_H2').innerHTML = lightlyrics[i].date;
+	document.getElementById('ShortLogs_P').innerText = lightlyrics[i].text;
+
+	let alltabs = document.getElementsByClassName('tabpage');
+	for (let i=0; i<alltabs.length; i++) {
+		alltabs[i].style.display = 'none';
+	};
+	document.getElementById('Page_ShortLogs').style.display = 'block';
+}
