@@ -30,6 +30,8 @@
 			<i class='fas fa-scroll'></i>Projects</h2>
 		<h2 f='n' onclick='openTab("Writing")' id='Nav_Writing'>
 				<i class='fas fa-pen-nib'></i>Writing</h2>
+		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Nav_Worldbuilding'>
+			<i class='fas fa-passport'></i>Worldbuilding</h2>-->
 		<h2 f='n' onclick='openTab("Social")' id='Nav_Social'>
 			<i class='fas fa-share-alt'></i>Social Media</h2>
 	</div>
@@ -41,6 +43,8 @@
 			<i class='fas fa-scroll'></i>Projects</h2>
 		<h2 f='n' onclick='openTab("Writing")' id='Tab_Writing'>
 			<i class='fas fa-pen-nib'></i>Writing</h2>
+		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Tab_Worldbuilding'>
+			<i class='fas fa-passport'></i>Worldbuilding</h2> -->
 		<h2 f='n' onclick='openTab("Social")' id='Tab_Social'>
 			<i class='fas fa-share-alt'></i>Social Media</h2>
 	</div>
@@ -48,10 +52,17 @@
 		<div class='tabpage' id='Page_Projects'>
 			<div class='workg'>
 
-					<div class='workt' onclick=
-			'window.open("https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160", "blank")'>
+					<div class='workt' onclick='openWork("Megu")'>
 						<h1>MeguBot</h1>
 						<h2>Multipurpose Discord Bot</h2>
+					</div>
+					<div class='workp' id='Megu'>
+						<div class='list'>
+							<a target='_blank' 
+							href='https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160'>
+								Invite to Server
+							</a>
+						</div>
 					</div>
 
 					<div class='workt' onclick='openWork("Daimei")'>
@@ -65,9 +76,16 @@
 						<p id='DaimeiResults'>No names generated.</p>
 					</div>
 
-					<div class='workt' onclick='window.open("./islandgame/index.html", "_self");'>
+					<div class='workt' onclick='openWork("Island")'>
 						<h1>ISLAND1</h1>
 						<h2>A Shitty RPG</h2>
+					</div>
+					<div class='workp' id='Island'>
+						<div class='list'>
+							<a href='./islandgame/index.html'>
+								Play Game
+							</a>
+						</div>
 					</div>
 
 				</div>
@@ -134,9 +152,13 @@
 						<div onclick='openLog(18)'>Log 18 - Happiness</div>
 						<div onclick='openLog(19)'>Log 19 - Boredom</div>
 						<div onclick='openLog(20)'>Log 20 - Unquenchable</div>
+						<div onclick='openLog(21)'>Log 21 - Hallway of Closed Doors</div>
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class='tabpage' id='Page_Worldbuilding'>
+			<h2>Under Construction</h2>
 		</div>
 		<div class='tabpage' id='Page_Social'>
 			<div class='list'>
@@ -163,7 +185,7 @@
 	</div>
 </div>
 
-<footer>liquify v2.0.5</footer>
+<footer>liquify v2.0.6</footer>
 
 </body>
 </html>
