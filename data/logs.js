@@ -106,7 +106,22 @@ const logData = {
 	},
 	21: {
 		'title': 'Hallway of Closed Doors',
-		'text': "Relationships with other people are complex.\nFriendships are fragile. How do you get to know someone better?\n\nRelationships. A hallway lined with doors.\nEveryone you know.\nEach door is a single person.\nWhen you meet someone new,\nall you see is their front door.\nTheir outward persona.\n\nWhen you get to know a person more,\nthey might give trust you enough\nto give you the key to their door.\nThey open up to you who they really are.\n\nBehind everyone's door is a maze.\nA maze of endless dead ends.\nBut each dead end holds a treasure,\nsomething new you didn't know about that person.\n\nBeing a friend is being able to understand each other.",
+		'text': "Relationships with other people are complex.\nFriendships are fragile. \nHow do you get to know someone better?\n\nRelationships. A hallway lined with doors.\nEveryone you know.\nEach door is a single person.\nWhen you meet someone new,\nall you see is their front door.\nTheir outward persona.\n\nWhen you get to know a person more,\nthey might trust you enough\nto give you the key to their door.\nThey open up to you. Who they really are.\n\nBehind everyone's door is a maze.\nA maze of endless dead ends.\nBut each dead end holds a treasure,\nsomething new you didn't know about that person.\n\nBeing a friend\nis being able to understand each other.",
 		'date': 'April 18th, 2020'
+	},
+	22: {
+		'title': 'Future Uncertain',
+		'text': "The future is uncertain.\nHow do you meld it into the future you want?\nHow do you pick the best future?\n\nThe future is a web of possibilities.\nThe ones that end in happiness,\nand the ones that end in misfortune.\n\nSome people close the doors to their future,\nnarrowing their path into the one they want.\nOther people open doors,\nkeeping their possibilities open\nin order to find the best one for them.\n\nNeither method is incorrect.\nIt's just a matter of what\nyou want your future to be,\nand how you want to get there.",
+		'date': 'April 27th, 2020'
+	},
+	23: {
+		'title': 'Creative Ends',
+		'text': "Creativity is a gentle stream.\nSlowly, ideas flow naturally to you.\nYou need to be creative\nto keep an open mind.\nAnd when the stream of creativity stops,\nyou know how much you took it for granted.\n\nA drought of ideas\ncan bring failure,\nfor ideas are never there\nwhen you really need them.\nBecause you limited yourself\nand your frame of mind.\n\nBut sometimes the stream floods,\na large blast of ideas and motivation\nthat is only short lived.\nAfter a flood, you feel like you can't think.\nBut that isn't true.\nIdeas just don't come as easy\nas they had in the flood.\n\nIdea floods aren't much of a blessing, though.\nIt distracts your mind.\nIt takes up your time.\nMaking you want to be creative,\ninstead of being rational.\nFloods are, of course, neither good nor bad.",
+		'date': 'May 9th, 2020'
+	},
+	24: {
+		'title': 'Moral Judgement',
+		'text': "Morals are the rules of our hearts,\nbut not those of the mind.\nIt would be difficult to break these laws,\neven if one wanted to.\n\nWhat makes morals?\nWho decided what we call good and right,\nagainst what is evil and wrong?\n\nI am a person who believes\nin my own moral compass.\nBut how do I know that compass\nis pointing North?\n\nUs people, as a whole\nhave collectively decided\non the basis of right and wrong.\nI trust my won morals,\nbecause I believe in them.",
+		'date': 'May 9th, 2020'
 	}
 }
