@@ -31,7 +31,10 @@ function openWork(workname) {
 	}
 }
 
+currentlog=null;
+
 function openLog(i) {
+	currentlog=i;
 	document.getElementById('ShortLogs_H1').innerHTML = logData[i].title;
 	document.getElementById('ShortLogs_H2').innerHTML = 'Log ' + i + ' - ' + logData[i].date;
 	document.getElementById('ShortLogs_P').innerText = logData[i].text;
@@ -40,10 +43,22 @@ function openLog(i) {
 	for (let i=0; i<alltabs.length; i++) {
 		alltabs[i].style.display = 'none';
 	};
+
+	if (i !== 0 ) {
+		document.getElementById('ShortLogs_H1').innerHTML = "<i class='fas fa-angle-double-left' onclick='openLog(currentlog-1)'></i> " + 
+			document.getElementById('ShortLogs_H1').innerHTML;
+	}
+	if (i !== logData["max"]) {
+		document.getElementById('ShortLogs_H1').innerHTML = document.getElementById('ShortLogs_H1').innerHTML
+			+ " <i class='fas fa-angle-double-right' onclick='openLog(currentlog+1)'></i>";
+	}
+
 	document.getElementById('Page_ShortLogs').style.display = 'block';
 }
 
-function openSong(i) {
+function navlogs(b) {openLog(currentlog+b)}
+
+/* function openSong(i) {
 	document.getElementById('Songs_H1').innerText = songData[i].title;
 	document.getElementById('Songs_H2').innerText = songData[i].dateWritten;
 	if (songData[i].revised !== undefined) {
@@ -60,16 +75,18 @@ function openSong(i) {
 		alltabs[i].style.display = 'none';
 	};
 	document.getElementById('Page_Songs').style.display = 'block';
-};
+}; */
 
 function openNav() {
 	document.getElementById('Nav').style.width = '100%';
+	document.getElementById('Nav').style.opacity = '100%';
 }
 function closeNav() {
+	document.getElementById('Nav').style.opacity = '0';
 	document.getElementById('Nav').style.width = '0';
 }
 
-function openLyric(i) {
+/* function openLyric(i) {
 	document.getElementById('ShortLogs_H1').innerHTML = lightlyrics[i].title;
 	document.getElementById('ShortLogs_H2').innerHTML = lightlyrics[i].date;
 	document.getElementById('ShortLogs_P').innerText = lightlyrics[i].text;
@@ -79,4 +96,4 @@ function openLyric(i) {
 		alltabs[i].style.display = 'none';
 	};
 	document.getElementById('Page_ShortLogs').style.display = 'block';
-}
+} */

@@ -123,5 +123,6 @@ const logData = {
 		'title': 'Moral Judgement',
 		'text': "Morals are the rules of our hearts,\nbut not those of the mind.\nIt would be difficult to break these laws,\neven if one wanted to.\n\nWhat makes morals?\nWho decided what we call good and right,\nagainst what is evil and wrong?\n\nI am a person who believes\nin my own moral compass.\nBut how do I know that compass\nis pointing North?\n\nUs people, as a whole\nhave collectively decided\non the basis of right and wrong.\nI trust my won morals,\nbecause I believe in them.",
 		'date': 'May 9th, 2020'
-	}
+	},
+	max: 24
 }

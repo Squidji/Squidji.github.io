@@ -38,14 +38,21 @@ footer {
 	color: white;
 	bottom: 0;
 	right: 0;
-	font-size: 28px;
+	font-size: 20px;
 	position: fixed;
 	transition: 0.4s;
-	cursor: default;
+	cursor: pointer;
+	border-radius: 10px;
+	background-color: none;
 }
 footer:hover {
 	opacity: 100;
-	font-size: 36px;
+	font-size: 24px;
+	background-color: #0000009c;
+	bottom: 5px;
+	right: 5px;
+	border-radius: 15px;
+	padding: 10px;
 }
 
 .blk {
@@ -78,6 +85,7 @@ footer:hover {
 	font-size: 0;
 	transition: 0.4s;
 	cursor: pointer;
+	border-radius: 10px;
 }
 .workg .workt:hover {
 	background-color: white;
@@ -85,6 +93,7 @@ footer:hover {
 	padding: 5px;
 	padding-left: 10px;
 	border-radius: 15px;
+	box-shadow: 0 1px 5px;
 }
 .workg .workt h1 {
 	font-size: 30px;
@@ -106,7 +115,7 @@ footer:hover {
 	padding: 10px;
 	padding-left: 20px;
 	display: none;
-	animation: fadeIn 1s;
+	animation: fadeIn 1s, moveDown .5s;
 }
 .workp p {
 	margin-left: 20px;
@@ -129,6 +138,7 @@ footer:hover {
 	margin-right: 0;
 	background-color: white;
 	color: black;
+	box-shadow: 0 1px 5px;
 }
 .list a i, .list div i {
 	font-size: 20px;
@@ -184,12 +194,18 @@ footer:hover {
 #Tabs h2[f=n] {
 	color: gray;
 }
+#Tabs h2[f=n]:hover {
+	color: #bbb;
+}
 .tabpage {
-	animation: fadeIn 1.5s;
+	animation: fadeIn 1.5s, moveDown .5s;
 	display: none;
 }
 
-#Page_Projects {
+#Tabs #Tab_History[f=n] {display: none;}
+#Tabs #Tab_History[f=y] {display: inline-block;}
+
+#Page_Games {
 	display: block;
 }
 #Page_Works {
@@ -209,7 +225,20 @@ footer:hover {
 	width: 60%;
 }
 
+#ShortLogs_H1 i {
+	cursor: pointer;
+}
+
+#DaimeiResults, #UsernameResults {
+	font-size: 24px;
+}
+
 @keyframes fadeIn {
 	from {opacity: 0;}
 	to {opacity: 1;}
+}
+
+@keyframes moveDown {
+	from {margin-top: -17px;}
+	to {margin-top: 0;}
 }

@@ -26,43 +26,90 @@
 <div id='Nav'>
 	<div onclick='closeNav()' id='X'>&times;</div>
 	<div id='NavTabs'>
-		<h2 f='y' onclick='openTab("Projects")' id='Nav_Projects'>
-			<i class='fas fa-scroll'></i>Projects</h2>
+		<h2 f='y' onclick='openTab("Games")' id='Nav_Games'>
+				<i class='fas fa-gamepad'></i>Games</h2>
+		<h2 f='n' onclick='openTab("Projects")' id='Nav_Projects'>
+			<i class='fas fa-folder'></i>Projects</h2>
 		<h2 f='n' onclick='openTab("Writing")' id='Nav_Writing'>
 				<i class='fas fa-pen-nib'></i>Writing</h2>
 		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Nav_Worldbuilding'>
-			<i class='fas fa-passport'></i>Worldbuilding</h2>-->
+			<i class='fas fa-passport'></i>Worldbuilding</h2> -->
 		<h2 f='n' onclick='openTab("Social")' id='Nav_Social'>
 			<i class='fas fa-share-alt'></i>Social Media</h2>
+		<h2 f='n' id='Nav_History' style='display:none;'>
+			<i class='fas fa-history'></i>History</h2>
 	</div>
 </div>
 
 <div class='page' id='Base'>
 	<div id='Tabs'>
-		<h2 f='y' onclick='openTab("Projects")' id='Tab_Projects'>
-			<i class='fas fa-scroll'></i>Projects</h2>
+		<h2 f='y' onclick='openTab("Games")' id='Tab_Games'>
+			<i class='fas fa-gamepad'></i>Games</h2>
+		<h2 f='n' onclick='openTab("Projects")' id='Tab_Projects'>
+			<i class='fas fa-folder'></i>Projects</h2>
 		<h2 f='n' onclick='openTab("Writing")' id='Tab_Writing'>
 			<i class='fas fa-pen-nib'></i>Writing</h2>
 		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Tab_Worldbuilding'>
 			<i class='fas fa-passport'></i>Worldbuilding</h2> -->
 		<h2 f='n' onclick='openTab("Social")' id='Tab_Social'>
 			<i class='fas fa-share-alt'></i>Social Media</h2>
+		<h2 f='n' id='Tab_History'>
+			<i class='fas fa-history'></i>History</h2>
 	</div>
 	<div id='TabPages'>
+		<div class='tabpage' id='Page_Games'>
+			<div class='workg'>
+
+				<div class='workt' onclick='openWork("Nitroid")'>
+					<h1>Nitroid</h1>
+					<h2>Fly Fast and Destroy Asteroids</h2>
+				</div>
+				<div class='workp' id='Nitroid'>
+					<div class='list'>
+						<a target='_blank' href='https://team-spleem.itch.io/nitroid/'>
+							<i class='fas fa-play'></i>Play on Itch
+						</a>
+						<a target='_blank' href='https://twitter.com/cbmakes'>
+							<i class='fab fa-twitter'></i>CBMakes (Co-Creator)
+						</a>
+						<a target='_blank' href='https://asymmetric-garbage.itch.io/'>
+							<i class='fab fa-itch-io'></i>Asymmetric (Co-Creator)
+						</a>
+					</div>
+				</div>
+
+				<div class='workt' onclick='openWork("RedSpectre")'>
+					<h1>Red Spectre</h1>
+					<h2>Aro the Wizard's Adventure in Naru Du</h2>
+				</div>
+				<div class='workp' id='RedSpectre'>
+					<div class='list'>
+						<a target='_blank' href='./RedSpectre.html'>
+							<i class='fas fa-play'></i>Play Game
+						</a>
+						<a target='_blank' href='https://aeraki.itch.io/redspectre'>
+							<i class='fab fa-itch-io'></i>Itch Page
+						</a>
+					</div>
+				</div>
+
+				<div class='workt' onclick='openWork("Island")'>
+					<h1>ISLAND1</h1>
+					<h2>A Shitty RPG about Catgirls and Stealing</h2>
+				</div>
+				<div class='workp' id='Island'>
+					<div class='list'>
+						<a target='_blank' href='./islandgame/index.html'>
+							<i class='fas fa-play'></i>Play Game
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
 		<div class='tabpage' id='Page_Projects'>
 			<div class='workg'>
 				
-					<div class='workt' onclick='openWork("RedSpectre")'>
-						<h1>Red Spectre</h1>
-						<h2>Aro the Wizard's Adventure in Naru Du</h2>
-					</div>
-					<div class='workp' id='RedSpectre'>
-						<div class='list'>
-							<a href='https://aeraki.itch.io/redspectre'>
-								Play Game
-							</a>
-						</div>
-					</div>
 
 					<div class='workt' onclick='openWork("Megu")'>
 						<h1>MeguBot (Discontinued)</h1>
@@ -72,7 +119,7 @@
 						<div class='list'>
 							<a target='_blank' 
 							href='https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160'>
-								Invite to Server
+							<i class='fab fa-discord'></i>Invite to Server
 							</a>
 						</div>
 					</div>
@@ -82,25 +129,24 @@
 						<h2>Aerakian Name Generator</h2>
 					</div>
 					<div class='workp' id='Daimei'>
-						<div class='blk'onclick='multidaimei();'>
-							Generate Names
+						<div class='list'>
+							<a onclick='multidaimei();'>Generate Names</a>
 						</div>
 						<p id='DaimeiResults'>No names generated.</p>
 					</div>
 
-					<div class='workt' onclick='openWork("Island")'>
-						<h1>ISLAND1</h1>
-						<h2>A Shitty RPG</h2>
+					<div class='workt' onclick='openWork("UsernameGen")'>
+						<h1>Username Machine</h1>
+						<h2>Generate Random Usernames</h2>
 					</div>
-					<div class='workp' id='Island'>
+					<div class='workp' id='UsernameGen'>
 						<div class='list'>
-							<a href='./islandgame/index.html'>
-								Play Game
-							</a>
+							<a onclick='multiusername();'>Generate Usernames</a>
 						</div>
+						<p id='UsernameResults'>No usernames generated.</p>
 					</div>
 
-				</div>
+			</div>
 		</div>
 		<div class='tabpage' id='Page_Writing'>
 			<div class='workg'>
@@ -144,7 +190,7 @@
 					</div>
 				</div>
 
-				<div class='workt' onclick='openWork("Lyrics");'>
+				<!-- <div class='workt' onclick='openWork("Lyrics");'>
 					<h1>Light Lyrics</h1>
 					<h2>A Collection of Song/Poem Lyrics</h2>
 				</div>
@@ -169,7 +215,7 @@
 						<div onclick='openSong(7)'>Song of Nature</div>
 						<div onclick='openSong(9)'>Song of Darkness - Chapter 3</div>
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 		</div>
@@ -178,11 +224,11 @@
 		</div>
 		<div class='tabpage' id='Page_Social'>
 			<div class='list'>
-				<a target='_blank' href='https://twitter.com/_aeraki'>
-					<i class='fab fa-twitter'></i>Twitter
-				</a>
 				<a target='_blank' href='https://www.instagram.com/ae_raki/'>
 					<i class='fab fa-instagram'></i>Instagram
+				</a>
+				<a target='_blank' href='https://twitter.com/_aeraki'>
+					<i class='fab fa-twitter'></i>Twitter
 				</a>
 			</div>
 		</div>
@@ -191,17 +237,39 @@
 			<h2 id='ShortLogs_H2'></h2>
 			<p  id='ShortLogs_P' ></p>
 		</div>
-		<div class='tabpage' id='Page_Songs'>
+		<!-- <div class='tabpage' id='Page_Songs'>
 			<h1 id='Songs_H1'></h1>
 			<h2 id='Songs_H2'></h2>
 			<h2 id='Songs_H3'></h2>
 			<h2 id='Songs_H4'></h2>
 			<p  id='Songs_P'></p>
+		</div> -->
+
+		<div class='tabpage' id='Page_History'>
+			<div class='list'>
+				<a onclick='openTab("Games")'>
+					<i class='fas fa-angle-right'></i>liquify v2.1.0</a>
+				<a target='_blank' href='./archive/petrichor_1.6.0/index.html'>
+					<i class='fas fa-angle-right'></i>petrichor v1.6.0</a>
+			</div>
 		</div>
+
 	</div>
 </div>
 
-<footer>liquify v2.0.8</footer>
+<footer onclick='openTab("History")'>liquify v2.1.0</footer>
+
+<div class='whatsnew' style='display: none;'>
+	- Separated Games from Projects
+	- Added Nitroid Game
+	- Added Username Machine
+	- New Fade-In Animation
+	- Style Improvements
+	- Added Navigation to Short Logs
+	- Daimei Machine Algorithm Improvements
+	- Changed Version Display Appearance
+	- Added History Tab
+</div>
 
 </body>
 </html>

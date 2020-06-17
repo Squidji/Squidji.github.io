@@ -1,0 +1,73 @@
+#HomeD1 .boxGroupAET, #HomeD2 .boxGroupAET {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+#HomeD1 .boxGroupAET div {
+	padding: 7px;
+	font-size: 21px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-bottom: 2px solid white;
+	width: 80%;
+}
+#HomeD1 .boxGroupAET div:hover {
+	letter-spacing: 3px;
+	padding-left: 30px;
+}
+#HomeD1 .listGroupAET p {
+	border-bottom: 2px white solid;
+	padding-left: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	transition: 0.4s;
+	display: inline-block;
+	margin-bottom: 0px;
+	padding-right: 10px;
+}
+#HomeD1 .listGroupAET p:hover {
+	letter-spacing: 3px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#HomeD2 .boxGroupAET div {
+	padding: 7px;
+	font-size: 21px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	transition: 0.5s;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: 2px solid white;
+	width: 80%;
+	border-radius: 32px;
+}
+#HomeD2 .boxGroupAET div:hover {
+	letter-spacing: 3px;
+	padding-left: 30px;
+}
+#HomeD2 .listGroupAET p {
+	border: 2px white solid;
+	padding-left: 15px;
+	font-size: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;
+	transition: 0.4s;
+	display: inline-block;
+	margin-bottom: 0px;
+	padding-right: 15px;
+	border-radius: 32px;
+}
+#HomeD2 .listGroupAET p:hover {
+	letter-spacing: 3px;
+	padding-left: 25px;
+	padding-right: 25px;
+}

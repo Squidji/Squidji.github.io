@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AERAKI アエラキ</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/all.css">
+	<link rel="icon" href="icon.ico">
+	<script src='data/logs.js'></script>
+	<script src='index.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class='page' id='Start'>
+	<h1>AERAKI アエラキ</h1>
+</div>
+
+<div class='page' id='Tabs'>
+	<div class='tabButtonActive' onclick='openPage("Home")'>
+		<i class="fas fa-home"></i> Home</div>
+	<div onclick='openPage("Projects")'>
+		<i class="fas fa-folder-open"></i> Projects</div>
+	<div onclick='openPage("Writing")'>
+		<i class="fas fa-pen"></i> Writing</div>
+<!--<div onclick='openPage("Worldbuild")'>
+		<i class="fas fa-map-marker-alt"></i> Worldbuilding Project</div> -->
+</div>
+
+<div class='page' id='Home'>
+	<h2>About me...</h2>
+	<p>
+		My name is Ben AEraki, and I am a 15 year-old sophomore in high school.<br>
+		I am a programmer, web designer, and writer.<br>
+		This website was created by me to showcase what I create.
+	</p>
+	<h2>See me on...</h2>
+	<div class='listGroup'>
+		<a href='https://twitter.com/_aeraki'>
+			<i class="fab fa-twitter"></i> Twitter</a><br>
+		<a href='https://www.instagram.com/aeraki7907/'>
+			<i class="fab fa-instagram"></i> Instagram</a><br>
+		<a href='https://www.reddit.com/u/BenSquidji'>
+			<i class="fab fa-reddit"></i> Reddit</a><br>
+		<a href='https://github.com/Squidji'>
+			<i class="fab fa-github"></i> Github</a>
+	</div>
+	<p class='footer'>Website PETRICHOR v1.6.0 by Ben AEraki</p>
+</div>
+
+<div class='page' id='Projects'>
+	<h2>Projects</h2>
+	<div class='workGroup' id='CodeProjects'>
+		<div onclick='openPage("Megubot")'>MeguBot <i class="fab fa-node-js"></i>
+			<p> Multipurpose Discord Bot</p></div>
+	</div>
+</div>
+
+<div class='page' id='Megubot'>
+	<img class='profileImage' src='megupfp.jpg'/>
+	<h1>MeguBot <i class="fab fa-node-js"></i></h1>
+	<h2>Multipurpose Discord Bot</h2>
+	<div class='boxGroup'>
+		<div onclick='window.open(
+		"https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160"
+		, "_blank")'><i class="fab fa-discord"></i> Invite to Your Server</div>
+		<div onclick='window.open("https://gist.github.com/Squidji/e4452b6aa5ece60d6eaa7a51fa6545f3",
+		 "_blank")'><i class="fab fa-github"></i> Source Code</div>
+	</div>
+	<h2>Dependencies</h2>
+	<div class='boxGroup'>
+		<div onclick='window.open("https://www.npmjs.com/package/discord.js",
+		 "_blank")'><i class="fab fa-npm"></i> discord.js</div>
+		<div onclick='window.open("https://www.npmjs.com/package/nekos.life",
+		"_blank")'><i class="fab fa-npm"></i> nekos.life</div>
+		<div onclick='window.open("https://www.npmjs.com/package/request",
+		"_blank")'><i class="fab fa-npm"></i> request</div>
+		<div onclick='window.open("https://www.npmjs.com/package/data-store",
+		"_blank")'><i class="fab fa-npm"></i> data-store</div>
+		<div onclick='window.open("https://www.npmjs.com/package/colors",
+		"_blank")'><i class="fab fa-npm"></i> colors</div>
+	</div>
+	<h2>Snippets</h2>
+	<p>Coming Soon...</p>
+</div>
+
+<div class='page' id='Writing'>
+	<h2>Writing Series</h2>
+	<div class='workGroup'>
+		<div onclick='openPage("Logs")'>Short Logs
+			<p>Small writings on life.</p></div>
+		<div>JoJo's Bizzare Adventure: Cisco Disco <p>Coming Soon...</p></div>
+	</div>
+</div>
+
+<div class='page' id='Logs'>
+	<h2>Season One - Null</h2>
+	<div class='workGroup'>
+		<div onclick='openLog(0)'>Log 0 - Introduction
+			<p>Nov. 9th, 2019</p></div>
+		<div onclick='openLog(1)'>Log 1 - Where There's Darkness
+			<p>Nov. 9th, 2019</p></div>
+		<div onclick='openLog(2)'>Log 2 - Existence
+			<p>Nov. 10th, 2019</p></div>
+		<div onclick='openLog(3)'>Log 3 - Colors
+			<p>Nov. 11th, 2019</p></div>
+		<div onclick='openLog(4)'>Log 4 - Moss
+			<p>Nov. 12th, 2019</p></div>
+		<div onclick='openLog(5)'>Log 5 - Music
+			<p>Nov. 13th, 2019</p></div>
+		<div onclick='openLog(6)'>Log 6 - Change
+			<p>Nov. 14th, 2019</p></div>
+		<div onclick='openLog(7)'>Log 7 - Aesthetics Part One
+			<p>Nov. 15th, 2019</p></div>
+	</div>
+	<h2>Season Two - Indefinite</h2>
+	<div class='workGroup'>
+		<div onclick='openLog(8)'>Log 8 - Sun and Moon
+			<p>Nov. 30th, 2019</p></div>
+		<div onclick='openLog(9)'>Log 9 - What Makes People
+			<p>Dec. 1st, 2019</p></div>
+		<div onclick='openLog(10)'>Log 10 - Awake
+			<p>Dec. 2nd, 2019</p></div>
+		<div onclick='openLog(11)'>Log 11 - Dystopian Utopia
+			<p>Dec. 3rd, 2019</p></div>
+		<div onclick='openLog(12)'>Log 12 - Neverending Time
+			<p>Dec. 4th, 2019</p></div>
+		<div onclick='openLog(13)'>Log 13 - Names
+			<p>Dec. 5th, 2019</p></div>
+		<div onclick='openLog(14)'>Log 14 - Aesthetics Part Two
+			<p>Dec. 6th, 2019</p></div>
+	</div>
+	<h2>Season Three - Error</h2>
+	<div class='workGroup'>
+		<div onclick='openLog(15)'>Log 15 - Broken
+			<p>Dec 14th, 2019</p></div>
+		<div onclick='openLog(16)'>Log 16 - Not Me
+			<p>Dec. 15th, 2019</p></div>
+		<div onclick='openLog(17)'>Log 17 - Things Look Up
+			<p>Dec. 16th, 2019</p></div>
+		<div onclick='openLog(18)'>Log 18 - Happiness
+			<p>Dec. 17th, 2019</p></div>
+		<div onclick='openLog(19)'>Log 19 - Boredom
+			<p>Dec. 28th, 2019</p></div>
+		<div onclick=''>Log 20 - ???
+			<p>Coming Soon...</p></div>
+		<div onclick=''>Log 21 - Finale
+			<p>Coming Soon...</p></div>
+	</div>
+</div>
+
+<div class='page' id='Log'>
+	<div class='backButton' onclick='openPage(pagehistory.Previous)'>
+		<i class="fas fa-angle-left"></i> Back</div>
+	<div class='prev' id='logPrev'>Previous Log</div><div class='next' id='logNext'>Next Log</div>
+	<h1 id='logTitle'></h1>
+	<h2 id='logDate'></h2>
+	<p id='logBody'></p>
+</div>
+
+<div class='page' id='Worldbuild'>
+	<h2>Worldbuilding Project</h2>
+	<div class='boxGroup'>
+		<div><i class="fas fa-meteor"></i> The World & Space</div>
+		<div><i class="fas fa-flag"></i> Nations</div>
+		<div><i class="fas fa-book-open"></i> Written Works</div>
+		<div><i class="fas fa-user-circle"></i> People</div>
+		<div><i class="fas fa-seedling"></i> Plants</div>
+	</div>
+</div>
+
+<script>openPage('Home')</script>
+
+</body>
+</html>
