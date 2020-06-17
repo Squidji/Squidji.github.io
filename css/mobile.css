@@ -1,4 +1,7 @@
 @media screen and (max-width: 1015px) {
+	body {
+		background-color: #0089c7;
+	}
 	.page {
 		margin-left: 0;
 		margin-right: 0;
@@ -46,6 +49,7 @@
 		top: 0;
 		margin-top: 0px;
 		width: calc(100% - 40px);
+		background-color: #001b31ec;
 	}
 	#Header i {
 		display: block;
@@ -106,5 +110,12 @@
 		width: 100%;
 		padding-top: 10px;
 		border-top: 2px solid white;
+	}
+
+	#ShortLogs .list div {
+		padding: 5px;
+		padding-left: 15px;
+		font-size: 17px;
+		border-radius: 15px;
 	}
 }

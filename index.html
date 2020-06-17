@@ -153,7 +153,7 @@
 
 				<div class='workt'>
 					<h1>Cisco Disco</h1>
-					<h2>Coming Soon</h2>
+					<h2 style='animation: fadeRed 1s;'>Coming Soon</h2>
 				</div>
 
 				<div class='workt' onclick='openWork("ShortLogs")'>
@@ -270,6 +270,15 @@
 	- Changed Version Display Appearance
 	- Added History Tab
 </div>
+
+<script>
+
+if (window.location.href.endsWith('#username')) {
+	openTab('Projects');
+	openWork('UsernameGen');
+};
+
+</script>
 
 </body>
 </html>
