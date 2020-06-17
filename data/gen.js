@@ -80,7 +80,7 @@ function username() {
 		'irish', 'portuguese', 'korean', 'cuban', 'chewy', 'russian', 'norwegian', 'greek', 'sexy', 'horrible', 'awful',
 		'lime', 'fried', 'cooked', 'doughy', 'pintsized', 'pornographic', 'saturated', 'humping', 'caged', 'canned',
 		'simple', 'complex', 'overcomplicated', 'virtual', 'ruinous', 'drunk', 'alcoholic', 'neon', 'titanium', 'nitrogen',
-		'tin', 'sulfur', 'chemical', 'toxic', 'gaming'
+		'tin', 'sulfur', 'chemical', 'toxic', 'gaming', 'swine', 'wet', 'dry', 'soaking', 'flooded', 'crusty', 'moist'
 	];
 
 	let n = nou[Math.floor(Math.random() * nou.length)];

@@ -24,6 +24,7 @@
 		padding-left: 0;
 		background-color: #00000000;
 		color: white;
+		box-shadow: none;
 	}
 	.workg .workt h1 {font-size: 24px;}
 	.workg .workt h2 {font-size: 16px;}
@@ -37,6 +38,7 @@
 	.list a:hover, .list div:hover {
 		background-color: #00000000;
 		color: white;
+		box-shadow: none;
 	}
 
 	#Header {
