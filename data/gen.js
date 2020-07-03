@@ -1,3 +1,53 @@
+function saveFavorite(click) {
+	let mach = click.target.mach;
+	if (window.localStorage.getItem(mach) === null) {
+		window.localStorage.setItem(mach, '[]')};
+
+	let all = JSON.parse(window.localStorage.getItem(mach));
+
+	if (click.target.classList.contains('saved')) {
+		click.target.classList.remove('saved');
+		all = all.filter(e => e !== click.target.innerText);
+		all = JSON.stringify(all);
+		window.localStorage.setItem(mach, all);
+	} else {
+		click.target.classList.add('saved');
+		all.push(click.target.innerText);
+		all = JSON.stringify(all);
+		window.localStorage.setItem(mach, all);
+	};
+
+	let fav = document.getElementById('favorites');
+	if (window.getComputedStyle(fav).display === 'block' && fav.classList.contains(mach)) {
+		updateFavlist();
+	};
+};
+
+function updateFavlist() {
+	let mach = document.getElementById('favorites').getAttribute('class');
+	let all = JSON.parse(window.localStorage.getItem(mach));
+	document.getElementById('favlist').innerHTML = '';
+	for (let i=0; i<all.length; i++) {
+		let temp = document.createElement('p');
+		temp.innerText = all[i];
+		temp.mach = mach;
+		temp.classList.add('saved');
+		temp.onclick = saveFavorite;
+		document.getElementById('favlist').appendChild(temp);
+	};
+	if (all.length === 0) {
+		document.getElementById('favlist').innerHTML = 'You have no favorites.';
+	};
+};
+
+function displayFav(mach) {
+	document.getElementById('favorites').style.display = 'block';
+	document.getElementById('favorites').classList = [mach];
+	updateFavlist();
+};
+
+
+
 function daimei() {
 	let res = '';
 	var consonants = [
@@ -25,12 +75,18 @@ function daimei() {
 };
 
 function multidaimei() {
-	let res = '';
+	let res = {};
+	document.getElementById('DaimeiResults').innerHTML = '';
 	for (let i=0; i<7; i++) {
-		res += daimei() + '\n';
+		let temp = document.createElement('p');
+		temp.classList.add('genres');
+		temp.innerText = daimei();
+		temp.onclick = saveFavorite;
+		temp.mach = 'favDaimei'
+		document.getElementById('DaimeiResults').appendChild(temp);
 	};
-	document.getElementById('DaimeiResults').innerText=res;
 };
+
 
 function username() {
 	var nou = [
@@ -135,9 +191,14 @@ function username() {
 };
 
 function multiusername() {
-	let res = '';
-	for (let i=0; i<5; i++) {
-		res += username() + '\n';
+	let res = {};
+	document.getElementById('UsernameResults').innerHTML = '';
+	for (let i=0; i<7; i++) {
+		let temp = document.createElement('p');
+		temp.classList.add('genres');
+		temp.innerText = username();
+		temp.onclick = saveFavorite;
+		temp.mach = 'favUsername'
+		document.getElementById('UsernameResults').appendChild(temp);
 	};
-	document.getElementById('UsernameResults').innerText=res;
 };

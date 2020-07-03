@@ -118,7 +118,8 @@ footer:hover {
 	animation: fadeIn 1s, moveDown .5s;
 }
 .workp p {
-	margin-left: 20px;
+	margin-left: 10px;
+	font-size: 25px;
 }
 
 .list a, .list div {
@@ -140,6 +141,9 @@ footer:hover {
 	color: black;
 	box-shadow: 0 1px 5px;
 }
+.list a:last-child, .list div:last-child {
+	margin-bottom: 0;
+}
 .list a i, .list div i {
 	font-size: 20px;
 	margin-right: 10px;
@@ -148,6 +152,20 @@ footer:hover {
 	font-size: 20px;
 	display: inline-block;
 	color: gray;
+	margin-left: 10px;
+}
+
+.genres {
+	margin: 0;
+}
+.genres:hover::after {
+	content: '☆';
+	color: gold;
+	margin-left: 10px;
+}
+.genres.saved::after {
+	content: '★';
+	color: gold;
 	margin-left: 10px;
 }
 
@@ -231,6 +249,43 @@ footer:hover {
 
 #DaimeiResults, #UsernameResults {
 	font-size: 24px;
+	margin-left: 10px;
+	overflow: hidden;
+}
+
+#favorites {
+	background-color: #002437;
+	padding: 20px;
+	border-radius: 20px 0 0 20px;
+	position: fixed;
+	right: 0;
+	top: 70px;
+	height: 60%;
+	width: 30%;
+	display: none;
+	overflow: hidden;
+	cursor: default;
+	border: solid white 3px;
+}
+#favorites i {
+	float: right;
+	font-size: 30px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+#favorites #favlist {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: fit-content;
+	max-height: 90%;
+}
+#favorites #favlist p {
+	margin-top: 0;
+}
+#favorites #favlist p:hover::after {
+	content: '🛇';
+	color: red;
+	margin-left: 10px;
 }
 
 @keyframes fadeIn {

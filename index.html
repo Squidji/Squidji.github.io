@@ -75,6 +75,10 @@
 						<a target='_blank' href='https://asymmetric-garbage.itch.io/'>
 							<i class='fab fa-itch-io'></i>Asymmetric (Co-Creator)
 						</a>
+						<a target='_blank' href='https://itch.io/jam/jumpstart-jam'>
+							<i class='fas fa-tools'></i>Jumpstart Jam
+						</a>
+
 					</div>
 				</div>
 
@@ -89,6 +93,9 @@
 						</a>
 						<a target='_blank' href='https://aeraki.itch.io/redspectre'>
 							<i class='fab fa-itch-io'></i>Itch Page
+						</a>
+						<a target='_blank' href='https://itch.io/jam/rndgame-jam'>
+							<i class='fas fa-tools'></i>RNDGAME Jam
 						</a>
 					</div>
 				</div>
@@ -112,7 +119,7 @@
 				
 
 					<div class='workt' onclick='openWork("Megu")'>
-						<h1>MeguBot (Discontinued)</h1>
+						<h1>MeguBot</h1>
 						<h2>Multipurpose Discord Bot</h2>
 					</div>
 					<div class='workp' id='Megu'>
@@ -130,9 +137,10 @@
 					</div>
 					<div class='workp' id='Daimei'>
 						<div class='list'>
+							<a onclick='displayFav("favDaimei");'>Show Favorites</a>
 							<a onclick='multidaimei();'>Generate Names</a>
 						</div>
-						<p id='DaimeiResults'>No names generated.</p>
+						<div id='DaimeiResults'>No names generated.</div>
 					</div>
 
 					<div class='workt' onclick='openWork("UsernameGen")'>
@@ -141,6 +149,7 @@
 					</div>
 					<div class='workp' id='UsernameGen'>
 						<div class='list'>
+							<a onclick='displayFav("favUsername");'>Show Favorites</a>
 							<a onclick='multiusername();'>Generate Usernames</a>
 						</div>
 						<p id='UsernameResults'>No usernames generated.</p>
@@ -151,9 +160,12 @@
 		<div class='tabpage' id='Page_Writing'>
 			<div class='workg'>
 
-				<div class='workt'>
+				<div class='workt' onclick='openWork("cisco")'>
 					<h1>Cisco Disco</h1>
-					<h2 style='animation: fadeRed 1s;'>Coming Soon</h2>
+					<h2>Jon Cili carries the Joestar Legacy</h2>
+				</div>
+				<div class='workp' id='cisco'>
+					<p>Coming Soon!!</p>
 				</div>
 
 				<div class='workt' onclick='openWork("ShortLogs")'>
@@ -248,36 +260,41 @@
 		<div class='tabpage' id='Page_History'>
 			<div class='list'>
 				<a onclick='openTab("Games")'>
-					<i class='fas fa-angle-right'></i>liquify v2.1.0</a>
+					<i class='fas fa-angle-right'></i>liquify v2.1</a>
+				<a target='_blank' href='./archive/liquify_2.0.0/index.html'>
+					<i class='fas fa-angle-right'></i>liquify v2.0</a>
 				<a target='_blank' href='./archive/petrichor_1.6.0/index.html'>
-					<i class='fas fa-angle-right'></i>petrichor v1.6.0</a>
+					<i class='fas fa-angle-right'></i>petrichor v1.6</a>
 			</div>
 		</div>
 
 	</div>
 </div>
 
-<footer onclick='openTab("History")'>liquify v2.1.0</footer>
+<footer onclick='openTab("History")'>liquify v2.1.1</footer>
+
+<div id='favorites' class='favDaimei'>
+	<i class='fas fa-times' onclick='document.getElementById("favorites").style.display = "none";'></i>
+	<br><br>
+	<div id='favlist'>
+
+	</div>
+</div>
 
 <div class='whatsnew' style='display: none;'>
-	- Separated Games from Projects
-	- Added Nitroid Game
-	- Added Username Machine
-	- New Fade-In Animation
-	- Style Improvements
-	- Added Navigation to Short Logs
-	- Daimei Machine Algorithm Improvements
-	- Changed Version Display Appearance
-	- Added History Tab
+	- Added Favorites to Daimei and Username Machines
+	- Updated Quick-Link to Username Machine
+	- Fixed 404 Page to work in any directory
+	- Added v2.0 to the history tab
 </div>
 
 <script>
-
 if (window.location.href.endsWith('#username')) {
 	openTab('Projects');
 	openWork('UsernameGen');
+	multiusername();
+	document.getElementById('UsernameResults').scrollIntoView();
 };
-
 </script>
 
 </body>

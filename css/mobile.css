@@ -118,4 +118,8 @@
 		font-size: 17px;
 		border-radius: 15px;
 	}
+
+	#favorites {
+		width: 70%;
+	}
 }
