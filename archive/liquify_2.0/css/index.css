@@ -1,0 +1,212 @@
+/* BASE CSS STYLING*/
+body {
+	background-color: black;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	background-image: url('./background.png');
+	background-size: 150vw 125vh;
+	background-attachment: fixed;
+}
+.page {
+	background-color: #0000009c;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 0px;
+	padding: 20px;
+	cursor: default;
+	margin-top: 20px;
+	display: block;
+	margin-bottom: 60px;
+	border-radius: 10px;
+}
+
+h1, h2 {margin: 0px;}
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h2 i {
+	font-size: 27px;
+	margin-right: 10px;
+}
+a {
+	color: white;
+	text-decoration: none;
+}
+footer {
+	opacity: 0;
+	color: white;
+	bottom: 0;
+	right: 0;
+	font-size: 28px;
+	position: fixed;
+	transition: 0.4s;
+	cursor: default;
+}
+footer:hover {
+	opacity: 100;
+	font-size: 36px;
+}
+
+.blk {
+	padding: 7px;
+	font-size: 20px;
+	border: 2px solid white;
+	border-radius: 10px;
+	display: inline-block;
+	transition: 0.4s;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.blk:hover {
+	background-color: white;
+	color: black;
+	border-radius: 15px;
+}
+
+.workg {
+	border-left: 4px solid white;
+	margin: 10px;
+	padding: 10px;
+	padding-left: 20px;
+	margin-left: 10px;
+}
+.workg .workt {
+	cursor: pointer;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 0;
+	transition: 0.4s;
+	cursor: pointer;
+}
+.workg .workt:hover {
+	background-color: white;
+	color: black;
+	padding: 5px;
+	padding-left: 10px;
+	border-radius: 15px;
+}
+.workg .workt h1 {
+	font-size: 30px;
+	display: inline;
+	margin-right: 10px;
+}
+.workg .workt h2 {
+	font-size: 24px;
+	color: gray;
+	display: inline;
+}
+.workg .workt h1 i {
+	margin-right: 10px;
+}
+.workp {
+	border-left: 4px solid gray;
+	margin: 10px;
+	margin-left: 20px;
+	padding: 10px;
+	padding-left: 20px;
+	display: none;
+	animation: fadeIn 1s;
+}
+.workp p {
+	margin-left: 20px;
+}
+
+.list a, .list div {
+	border: 3px solid white;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	display: block;
+	padding: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	padding-left: 15px;
+	transition: 0.4s;
+	margin-right: 100px;
+}
+.list a:hover, .list div:hover {
+	margin-left: 0;
+	margin-right: 0;
+	background-color: white;
+	color: black;
+}
+.list a i, .list div i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+.list div h2 {
+	font-size: 20px;
+	display: inline-block;
+	color: gray;
+	margin-left: 10px;
+}
+
+
+
+/* SPECIFIC CSS STYLING */
+#Header {
+	margin-bottom: 0px;
+	animation: fadeIn 1s;
+	-webkit-animation: fadeIn 1s;
+	font-size: 0;
+}
+#Header h1, #Header h2{
+	display: inline-block;
+}
+#Header h2 {
+	color: gray;
+	margin-left: 5px;
+}
+#Header i {display: none;}
+
+#Nav {display: none;}
+
+#Base {
+	animation: fadeIn 1.25s;
+	-webkit-animation: fadeIn 1.25s;
+}
+
+#Tabs {
+	margin-bottom: 20px;
+	font-size: 0;
+}
+#Tabs h2 {
+	display: inline-block;
+	margin-right: 20px;
+	cursor: pointer;
+	padding-bottom: 10px;
+	transition: 0.4s;
+	border-bottom: 2px solid #ffffff00;
+}
+#Tabs h2[f=y] {
+	border-color: #ffffff;
+}
+#Tabs h2[f=n] {
+	color: gray;
+}
+.tabpage {
+	animation: fadeIn 1.5s;
+	display: none;
+}
+
+#Page_Projects {
+	display: block;
+}
+#Page_Works {
+	display: block;
+}
+
+#Page_ShortLogs h1 {
+	display: inline-block;
+}
+#Page_ShortLogs p {
+	margin-left: 20px;
+	border-left: 4px solid gray;
+	padding-left: 20px;
+	width: 60%;
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}

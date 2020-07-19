@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>アエラキ</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/mobile.css">
+	<link rel="stylesheet" href="./css/all.css">
+	<link rel="icon" href="./icon.ico">
+	<script src='./data/logs.js'></script>
+	<script src='./data/gen.js'></script>
+	<script src='./data/songs.js'></script>
+	<script src='./data/lightlyrics.js'></script>
+	<script src='./index.js'></script>
+	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class='page' id='Header'>
+	<h1>Aeraki</h1>
+	<h2>アエラキ</h2>
+	<i class='fas fa-bars' onclick='openNav()'></i>
+</div>
+
+<div id='Nav'>
+	<div onclick='closeNav()' id='X'>&times;</div>
+	<div id='NavTabs'>
+		<h2 f='y' onclick='openTab("Games")' id='Nav_Games'>
+				<i class='fas fa-gamepad'></i>Games</h2>
+		<h2 f='n' onclick='openTab("Projects")' id='Nav_Projects'>
+			<i class='fas fa-folder'></i>Projects</h2>
+		<h2 f='n' onclick='openTab("Writing")' id='Nav_Writing'>
+				<i class='fas fa-pen-nib'></i>Writing</h2>
+		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Nav_Worldbuilding'>
+			<i class='fas fa-passport'></i>Worldbuilding</h2> -->
+		<h2 f='n' onclick='openTab("Social")' id='Nav_Social'>
+			<i class='fas fa-share-alt'></i>Social Media</h2>
+		<h2 f='n' onclick='openTab("History")' id='Nav_History' style='opacity: 0;'>
+			<i class='fas fa-history'></i>History</h2>
+	</div>
+</div>
+
+<div class='page' id='Base'>
+	<div id='Tabs'>
+		<h2 f='y' onclick='openTab("Games")' id='Tab_Games'>
+			<i class='fas fa-gamepad'></i>Games</h2>
+		<h2 f='n' onclick='openTab("Projects")' id='Tab_Projects'>
+			<i class='fas fa-folder'></i>Projects</h2>
+		<h2 f='n' onclick='openTab("Writing")' id='Tab_Writing'>
+			<i class='fas fa-pen-nib'></i>Writing</h2>
+		<!-- <h2 f='n' onclick='openTab("Worldbuilding")' id='Tab_Worldbuilding'>
+			<i class='fas fa-passport'></i>Worldbuilding</h2> -->
+		<h2 f='n' onclick='openTab("Social")' id='Tab_Social'>
+			<i class='fas fa-share-alt'></i>Social Media</h2>
+		<h2 f='n' id='Tab_History'>
+			<i class='fas fa-history'></i>History</h2>
+	</div>
+	<div id='TabPages'>
+		<div class='tabpage' id='Page_Games'>
+			<div class='workg'>
+
+				<div class='workt' onclick='openWork("Nitroid")'>
+					<h1>Nitroid</h1>
+					<h2>Fly Fast and Destroy Asteroids</h2>
+				</div>
+				<div class='workp' id='Nitroid'>
+					<div class='list'>
+						<a target='_blank' href='https://team-spleem.itch.io/nitroid/'>
+							<i class='fas fa-play'></i>Play on Itch
+						</a>
+						<a target='_blank' href='https://twitter.com/cbmakes'>
+							<i class='fab fa-twitter'></i>CBMakes (Co-Creator)
+						</a>
+						<a target='_blank' href='https://asymmetric-garbage.itch.io/'>
+							<i class='fab fa-itch-io'></i>Asymmetric (Co-Creator)
+						</a>
+						<a target='_blank' href='https://itch.io/jam/jumpstart-jam'>
+							<i class='fas fa-tools'></i>Jumpstart Jam
+						</a>
+
+					</div>
+				</div>
+
+				<div class='workt' onclick='openWork("RedSpectre")'>
+					<h1>Red Spectre</h1>
+					<h2>Aro the Wizard's Adventure in Naru Du</h2>
+				</div>
+				<div class='workp' id='RedSpectre'>
+					<div class='list'>
+						<a target='_blank' href='./RedSpectre.html'>
+							<i class='fas fa-play'></i>Play Game
+						</a>
+						<a target='_blank' href='https://aeraki.itch.io/redspectre'>
+							<i class='fab fa-itch-io'></i>Itch Page
+						</a>
+						<a target='_blank' href='https://itch.io/jam/rndgame-jam'>
+							<i class='fas fa-tools'></i>RNDGAME Jam
+						</a>
+					</div>
+				</div>
+
+				<div class='workt' onclick='openWork("Island")'>
+					<h1>ISLAND1</h1>
+					<h2>A Shitty RPG about Catgirls and Stealing</h2>
+				</div>
+				<div class='workp' id='Island'>
+					<div class='list'>
+						<a target='_blank' href='./islandgame/index.html'>
+							<i class='fas fa-play'></i>Play Game
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class='tabpage' id='Page_Projects'>
+			<div class='workg'>
+				
+
+					<div class='workt' onclick='openWork("Megu")'>
+						<h1>MeguBot</h1>
+						<h2>Multipurpose Discord Bot</h2>
+					</div>
+					<div class='workp' id='Megu'>
+						<div class='list'>
+							<a target='_blank' 
+							href='https://discordapp.com/oauth2/authorize?client_id=637999108451336194&scope=bot&permissions=92160'>
+							<i class='fab fa-discord'></i>Invite to Server
+							</a>
+						</div>
+					</div>
+
+					<div class='workt' onclick='openWork("Daimei")'>
+						<h1>Daimei Machine</h1>
+						<h2>Aerakian Name Generator</h2>
+					</div>
+					<div class='workp' id='Daimei'>
+						<div class='list'>
+							<a onclick='displayFav("favDaimei");'>Show Favorites</a>
+							<a onclick='multidaimei();'>Generate Names</a>
+						</div>
+						<div id='DaimeiResults'>No names generated.</div>
+					</div>
+
+					<div class='workt' onclick='openWork("UsernameGen")'>
+						<h1>Username Machine</h1>
+						<h2>Generate Random Usernames</h2>
+					</div>
+					<div class='workp' id='UsernameGen'>
+						<div class='list'>
+							<a onclick='displayFav("favUsername");'>Show Favorites</a>
+							<a onclick='multiusername();'>Generate Usernames</a>
+						</div>
+						<p id='UsernameResults'>No usernames generated.</p>
+					</div>
+
+			</div>
+		</div>
+		<div class='tabpage' id='Page_Writing'>
+			<div class='workg'>
+
+				<div class='workt' onclick='openWork("cisco")'>
+					<h1>Cisco Disco</h1>
+					<h2>Jon Cili carries the Joestar Legacy</h2>
+				</div>
+				<div class='workp' id='cisco'>
+					<p>Coming Soon!!</p>
+				</div>
+
+				<div class='workt' onclick='openWork("ShortLogs")'>
+					<h1>Short Logs</h1>
+					<h2>A Series of Short Texts</h2>
+				</div>
+				<div class='workp' id='ShortLogs'>
+					<div class='list'>
+						<div onclick='openLog(0)'>Log 0 - Introduction</div>
+						<div onclick='openLog(1)'>Log 1 - Where There's Darkness</div>
+						<div onclick='openLog(2)'>Log 2 - Existence</div>
+						<div onclick='openLog(3)'>Log 3 - Colors</div>
+						<div onclick='openLog(4)'>Log 4 - Moss</div>
+						<div onclick='openLog(5)'>Log 5 - Music</div>
+						<div onclick='openLog(6)'>Log 6 - Change</div>
+						<div onclick='openLog(7)'>Log 7 - Aesthetics Part One</div>
+						<div onclick='openLog(8)'>Log 8 - Sun and Moon</div>
+						<div onclick='openLog(9)'>Log 9 - What Makes People</div>
+						<div onclick='openLog(10)'>Log 10 - Awake</div>
+						<div onclick='openLog(11)'>Log 11 - Dystopian Utopia</div>
+						<div onclick='openLog(12)'>Log 12 - Neverending Time</div>
+						<div onclick='openLog(13)'>Log 13 - Names</div>
+						<div onclick='openLog(14)'>Log 14 - Aesthetics Part Two</div>
+						<div onclick='openLog(15)'>Log 15 - Broken</div>
+						<div onclick='openLog(16)'>Log 16 - Not Me</div>
+						<div onclick='openLog(17)'>Log 17 - Things Look Up</div>
+						<div onclick='openLog(18)'>Log 18 - Happiness</div>
+						<div onclick='openLog(19)'>Log 19 - Boredom</div>
+						<div onclick='openLog(20)'>Log 20 - Unquenchable</div>
+						<div onclick='openLog(21)'>Log 21 - Hallway of Closed Doors</div>
+						<div onclick='openLog(22)'>Log 22 - Future Uncertain</div>
+						<div onclick='openLog(23)'>Log 23 - Creative Ends</div>
+						<div onclick='openLog(24)'>Log 24 - Moral Judgement</div>
+					</div>
+				</div>
+
+				<!-- <div class='workt' onclick='openWork("Lyrics");'>
+					<h1>Light Lyrics</h1>
+					<h2>A Collection of Song/Poem Lyrics</h2>
+				</div>
+				<div class='workp' id='Lyrics'>
+					<div class='list'>
+						<div onclick='openLyric(0)'>A Broken Contradiction</div>
+						<div onclick='openLyric(1)'>Moonlight Confliction</div>
+					</div>
+				</div>
+				
+				<div class='workt' onclick='openWork("Songs");'>
+					<h1>Song of Space</h1>
+					<h2>A Series of Short Stories</h2>
+				</div>
+				<div class='workp' id='Songs'>
+					<div class='list'>
+						<div onclick='openSong(0)'>Song of Space</div>
+						<div onclick='openSong(1)'>Jazz Knives</div>
+						<div onclick='openSong(2)'>Song of Darkness - Chapter 1</div>
+						<div onclick='openSong(3)'>Song of Darkness - Chapter 2</div>
+						<div onclick='openSong(4)'>Jackal's Apple</div>
+						<div onclick='openSong(7)'>Song of Nature</div>
+						<div onclick='openSong(9)'>Song of Darkness - Chapter 3</div>
+					</div>
+				</div> -->
+
+			</div>
+		</div>
+		<div class='tabpage' id='Page_Worldbuilding'>
+			<h2>Under Construction</h2>
+		</div>
+		<div class='tabpage' id='Page_Social'>
+			<div class='list'>
+				<a target='_blank' href='https://www.instagram.com/ae_raki/'>
+					<i class='fab fa-instagram'></i>Instagram
+				</a>
+				<a target='_blank' href='https://twitter.com/_aeraki'>
+					<i class='fab fa-twitter'></i>Twitter
+				</a>
+			</div>
+		</div>
+		<div class='tabpage' id='Page_ShortLogs'>
+			<h1 id='ShortLogs_H1'></h1>
+			<h2 id='ShortLogs_H2'></h2>
+			<p  id='ShortLogs_P' ></p>
+		</div>
+		<!-- <div class='tabpage' id='Page_Songs'>
+			<h1 id='Songs_H1'></h1>
+			<h2 id='Songs_H2'></h2>
+			<h2 id='Songs_H3'></h2>
+			<h2 id='Songs_H4'></h2>
+			<p  id='Songs_P'></p>
+		</div> -->
+
+		<div class='tabpage' id='Page_History'>
+			<div class='list'>
+				<a onclick='openTab("Games")'>
+					<i class='fas fa-angle-right'></i>liquify v2.1</a>
+				<a target='_blank' href='./archive/liquify_2.0.0/index.html'>
+					<i class='fas fa-angle-right'></i>liquify v2.0</a>
+				<a target='_blank' href='./archive/petrichor_1.6.0/index.html'>
+					<i class='fas fa-angle-right'></i>petrichor v1.6</a>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<footer onclick='openTab("History")'>liquify v2.1.1</footer>
+
+<div id='favorites' class='favDaimei'>
+	<i class='fas fa-times' onclick='document.getElementById("favorites").style.display = "none";'></i>
+	<br><br>
+	<div id='favlist'>
+
+	</div>
+</div>
+
+<div class='whatsnew' style='display: none;'>
+	- Added Favorites to Daimei and Username Machines
+	- Updated Quick-Link to Username Machine
+	- Fixed 404 Page to work in any directory
+	- Added v2.0 to the history tab
+</div>
+
+<script>
+if (window.location.href.endsWith('#username')) {
+	openTab('Projects');
+	openWork('UsernameGen');
+	multiusername();
+	document.getElementById('UsernameResults').scrollIntoView();
+};
+</script>
+
+</body>
+</html>

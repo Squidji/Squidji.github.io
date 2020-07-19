@@ -1,0 +1,125 @@
+@media screen and (max-width: 1015px) {
+	body {
+		background-color: #0089c7;
+	}
+	.page {
+		margin-left: 0;
+		margin-right: 0;
+		border-radius: 0;
+	}
+	h1 {
+		font-size: 34px;
+	}
+	h2 {
+		font-size: 26px;
+	}
+	footer {
+		display: none;
+	}
+
+	.workg {
+		border-left-width: 0px;
+		padding: 0;
+		margin: 0;
+	}
+	.workg .workt:hover {
+		padding: 0;
+		padding-left: 0;
+		background-color: #00000000;
+		color: white;
+		box-shadow: none;
+	}
+	.workg .workt h1 {font-size: 24px;}
+	.workg .workt h2 {font-size: 16px;}
+	.workp {margin-left: 10px;}
+
+	.list a, .list div {
+		margin-right: 0;
+		font-size: 18px;
+		border-width: 2px;
+	}
+	.list a:hover, .list div:hover {
+		background-color: #00000000;
+		color: white;
+		box-shadow: none;
+	}
+
+	#Header {
+		position: fixed;
+		top: 0;
+		margin-top: 0px;
+		width: calc(100% - 40px);
+		background-color: #001b31ec;
+	}
+	#Header i {
+		display: block;
+		float: right;
+		margin-top: 10px;
+		margin-right: 10px;
+		font-size: 32px;
+		cursor: pointer;
+	}
+	#Header .blk {
+		display: none;
+	}
+
+	#Nav {
+		display: block;
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		left: 0;
+		top: 0;
+		background-color: #003d68e3;
+		overflow-x: hidden;
+		transition: 0.4s;
+	}
+	#Nav #X {
+		margin-top: 5px;
+		margin-right: 30px;
+		font-size: 50px;
+		float: right;
+		cursor: pointer;
+	}
+	#Nav #NavTabs {
+		margin-top: 150px;
+	}
+	#Nav h2 {
+		margin: 30px;
+		cursor: pointer;
+		display: block;
+		padding-left: 10px;
+	}
+	#Nav h2[f=y] {
+		background-color: white;
+		color: black;
+		border-radius: 20px;
+		padding: 10px;
+		padding-left: 20px;
+	}
+
+	#Base {
+		margin-top: 91px;
+		padding-top: 0;
+	}
+
+	#Tabs h2 {display: none;}
+	#Tabs h2[f=y] {
+		display: block;
+		width: 100%;
+		padding-top: 10px;
+		border-top: 2px solid white;
+	}
+
+	#ShortLogs .list div {
+		padding: 5px;
+		padding-left: 15px;
+		font-size: 17px;
+		border-radius: 15px;
+	}
+
+	#favorites {
+		width: 70%;
+	}
+}
