@@ -354,6 +354,9 @@ i.fas {margin-right: 9px;}
 	margin-left: 10px;
 }
 
+#whatsnew {
+	display: none;
+}
 
 @keyframes fadeIn {
 	from {opacity: 0;}

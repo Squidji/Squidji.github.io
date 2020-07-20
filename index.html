@@ -68,6 +68,7 @@
 		<div class='area'>
 			<div class='list'>
 				<div onclick='openPage("p3clock")'><h1>P3 Clock</h1><h2>ピー・スリー・クロック</h2></div>
+				<div onclick='openPage("p4clock")'><h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2></div>
 			</div>
 		</div>
 	</div>
@@ -241,7 +242,7 @@
 
 		<div class='content'>
 			<div class='side'>
-				<a target='_blank' href='./p3clock.zip'><i class='far fa-file-archive'></i> .zip File</a>
+				<a target='_blank' href='./zips/p3clock.zip'><i class='far fa-file-archive'></i> .zip File</a>
 			</div>
 			<div class='desc'>
 				Link this javascript file to your page to add a clock element inspired by Persona 3.<br><br>
@@ -252,12 +253,41 @@
 				<i>day_name</i> - Specify the names of the days of the week.
 			</div>
 		</div>
-		
+	</div>
+
+	<div class='page projectpage' id='p4clock'>
+		<div class='top'>
+			<h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2>
+		</div>
+	
+		<div class='area' id='p4clockarea'>
+			<script src='./p4clock.js'></script>
+		</div>
+
+		<div class='content'>
+			<div class='side'>
+				<a target='_blank' href='./zips/p4clock.zip'><i class='far fa-file-archive'></i> .zip File</a>
+			</div>
+			<div class='desc'>
+				Link this javascript file to your page to add a clock element inspired by Persona 4.<br><br>
+				<b>MODIFIERS</b><br>
+				<i>img_directory</i> - The directory where the required images are located.<br>
+				<i>element_parent</i> - The element the clock is located in.<br>
+				<i>clock_sprite</i> - The clock sprite to display.
+				<i>weather_icon</i> - Choose which weather icon will appear.
+				<i>time_patterns</i> - Specify the time label according to the hour.<br>
+				<i>day_name</i> - Specify the names of the days of the week.
+			</div>
+		</div>
 	</div>
 
 </div>
 
-<footer onclick='openPage("history")'>miso v3.0.0</footer>
+<footer onclick='openPage("history")'>miso v3.0.1</footer>
+
+<div class='whatsnew'>
+	- Added P4 Clock
+</div>
 
 <script>hashpage()</script>
 
