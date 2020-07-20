@@ -151,5 +151,11 @@
 		margin: 0 30px;
 	}
 
-	#p3clocknode {display: none;}
+	#p3back {top: 87px !important;}
+	#p3date {top: 96px !important;} 
+	#p3time {top: 120px !important;}
+	#p4back {top: 75px !important;}
+	#p4date {top: 105px !important;}
+	#p4time {top: 120px !important;}
+	#p4icon {top: 160px !important;}
 }
