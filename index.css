@@ -20,6 +20,12 @@ h2 {
 	margin-top: 0px;
 }
 
+#codelist red {
+	margin: 20px;
+	display: block;
+	font-size: 30px;
+}
+
 footer {
 	opacity: 0;
 	position: fixed;
@@ -48,7 +54,10 @@ red {
 i.fab {margin-right: 9px;}
 i.fas {margin-right: 9px;}
 
-.page {animation: fadeIn 1.5s, moveDown .5s;}
+.page {
+	animation: fadeIn 1.5s, moveDown .5s;
+	overflow: hidden;
+}
 .tabpage {
 	display: none;
 }
@@ -173,6 +182,31 @@ i.fas {margin-right: 9px;}
 	padding-left: 10px;
 }
 
+.gallery {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 30px;
+}
+.gallery div {
+	height: 200px;
+	width: 270px;
+	margin-bottom: 50px;
+	margin-right: 50px;
+	cursor: pointer;
+	transition: 0.3s;
+	box-shadow: 0 10px 30px #00000091;
+	border-radius: 20px;
+	background-size: 100%;
+	background-position-x: center;
+	background-position-y: center;
+	font-size: 0;
+}
+.gallery div:hover {
+	border-radius: 30px;
+	background-size: 110%;
+}
+
 .slideshow {
 	height: 45vh;
 	background-color: #0000004d;
@@ -249,109 +283,18 @@ i.fas {margin-right: 9px;}
 	border-radius: 24px;
 }
 
-#rangen {height: 100%;}
-#rangen .area {height: 50%;}
-#generators {
-	margin: 20px 30px;
-}
-#generators div {
-	display: inline;
-	font-size: 27px;
-	padding: 5px 10px;
-	cursor: pointer;
-	border-radius: 5px;
-	transition: 0.3s;
-	color: gray;
-	border: solid transparent 2px;
-}
-#generators div:hover {
-	color: lightgray;
-}
-#generators div[sel=true] {
-	color: white;
-	border-color: white;
-	border-radius: 15px;
-}
-#genbtn {
-	text-align: center;
+.topbtn {
+	display: block;
+	float: right;
 	font-size: 42px;
-	cursor: pointer;
-	transition: 0.4s;
 	color: gray;
-	border: 2px solid gray;
-	margin: 10px;
-	border-radius: 15px;
-}
-#genbtn:hover {
-	color: white;
-	letter-spacing: 3px;
-	border-color: white;
-}
-.boxflex {
-	margin-top: 20px;
-	display: flex;
-	flex-direction: row;
-	width: 100%;
-	height: 100%;
-}
-.boxflex div {
-	display: block;
-	width: 100%;
-	height: 100%;
-	margin: 20px;
-	background-color: #0000004d;
-	border: solid 2px gray;
-	border-radius: 20px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-evenly;
-}
-.boxflex div b {
-	display: block;
-	font-weight: normal;
-	width: 100%;
-	text-align: center;
-	font-size: 25px;
-}
-#genres b {cursor: pointer;}
-#genres b::after {
-	content: '☆';
-	color: gold;
-	margin-left: 5px;
-	opacity: 0;
-	transition: 0.3s;
-}
-#genres b:hover::after {
-	opacity: 1;
-	margin-left: 10px;
-}
-#genres b.saved::after {
-	content: '★';
-	color: gold;
-	margin-left: 10px;
-	opacity: 1;
-}
-#genfav {
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-evenly center;
-}
-#genfav b {
-	font-size: 21px;
-	width: 50%;
+	margin-top: 30px !important;
+	margin-right: 30px !important;
 	cursor: pointer;
-	align-self: center;
-}
-#genfav b::after {
-	content: '🛇';
-	color: #b80000;
-	margin-left: 5px;
-	opacity: 0;
 	transition: 0.3s;
 }
-#genfav b:hover::after {
-	opacity: 1;
-	margin-left: 10px;
+.topbtn:hover {
+	color: white;
 }
 
 #whatsnew {

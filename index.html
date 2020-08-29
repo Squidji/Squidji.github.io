@@ -10,7 +10,7 @@
 	<link rel='stylesheet' href='./index.css'/>
 	<link rel='stylesheet' href='./mobile.css'/>
 	<link rel='stylesheet' href='./icons/css/all.css'>
-	<script src='./pages.js'></script>
+	<script src='./index.js'></script>
 	<script src='./gen.js'></script>
 </head>
 <body>
@@ -38,13 +38,13 @@
 
 	<div class='page tabpage' id='gamelist'>
 		<div class='top'>
-			<h1><i class='fas fa-gamepad'></i> Games</h1><h2>ゲームズ</h2>
+			<h1><i class='fas fa-gamepad'></i> Games</h1><h2>ゲームズ</h2><i class='fas fa-trash-alt topbtn' onclick='openPage("trash")'></i>
 		</div>
 		<div class='area'>
-			<div class='list'>
-				<div onclick='openPage("nitroid")'><h1>Nitroid</h1><h2>ニトロイド</h2></div>
-				<div onclick='openPage("redspectre")'><h1>Red Spectre</h1><h2>レッド・スペクター</h2></div>
-				<div onclick='openPage("island1")'><h1>ISLAND1</h1><h2>アイランド・ワン</h2></div>
+			<div class='gallery'>
+				<div style='background-image: url("./img/_nitroid.png");' onclick='openPage("nitroid")'></div>
+				<div style='background-image: url("./img/_redspectre.png");' onclick='openPage("redspectre")'></div>
+				<div style='background-image: url("./img/_island1.png");' onclick='openPage("island1")'></div>
 			</div>
 		</div>
 	</div>
@@ -55,9 +55,11 @@
 		</div>
 		<div class='area'>
 			<div class='list'>
+				<div onclick='openPage("aeslink")'><h1>AESLink</h1><h2>アエスリンク</h2></div>
+				<div onclick='openPage("p3clock")'><h1>P3 Clock</h1><h2>ピー・スリー・クロック</h2></div>
+				<div onclick='openPage("p4clock")'><h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2></div>
 				<div onclick='openPage("aechat")'><h1>aeChat</h1><h2>アエチャット</h2></div>
 				<div onclick='openPage("megubot")'><h1>MeguBot</h1><h2>メギューボット</h2></div>
-				<div onclick='openPage("rangen");loadfavorites();'><h1>Generators</h1><h2>ジェネレーターズ</h2></div>
 			</div>
 		</div>
 	</div>
@@ -67,10 +69,7 @@
 			<h1><i class='fas fa-code-branch'></i> Code</h1><h2>コード</h2>
 		</div>
 		<div class='area'>
-			<div class='list'>
-				<div onclick='openPage("p3clock")'><h1>P3 Clock</h1><h2>ピー・スリー・クロック</h2></div>
-				<div onclick='openPage("p4clock")'><h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2></div>
-			</div>
+			<red>CODE - Coming Soon!</red>
 		</div>
 	</div>
 
@@ -80,6 +79,10 @@
 		</div>
 		<div class='area'>
 			<div class='list'>
+				<div onclick='location.reload()'>
+					<h1>miso v3.1</h1><h2>Aug. 29th, 2020</h2></div>
+				<div onclick='window.open("./archive/miso_3.0/index.html", "_blank")'>
+					<h1>miso v3.0</h1><h2>Jul. 19th, 2020</h2></div>
 				<div onclick='window.open("./archive/liquify_2.1/index.html", "_blank")'>
 					<h1>liquify v2.1</h1><h2>Jun. 17th, 2020</h2></div>
 				<div onclick='window.open("./archive/liquify_2.0/index.html", "_blank")'>
@@ -90,11 +93,26 @@
 		</div>
 	</div>
 
+	<div class='page tabpage' id='trash'>
+		<div class='top'>
+			<h1><i class='fas fa-trash-alt'></i> Scrapped Games</h1><h2>スクラプト・ゲームズ</h2>
+			<i class='fas fa-gamepad topbtn' onclick='openPage("gamelist")'></i>
+		</div>
+		<div class='area'>
+			<div class='gallery'>
+				<div style='background-image: url("./img/_pentaengine.png");' onclick='openPage("pentaengine")'></div>
+				<div style='background-image: url("./img/_mezua.png");' onclick='openPage("mezua")'></div>
+				<div style='background-image: url("./img/_deepsleep.png");' onclick='openPage("deepsleep")'></div>
+				<!-- <div style='background-image: url("./img/_itanaru.png");'></div> -->
+			</div>
+		</div>
+	</div>
+
 
 
 	<div class='page projectpage' id='nitroid'>
 		<div class='top'>
-			<h1>Nitroid</h1><h2>ニトロイド</h2>
+			<h1>Nitroid</h1><h2>ニトロイド</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("game")'></i>
 		</div>
 	
 		<div class='slideshow'>
@@ -123,7 +141,7 @@
 
 	<div class='page projectpage' id='redspectre'>
 		<div class='top'>
-			<h1>Red Spectre</h1><h2>レッド・スペクター</h2>
+			<h1>Red Spectre</h1><h2>レッド・スペクター</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("game")'></i>
 		</div>
 	
 		<div class='slideshow'>
@@ -134,7 +152,7 @@
 
 		<div class='content'>
 			<div class='side'>
-				<a target='_blank' href='./redspectre.html'><i class='fas fa-play'></i>Play Game</a>
+				<a target='_blank' href='./redspectre/index.html'><i class='fas fa-play'></i>Play Game</a>
 				<a target='_blank' href='https://aeraki.itch.io/redspectre'><i class='fab fa-itch-io'></i>itch.io Page</a>
 				<a target='_blank' href='https://itch.io/jam/rndgame-jam'><i class='fas fa-tools'></i>RNDGame Jam</a>
 			</div>
@@ -149,8 +167,7 @@
 
 	<div class='page projectpage' id='island1'>
 		<div class='top'>
-			<!-- <i class='share fas fa-share-square'></i> -->
-			<h1>ISLAND1</h1><h2>アイランド・ワン</h2>
+			<h1>ISLAND1</h1><h2>アイランド・ワン</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("game")'></i>
 		</div>
 	
 		<div class='slideshow'>
@@ -172,7 +189,7 @@
 
 	<div class='page projectpage' id='aechat'>
 		<div class='top'>
-			<h1>aeChat</h1><h2>アエチャット</h2>
+			<h1>aeChat</h1><h2>アエチャット</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("project")'></i>
 		</div>
 	
 		<div class='slideshow'>
@@ -190,7 +207,7 @@
 
 	<div class='page projectpage' id='megubot'>
 		<div class='top'>
-			<h1>MeguBot</h1><h2>メギューボット</h2>
+			<h1>MeguBot</h1><h2>メギューボット</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("project")'></i>
 		</div>
 	
 		<div class='slideshow'>
@@ -208,37 +225,13 @@
 		</div>
 	</div>
 
-	<div class='page projectpage' id='rangen'>
-		<div class='top'>
-			<h1>Generators</h1><h2>ジェネレーターズ</h2>
-		</div>
-	
-		<div class='area'>
-
-			<div id='generators'>
-				<div id='daimei' onclick='setgenerator("daimei", daimei)' sel=true>Daimei Machine</div>
-				<div id='username' onclick='setgenerator("username", username)'>Username Machine</div>
-			</div>
-
-			<div id='genbtn' onclick='generate()'>GENERATE</div>
-
-			<div class='boxflex'>
-				<div id='genres'>
-				</div>
-				<div id='genfav'>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
 	<div class='page projectpage' id='p3clock'>
 		<div class='top'>
-			<h1>P3 Clock</h1><h2>ピー・スリー・クロック</h2>
+			<h1>P3 Clock</h1><h2>ピー・スリー・クロック</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("project")'></i>
 		</div>
 	
 		<div class='area' id='p3clockarea'>
-			<script src='./p3clock.js'></script>
+			<script src='./clocks/p3clock.js'></script>
 		</div>
 
 		<div class='content'>
@@ -258,11 +251,11 @@
 
 	<div class='page projectpage' id='p4clock'>
 		<div class='top'>
-			<h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2>
+			<h1>P4 Clock</h1><h2>ピー・フォー・クロック</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("project")'></i>
 		</div>
 	
 		<div class='area' id='p4clockarea'>
-			<script src='./p4clock.js'></script>
+			<script src='./clocks/p4clock.js'></script>
 		</div>
 
 		<div class='content'>
@@ -282,13 +275,103 @@
 		</div>
 	</div>
 
+	<div class='page projectpage' id='aeslink'>
+		<div class='top'>
+			<h1>AESLink</h1><h2>アエスリンク</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("project")'></i>
+		</div>
+	
+		<div class='slideshow'>
+			<i class='fas fa-chevron-left' onclick='slidenext("aeslink",-1)'></i>
+			<img src='./img/aesl2.png' index='1' id='aeslinkimg'/>
+			<i class='fas fa-chevron-right' onclick='slidenext("aeslink", 1)'></i>
+		</div>
+
+		<div class='content'>
+			<div class='side'>
+				<a target='_blank' href='http://aeslink.tk/'><i class='fas fa-external-link-alt'></i>Open Page</a>
+			</div>
+			<div class='desc'>
+				AESLink is a website providing easy access to the links you use everyday.
+				It features a wide range of custom made themes to change the appearance of your page.
+			</div>
+		</div>
+	</div>
+
+	<div class='page projectpage' id='pentaengine'>
+		<div class='top'>
+			<h1>Penta-Engine</h1><h2>ペンター・エンジン</h2><i class='fas fa-chevron-down topbtn' onclick='openPage("trash")'></i>
+		</div>
+
+		<div class='slideshow'>
+			<i class='fas fa-chevron-left' onclick='slidenext("pentaengine",-1)'></i>
+			<img src='./img/penta1.png' index='0' id='pentaengineimg'/>
+			<i class='fas fa-chevron-right' onclick='slidenext("pentaengine", 1)'></i>
+		</div>
+
+		<div class='content'>
+			<div class='side'>
+				<a target='_blank' href='http://aeraki.tk/Penta-Engine'><i class='fas fa-external-link-alt'></i>Open Page</a>
+			</div>
+			<div class='desc'>
+				<red>This project is incomplete.</red><br>
+				Penta-Engine was a scrapped roleplaying game engine.
+			</div>
+		</div>
+	</div>
+
+	<div class='page projectpage' id='mezua'>
+		<div class='top'>
+			<h1>Mezua</h1><h2>メズア</h2><i class='fas fa-chevron-down topbtn' onclick='openPage("trash")'></i>
+		</div>
+
+		<div class='slideshow'>
+			<img src='./img/mezua1.png'/>
+		</div>
+
+		<div class='content'>
+			<div class='side'>
+				<a target='_blank' href='./mezua/index.html'><i class='fas fa-external-link-alt'></i>Open Page</a>
+			</div>
+			<div class='desc'>
+				<red>This project was barely started.</red><br>
+				Mezua was going to be a turn based strategy board game.
+			</div>
+		</div>
+	</div>
+
+	<div class='page projectpage' id='deepsleep'>
+		<div class='top'>
+			<h1>Deep Sleep</h1><h2>ディープ・スリープ</h2><i class='fas fa-chevron-down topbtn' onclick='openPage("trash")'></i>
+		</div>
+
+		<div class='slideshow'>
+			<img src='./img/deepsleep_0.gif'/>
+		</div>
+
+		<div class='content'>
+			<div class='side'>
+				<a target='_blank' href='./deepsleep/deepsleep.html'><i class='fas fa-external-link-alt'></i>Open Page</a>
+			</div>
+			<div class='desc'>
+				<red>This project is incomplete.</red><br>
+				Deep Sleep was a bullet hell planned to have 3 levels.
+				It includes the funtions of shooting and stopping time.
+			</div>
+		</div>
+	</div>
+
 </div>
 
-<footer onclick='openPage("history")'>miso v3.0.2</footer>
+<footer onclick='openPage("history")'>miso v3.1.0</footer>
 
 <div id='whatsnew'>
-	- Fixed MeguBot Page Name
-	- Added Github Link
+	- Added Gallery View for Games
+	- Added Scrapped Games Page
+	- Added AESLink
+	- Added Back Buttons to Project Pages
+	- Moved Persona Clocks to Projects
+	- Removed Generators
+	- New 404 Page
 </div>
 
 <script>hashpage()</script>

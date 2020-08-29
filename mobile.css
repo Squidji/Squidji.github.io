@@ -120,6 +120,10 @@
 		font-size: 14px;
 	}
 
+	.gallery div {
+		margin-right: 0;
+	}
+
 	.slideshow i {
 		margin-left: 0;
 		margin-right: 0;
@@ -149,6 +153,11 @@
 	}
 	.content .desc {
 		margin: 0 30px;
+	}
+
+	.topbtn {
+		font-size: 28px;
+		margin: 8px !important;
 	}
 
 	#p3back {top: 87px !important;}
