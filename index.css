@@ -1,10 +1,18 @@
 body {
 	background-color: #0089c7;
 	background-image: url('./background.png');
+	background-size: 8640px 4320px;
 	color: white;
 	font-family: 'M PLUS Rounded 1c', sans-serif;
 	cursor: default;
+	animation: backgroundWave 40s ease-in-out infinite;
 }
+@keyframes backgroundWave {
+	0% { background-position: 0 0; }
+	50% { background-position: -4320px -2160px; }
+	100% { background-position: 0 0; }
+}
+
 h1, h2 {
 	margin-bottom: 0;
 	margin-left: 25px;
