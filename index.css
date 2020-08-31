@@ -57,6 +57,8 @@ footer:hover {
 red {
 	font-weight: bold;
 	color: #f14444;
+	background-color: #00000062;
+	border-radius: 5px;
 }
 
 i.fab {margin-right: 9px;}
@@ -79,13 +81,13 @@ i.fas {margin-right: 9px;}
 
 #menu {
 	position: fixed;
-	left: 30px;
-	top: 20px;
-	bottom: 30px;
+	left: 0;
+	top: 0;
+	bottom: 0;
 	width: 220px;
 	background-color: #0000009c;
-	border-radius: 15px;
 	animation: fadeIn 1s, moveDown .5s;
+	box-shadow: #0000009d 0 0 20px;
 }
 #menu #navbtn {
 	display: none;
@@ -130,7 +132,7 @@ i.fas {margin-right: 9px;}
 
 #mainpage {
 	position: fixed;
-	left: 280px;
+	left: 260px;
 	right: 30px;
 	top: 20px;
 	bottom: 30px;
@@ -138,10 +140,21 @@ i.fas {margin-right: 9px;}
 	border-radius: 15px;
 	animation: fadeIn 1s, moveDown .5s;
 }
+#mainpage.flush {
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 220px;
+	border-radius: 0;
+	background-color: #0000005e;
+}
 .top {margin-bottom: 20px;}
 .top h1 {
 	display: inline-block;
 	font-size: 52px;
+}
+#mainpage.flush .top h1 {
+	margin-left: 30px;
 }
 .top h2 {
 	display: inline-block;
@@ -200,7 +213,8 @@ i.fas {margin-right: 9px;}
 	height: 200px;
 	width: 270px;
 	margin-bottom: 50px;
-	margin-right: 50px;
+	margin-right: 25px;
+	margin-left: 25px;
 	cursor: pointer;
 	transition: 0.3s;
 	box-shadow: 0 10px 30px #00000091;
