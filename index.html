@@ -11,6 +11,8 @@
 	<link rel='stylesheet' href='./mobile.css'/>
 	<link rel='stylesheet' href='./icons/css/all.css'>
 	<script src='./index.js'></script>
+	<link rel='stylesheet' href='./prism/prism.css'/>
+	<script src='./prism/prism.js'></script>
 </head>
 <body>
 
@@ -68,7 +70,9 @@
 			<h1><i class='fas fa-code-branch'></i> Code</h1><h2>コード</h2>
 		</div>
 		<div class='area'>
-			<red>CODE - Coming Soon!</red>
+			<div class='list'>
+				<div onclick='openPage("p3cc")'><h1>P3 Clock</h1><h2>Code Explanation</h2></div>
+			</div>
 		</div>
 	</div>
 
@@ -357,6 +361,102 @@
 				Deep Sleep was a bullet hell planned to have 3 levels.
 				It includes the funtions of shooting and stopping time.
 			</div>
+		</div>
+	</div>
+
+	<div class='page projectpage' id='p3cc'>
+		<div class='top'>
+			<h1>P3 Clock</h1><h2>Code Explanation</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("code")'></i>
+		</div>
+
+		<div class='content'>
+			<pre><code class='language-js'>// P3 CLock
+// by Ben Aeraki
+
+// This object holds customizable info on how the clock works.
+var p3clock = {
+	img_directory: './', // The folder that the required images are located.
+	element_parent: document.body, // The element under which the clock resides.
+	time_patterns: { // The hour of the day translated into its label.
+		0 : 'Dark Hour', // Note that the clock turns green during the Dark Hour.
+		1 : 'Before Dawn',
+		2 : 'Before Dawn',
+		3 : 'Before Dawn',
+		4 : 'Before Dawn',
+		5 : 'Before Dawn',
+		6 : 'Morning',
+		7 : 'Morning',
+		8 : 'Morning',
+		9 : 'Morning',
+		10: 'Morning',
+		11: 'Lunchtime',
+		12: 'Afternoon',
+		13: 'Afternoon',
+		14: 'Afternoon',
+		15: 'After School',
+		16: 'After School',
+		17: 'After School',
+		18: 'Evening',
+		19: 'Evening',
+		20: 'Evening',
+		21: 'Evening',
+		22: 'Late Night',
+		23: 'Late Night'
+	},
+	day_name: ['Su', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'] // The labels for the days of the week.
+};
+
+// Adding the font used.
+var fontlink = document.createElement('link'); // Creates a &lt;link&gt; element.
+fontlink.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap'; // Refering the &lt;link&gt; to the font.
+fontlink.rel = 'stylesheet'; // Setting the type of media the &lt;link&gt; is referring to.
+document.head.appendChild(fontlink);  // Adds the &lt;link&gt; to the page head.
+
+// Adding CSS used by the clock.
+var style = document.createElement('style'); // Creates a &lt;style&gt; element.
+style.innerHTML = '#p3clocknode {font-family: "Montserrat", sans-serif;}#p3clocknode img {\ // Adds the CSS to the &lt;style&gt; element.
+position: fixed;right: -3px;top: -3px;}#p3clocknode div {position: fixed;}#p3clocknode #p3date {\
+right: 20px;top: 6px;color: #0d2e47;font-size: 20px;}#p3clocknode #p3time {right: 14px;top: 30px;\
+color: white;text-shadow: #237e7e 3px 3px;font-size: 25px;}#p3clocknode.darkhour #p3date {\
+color: #113305;}#p3clocknode.darkhour #p3time {color: #e1ffef;text-shadow: #295151 3px 3px;}';
+document.head.appendChild(style); // Adds the &lt;style&gt; element to the page head.
+
+// Creating the clock element.
+var parentnode = document.createElement('div'); // Creates the &lt;div&gt; holding the clock element.
+parentnode.id = 'p3clocknode'; // Sets the ID of the &lt;div&gt;.
+var p3back = document.createElement('img'); p3back.id = 'p3back'; // Creates an &lt;img&gt; for holding the clock's background image.
+var p3date = document.createElement('div'); p3date.id = 'p3date'; // Creates a &lt;div&gt; for writing the current date.
+var p3time = document.createElement('div'); p3time.id = 'p3time'; // Creates a &lt;div&gt; for writing the current time.
+parentnode.appendChild(p3back);
+parentnode.appendChild(p3date); // Adds the created elements to the parent &lt;div&gt;.
+parentnode.appendChild(p3time);
+p3clock.element_parent.appendChild(parentnode); // Adds the parent element to the p3clock object for use later.
+
+
+// Editing the clock element.
+setInterval( () => { // Sets the code to run every second.
+	let date = new Date(); // Gets the current date.
+	// Sets `line1` to the date, month/day.
+	let line1 = '' + ( date.getMonth() + 1 ) + ' / ' + date.getDate() + ' • ' + p3clock.day_name[date.getDay()];
+	// Sets the date element's text to `line1`
+	document.getElementById('p3date').innerHTML = line1;
+	// Sets `line2` to the label for the current hour.
+	let line2 = p3clock.time_patterns[date.getHours()];
+	// Sets the time element's text to `line2`
+	document.getElementById('p3time').innerHTML = line2;
+	
+	if (line2 === 'Dark Hour') { // If the label for the current hour (or `line2`) is the "Dark Hour"...
+		// Sets the background image to the dark hour green color.
+		document.getElementById('p3back').src = p3clock.img_directory + 'p3dhr.png';
+		// Gives the clock element the `darkhour` class to change the text color.
+		document.getElementById('p3clocknode').classList = ['darkhour'];
+	} else { // If the label is not the "Dark Hour"...
+		// Sets the background image to the standard blue color
+		document.getElementById('p3back').src = p3clock.img_directory + 'p3spr.png';
+		// Removes any classes from the clock element, keeping the text's standard color.
+		document.getElementById('p3clocknode').classList = [];
+	};
+}, 1000); // Runs every 1000 milliseconds (or 1 second).</code></pre>
 		</div>
 	</div>
 
