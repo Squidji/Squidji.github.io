@@ -13,13 +13,22 @@ body {
 	100% { background-position: 0 0; }
 }
 
+copyright {
+	position: fixed;
+	left: 7px;
+	bottom: 5px;
+	display: block;
+	font-size: 10px;
+	color: gray;
+}
+
 h1, h2 {
 	margin-bottom: 0;
 	margin-left: 25px;
 }
 h1 {
 	font-size: 40px;
-	margin-top: 20px;
+	margin-top: 15px;
 	margin-bottom: -5px;
 }
 h2 {
@@ -272,6 +281,11 @@ i.fas {margin-right: 9px;}
 	color: lightgray;
 }
 .desc b {color: white;}
+.desc a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
 
 .side {
 	width: 240px;

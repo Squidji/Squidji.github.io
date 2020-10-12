@@ -24,17 +24,30 @@
 		<h2 onclick='openTab("game")' id='gametab' sel=true ><i class='fas fa-gamepad'></i>Games</h2>
 		<h2 onclick='openTab("project")' id='projecttab'><i class='fas fa-folder'></i>Projects</h2>
 		<h2 onclick='openTab("code")' id='codetab'><i class='fas fa-code-branch'></i>Code</h2>
+		<h2 onclick='openTab("about")' id='abouttab'><i class='fas fa-user'></i>About</h2>
 	</div>
 	<div id='socials'>
-		<a href='https://github.com/aeraki' target='_blank'><i class='fab fa-github'></i>Github</a>
 		<a href='https://twitter.com/_aeraki' target='_blank'><i class='fab fa-twitter'></i>Twitter</a>
+		<a href='https://github.com/aeraki' target='_blank'><i class='fab fa-github'></i>Github</a>
 	</div>
 	<i class='fas fa-bars' id='navbtn' onclick='openNav()'></i>
 </div>
 
 <div id='mainpage' class='flush'>
 
-
+	<div class='page tabpage' id='aboutlist'>
+		<div class='top'>
+			<h1><i class='fas fa-user'></i> About</h1><h2>アバウト</h2>
+		</div>
+		<div class='area'>
+			<div class='desc'>
+				My name is Ben Aeraki, but I also go by the alias Kishi Aeraki.
+				I have a passion for game and web development. Check me out on
+				my <a href='https://twitter.com/_aeraki' target='_blank'>Twitter</a>.<br>
+				If you want to contact me, you can do so at <b>kishiaeraki@gmail.com</b>.
+			</div>
+		</div>
+	</div>
 
 	<div class='page tabpage' id='gamelist'>
 		<div class='top'>
@@ -44,7 +57,6 @@
 			<div class='gallery'>
 				<div style='background-image: url("./img/card_nitroid.png");' onclick='openPage("nitroid")'></div>
 				<div style='background-image: url("./img/card_redspectre.png");' onclick='openPage("redspectre")'></div>
-				<div style='background-image: url("./img/card_island1.png");' onclick='openPage("island1")'></div>
 			</div>
 		</div>
 	</div>
@@ -105,9 +117,7 @@
 		<div class='area'>
 			<div class='gallery'>
 				<div style='background-image: url("./img/card_pentaengine.png");' onclick='openPage("pentaengine")'></div>
-				<div style='background-image: url("./img/card_mezua.png");' onclick='openPage("mezua")'></div>
 				<div style='background-image: url("./img/card_deepsleep.png");' onclick='openPage("deepsleep")'></div>
-				<!-- <div style='background-image: url("./img/_itanaru.png");'></div> -->
 			</div>
 		</div>
 	</div>
@@ -139,6 +149,8 @@
 				Arrow Keys - Move Ship<br>
 				X - Shoot Laser<br>
 				Z - Shift between Nitro and Normal Speed
+				<br><br>
+				This game was a collaborative effort created by Team Spleem.
 			</div>
 		</div>
 	</div>
@@ -165,28 +177,6 @@
 				evil ghoul known as the Red Spectre. Explore the vast dungeon as you get closer 
 				and closer to defeating the haunting ghost.<br><br>
 				Use the <b>Arrow Keys</b> to move.<br>Press <b>Z</b> to cast a magic Fireball.
-			</div>
-		</div>
-	</div>
-
-	<div class='page projectpage' id='island1'>
-		<div class='top'>
-			<h1>ISLAND1</h1><h2>アイランド・ワン</h2><i class='fas fa-chevron-down topbtn' onclick='openTab("game")'></i>
-		</div>
-	
-		<div class='slideshow'>
-			<i class='fas fa-chevron-left' onclick='slidenext("island1",-1)'></i>
-			<img src='./img/isl1.png' index='0' id='island1img'/>
-			<i class='fas fa-chevron-right' onclick='slidenext("island1",1)'></i>
-		</div>
-
-		<div class='content'>
-			<div class='side'>
-				<a target='_blank' href='https://aeraki.tk/g/islandgame/'><i class='fas fa-play'></i>Play Game</a>
-			</div>
-			<div class='desc'>
-				A shitty RPG about islands, catgirls, and stealing.<br>
-				Use the <b>Arrow Keys</b> to move and <b>Z</b> to perform an action.
 			</div>
 		</div>
 	</div>
@@ -324,26 +314,6 @@
 		</div>
 	</div>
 
-	<div class='page projectpage' id='mezua'>
-		<div class='top'>
-			<h1>Mezua</h1><h2>メズア</h2><i class='fas fa-chevron-down topbtn' onclick='openPage("trash")'></i>
-		</div>
-
-		<div class='slideshow'>
-			<img src='./img/mezua1.png'/>
-		</div>
-
-		<div class='content'>
-			<div class='side'>
-				<a target='_blank' href='https://aeraki.tk/g/mezua/'><i class='fas fa-external-link-alt'></i>Open Page</a>
-			</div>
-			<div class='desc'>
-				<red>This project was barely started.</red><br>
-				Mezua was going to be a turn based strategy board game.
-			</div>
-		</div>
-	</div>
-
 	<div class='page projectpage' id='deepsleep'>
 		<div class='top'>
 			<h1>Deep Sleep</h1><h2>ディープ・スリープ</h2><i class='fas fa-chevron-down topbtn' onclick='openPage("trash")'></i>
@@ -463,11 +433,14 @@ setInterval( () => { // Sets the code to run every second.
 
 </div>
 
-<footer onclick='openPage("history")'>miso v3.2.1</footer>
+<copyright>© 2020 Aeraki</copyright>
+
+<footer onclick='openPage("history")'>miso v3.2.2</footer>
 
 <div id='whatsnew'>
-	- New Design
-	- Added P3 Clock /Code Explanation
+	- CSS Fixes
+	- Added Copyright
+	- Added About Page
 </div>
 
 <script>hashpage()</script>

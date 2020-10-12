@@ -9,6 +9,9 @@ const imglift = {
 function openPage(id) {
 	$('.page').css('display', 'none');
 	$('#' + id).css('display', 'block');
+	$('.page').each(function( index ) {
+		$(this).scrollTop(0);
+	});
 };
 
 function openTab(i) {
