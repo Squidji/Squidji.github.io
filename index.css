@@ -139,3 +139,40 @@ copyright {
 ::-webkit-scrollbar-thumb {
 	background: lightgray; 
 }
+
+@media screen and (max-width: 1100px) {
+	body {
+		margin-left: 0;
+		overflow-y: scroll;
+	}
+	#vessel {
+		width: unset;
+		position: relative;
+		margin: 10px;
+	}
+	#socials {
+		right: 24px;
+	}
+	copyright {
+		left: 14px;
+		color: gray;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#content {
+		margin: 0 140px 100px 60px;
+	}
+	.display {
+		flex-direction: column;
+	}
+	.display button, .display a.button {
+		width: 100%;
+	}
+	#themebutton {
+		color: var(--ae-setcol);
+		border-color: var(--ae-setcol);
+		border-width: 1px;
+		font-size: 15px;
+	}
+}
