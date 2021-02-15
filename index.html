@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>アエラキ</title>
+
+	<title>エイラキ</title>
 	<meta charset='utf-8'/>
-	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+
 	<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-	<link href='./icon.ico' rel='icon'/>
-	<link href='https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&amp;display=swap' rel='stylesheet'/>
+	<link href='./icon_light.ico' rel='icon'/>
 	<link rel='stylesheet' href='./index.css'/>
-	<link rel='stylesheet' href='./icons/css/all.css'>
 	<script src='./index.js'></script>
+
+	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 	<link rel='stylesheet' href='./prism/prism.css'/>
 	<script src='./prism/prism.js'></script>
+	<link rel='stylesheet' href="./icons/css/all.css">
+
 </head>
 <body>
 
-<div id='pop'>
-	<h1>AERAKI SITE</h1>
-	<h2>Under Construction</h2>
+<div id='vessel'>
+	<div id='content'>
+		<h1>AERAKI</h1>
+		<div class='desc'>
+			My name is Ben Aeraki, and I am a web and game developer.
+		</div>
+
+		<h2>My Games</h2>
+		<div class='display'>
+			<a class='button' href='https://team-spleem.itch.io/nitroid' target='_blank'>NITROID</a>
+			<a class='button' href='https://aeraki.itch.io/redspectre' target='_blank'>RED SPECTRE</a>
+		</div>
+
+		<h2>My Web Apps</h2>
+		<div class='display'>
+			<a class='button' href='https://aeslink.tk' target='_blank'>AESLink</a>
+			<a class='button'>Coming Soon...</a>
+		</div>
+
+		<h2>My Writing</h2>
+		<div class='display'>
+			<button class='soon'>Coming Soon...</button>
+		</div>
+	</div>
 </div>
+
+<button onclick='toggleTheme();' id='themebutton'>Toggle Theme</button>
+
+<div id='socials'>
+	<a target='_blank' href='https://twitter.com/_aeraki/'>
+		<i class='fab fa-twitter'></i>
+	</a>
+	<a target='_blank' href='https://github.com/aeraki/'>
+		<i class='fab fa-github'></i>
+	</a>
+</div>
+
+<copyright>© 2021 Aeraki</copyright>
 
 </body>
 </html>
