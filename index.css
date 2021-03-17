@@ -176,3 +176,40 @@ copyright {
 		font-size: 15px;
 	}
 }
+
+canvas {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+#egg {
+	display: inline !important;
+	cursor: pointer;
+}
+#egg:hover {
+	color: #0188b2;
+}
+
+body.viewcanvas #vessel {
+	background-color: #00000000;
+	overflow: hidden;
+}
+
+body.viewcanvas h1 {
+	display: block;
+	background-color: var(--ae-backgr);
+	border: solid 4px var(--ae-border);
+	padding: 10px;
+	width: 50%;
+}
+
+body.viewcanvas #content div, body.viewcanvas #content h2 {
+	display: none;
+}
+
+body.viewcanvas copyright {
+	left: 1px;
+}

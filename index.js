@@ -9,3 +9,7 @@ function toggleTheme() {
 		localStorage.setItem('darktheme', 'false');
 	};
 };
+
+function toggleViewer() {
+	$('body').toggleClass('viewcanvas');
+};

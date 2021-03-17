@@ -14,12 +14,20 @@
 	<link rel='stylesheet' href='./index.css'/>
 	<link rel='stylesheet' href='./icons/css/all.css'>
 
+	<meta property='og:title' content='エイラキ AERAKI'/>
+	<meta property='og:description' content='Official Aeraki Website'/>
+	<meta property='og:image' content='https://aeraki.tk/MATERIAL%20DARK.png'/>
+	<meta property='og:url' content='https://aeraki.tk'/>
+	<meta name='theme-color' data-react-helmet='true' content='#0188b2'/>
+
 </head>
 <body class='darktheme'>
 
+	<canvas id='graphics'></canvas>
+
 <div id='vessel'>
 	<div id='content'>
-		<h1>AERAKI</h1>
+		<h1><div id='egg' onclick='toggleViewer();'>AE</div>RAKI</h1>
 		<div class='desc'>
 			My name is Ben Aeraki, and I am a web and game developer.
 		</div>
@@ -33,7 +41,7 @@
 		<h2>My Web Apps</h2>
 		<div class='display'>
 			<a class='button' href='https://aeslink.tk' target='_blank'>AESLink</a>
-			<a class='button'>Coming Soon...</a>
+			<a class='button' href='https://aeraki.tk/graphics' target='_blank'>Graphics Test</a>
 		</div>
 
 		<h2>My Writing</h2>
@@ -65,6 +73,8 @@ switch (localStorage.getItem('darktheme')) {
 		toggleTheme();
 };
 </script>
+
+<script src='./graphics.js'></script>
 
 </body>
 </html>
