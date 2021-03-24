@@ -53,7 +53,7 @@ function _update() {
 	// Continue
 	requestAnimationFrame(_update);
 };
-  
+
 _update();
 
 window.setInterval(function() {
@@ -61,10 +61,7 @@ window.setInterval(function() {
 
 	let hvs = Math.ceil(height/5);
 
-	let startx = 0 /*document.getElementById('vessel').offsetWidth - 10
-	if ($('body').hasClass('viewcanvas')) {
-		startx = 0;
-	};*/
+	let startx = 0;
 
 	for (let i=0; i<randomval; i++) {
 		let randomy = Math.floor(Math.random() * hvs)*5;
