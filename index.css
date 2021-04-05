@@ -11,8 +11,6 @@ body {
 	--ae-border: #cccccc;
 	--ae-backgr: #f1f1f1;
 	--ae-setcol: #161916;
-
-	transition: 0.4s;
 }
 
 body.darktheme {
@@ -42,11 +40,6 @@ body.darktheme {
 h1 {
 	font-size: 50px;
 	margin-top: 100px;
-	transition: 0.2s;
-	cursor: pointer;
-}
-h1:hover {
-	color: #0188b2;
 }
 
 h2 {
